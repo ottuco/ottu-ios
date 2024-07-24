@@ -1,0 +1,24 @@
+{
+  "originHash" : "48fa2493c98baec82f7a16e59fdbe0f7cacd3fe7d5b58bf8565ff7e40ad7fe8e",
+  "pins" : [
+    {
+      "identity" : "ottu-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ottuco/ottu-ios.git",
+      "state" : {
+        "branch" : "feature/release-1",
+        "revision" : "a4c990e7207f0d157f29a5959f5e60bcd7179faa"
+      }
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa.git",
+      "state" : {
+        "revision" : "7339fcbab2ded21fe5753687022f2b673a1a1865",
+        "version" : "8.31.1"
+      }
+    }
+  ],
+  "version" : 3
+}
