@@ -21958,6 +21958,16 @@
       },
       {
         "kind": "Import",
+        "name": "SVGKit",
+        "printedName": "SVGKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -37217,1953 +37227,1953 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 226,
       "length": 9,
       "value": "\"ottu_pg\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 258,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 226,
       "length": 9,
       "value": "\"ottu_pg\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 258,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 329,
       "length": 13,
       "value": "\"benefit_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 12,
       "value": "\"payu_india\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 521,
       "length": 12,
       "value": "\"amazon_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 552,
       "length": 9,
       "value": "\"ottu_pg\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 11,
       "value": "\"smart_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 766,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 813,
       "length": 13,
       "value": "\"beyon_money\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 329,
       "length": 13,
       "value": "\"benefit_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 12,
       "value": "\"payu_india\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 521,
       "length": 12,
       "value": "\"amazon_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 552,
       "length": 9,
       "value": "\"ottu_pg\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 11,
       "value": "\"smart_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 766,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentGateway.swift",
       "kind": "StringLiteral",
       "offset": 813,
       "length": 13,
       "value": "\"beyon_money\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 184,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 214,
       "length": 6,
       "value": "\"VISA\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 247,
       "length": 12,
       "value": "\"MASTERCARD\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 184,
       "length": 9,
       "value": "\"stc_pay\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 214,
       "length": 6,
       "value": "\"VISA\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Card.swift",
       "kind": "StringLiteral",
       "offset": 247,
       "length": 12,
       "value": "\"MASTERCARD\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
       "kind": "StringLiteral",
       "offset": 177,
       "length": 12,
       "value": "\"e_commerce\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 17,
       "value": "\"payment_request\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
       "kind": "StringLiteral",
       "offset": 177,
       "length": 12,
       "value": "\"e_commerce\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TransactionDetailsAPI\/Models\/Enums\/PaymentTransactionType.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 17,
       "value": "\"payment_request\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
       "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2349,
       "length": 75,
       "value": "\"https:\/\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2371,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/pymt-txn\/submit\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2422,
       "length": 1,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2751,
       "length": 77,
       "value": "\"https:\/\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2773,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/concur-payer-view\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
       "offset": 2826,
       "length": 1,
       "value": "\"\/\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
       "offset": 4355,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 311,
       "length": 6,
       "value": "0x2000"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1947,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1959,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1973,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1986,
       "length": 3,
       "value": "0x8"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1998,
       "length": 3,
       "value": "0x9"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 2010,
       "length": 3,
       "value": "0xA"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1947,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1959,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1973,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1986,
       "length": 3,
       "value": "0x8"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1998,
       "length": 3,
       "value": "0x9"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 2010,
       "length": 3,
       "value": "0xA"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1947,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1959,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1973,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1986,
       "length": 3,
       "value": "0x8"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 1998,
       "length": 3,
       "value": "0x9"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 2010,
       "length": 3,
       "value": "0xA"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4657,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4732,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4806,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4882,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4657,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4732,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4806,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4882,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4657,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4732,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4806,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 4882,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 5383,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 5644,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 5715,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 6010,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 6904,
       "length": 20,
       "value": "\"streamStatus.atEnd\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 6946,
       "length": 60,
       "value": "\"The operation couldn’t be completed. Operation timed out\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 7045,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 8597,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 8624,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 8678,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 8746,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 8794,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 11746,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 11861,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 11883,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14205,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14241,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14335,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14372,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14602,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14635,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14671,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 14714,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 14801,
       "length": 24,
       "value": "[0x00, 0x00, 0xFF, 0xFF]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 16881,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 16902,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 19257,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19458,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19493,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19574,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19607,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 19641,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 19718,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 19832,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 19911,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 20182,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 22092,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 22655,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 22672,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24771,
       "length": 12,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24797,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24823,
       "length": 9,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24846,
       "length": 3,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24771,
       "length": 12,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24797,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24823,
       "length": 9,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24846,
       "length": 3,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24771,
       "length": 12,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24797,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24823,
       "length": 9,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24846,
       "length": 3,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 24954,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 24987,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 25012,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 25036,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 25063,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 25111,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 25132,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 33749,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 33814,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 46506,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 46540,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 46569,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 46598,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "BooleanLiteral",
       "offset": 46623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 46820,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 46852,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 46890,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 53142,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 53152,
       "length": 4,
       "value": "0xFF"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 55804,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 55827,
       "length": 16,
       "value": "\"Normal Closure\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 58172,
       "length": 24,
       "value": "\"SwiftWebSocketInstance\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 58210,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 58362,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 62555,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "Array",
       "offset": 66338,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "IntegerLiteral",
       "offset": 67280,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Core\/WebSocket.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/WebSocket.swift",
       "kind": "StringLiteral",
       "offset": 67303,
       "length": 16,
       "value": "\"Normal Closure\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TokenPayAPI\/TokenPaySubmitterMapper.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TokenPayAPI\/TokenPaySubmitterMapper.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 5,
       "value": "\"3DS\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/TokenPayAPI\/TokenPaySubmitterMapper.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/TokenPayAPI\/TokenPaySubmitterMapper.swift",
       "kind": "StringLiteral",
       "offset": 374,
       "length": 5,
       "value": "\"3DS\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/ApplePayManager\/ApplePayManager.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/ApplePayManager\/ApplePayManager.swift",
       "kind": "StringLiteral",
       "offset": 126,
       "length": 15,
       "value": "\"ottu_checkout_sdk.ApplePayManager\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/Components\/ButtonComponent.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/Components\/ButtonComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 2,
       "value": "17"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1941,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 1976,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 2010,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "IntegerLiteral",
       "offset": 2038,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "FloatLiteral",
       "offset": 2090,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "FloatLiteral",
       "offset": 2123,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "FloatLiteral",
       "offset": 2150,
       "length": 3,
       "value": "0.9"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetConfiguration.swift",
       "kind": "FloatLiteral",
       "offset": 2181,
       "length": 3,
       "value": "0.3"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Sentry\/SentryManager.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Sentry\/SentryManager.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 20,
       "value": "\"SdkStudioConfigURL\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/OTPCode\/GlobalOTPCountdown.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/OTPCode\/GlobalOTPCountdown.swift",
       "kind": "IntegerLiteral",
       "offset": 418,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/OTPCode\/OTPCodePresenter.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/OTPCode\/OTPCodePresenter.swift",
       "kind": "IntegerLiteral",
       "offset": 461,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/OTPCode\/OTPCodePresenter.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/OTPCode\/OTPCodePresenter.swift",
       "kind": "StringLiteral",
       "offset": 4293,
       "length": 5,
       "value": "\"966\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
       "kind": "IntegerLiteral",
       "offset": 605,
       "length": 2,
       "value": "36"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
       "kind": "IntegerLiteral",
       "offset": 617,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
       "kind": "StringLiteral",
       "offset": 135,
       "length": 33,
       "value": "\"ottu_checkout_sdk.BottomSheetPresentationController\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
       "kind": "IntegerLiteral",
       "offset": 8231,
       "length": 2,
       "value": "80"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetPresentationController.swift",
       "kind": "IntegerLiteral",
       "offset": 8284,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
       "kind": "IntegerLiteral",
       "offset": 812,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
       "kind": "IntegerLiteral",
       "offset": 821,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
       "kind": "IntegerLiteral",
       "offset": 833,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/CVVTextField.swift",
       "kind": "IntegerLiteral",
       "offset": 843,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
       "kind": "BooleanLiteral",
       "offset": 481,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
       "kind": "BooleanLiteral",
       "offset": 573,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
       "kind": "BooleanLiteral",
       "offset": 843,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
       "kind": "FloatLiteral",
       "offset": 1009,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/TextFields\/SuffixTextField.swift",
       "kind": "FloatLiteral",
       "offset": 1100,
       "length": 4,
       "value": "10.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 663,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "IntegerLiteral",
       "offset": 751,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 766,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "IntegerLiteral",
       "offset": 842,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 857,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "IntegerLiteral",
       "offset": 921,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 935,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "IntegerLiteral",
       "offset": 1012,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 1027,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "BooleanLiteral",
       "offset": 1203,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "IntegerLiteral",
       "offset": 1347,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "FloatLiteral",
       "offset": 1527,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "FloatLiteral",
       "offset": 1622,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "FloatLiteral",
       "offset": 1707,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsController.swift",
       "kind": "FloatLiteral",
       "offset": 1798,
       "length": 4,
       "value": "20.0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentViewController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 3024,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentViewController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 3177,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/Components\/LabelComponent.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/Components\/LabelComponent.swift",
       "kind": "IntegerLiteral",
       "offset": 262,
       "length": 2,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "BooleanLiteral",
       "offset": 746,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "IntegerLiteral",
       "offset": 782,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "BooleanLiteral",
       "offset": 834,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "BooleanLiteral",
       "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "IntegerLiteral",
       "offset": 1152,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/PaymentDetails\/PaymentDetailsValueView.swift",
       "kind": "BooleanLiteral",
       "offset": 1204,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentMethodButton.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentMethodButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1047,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentMethodButton.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentMethodButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1380,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 191,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 229,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 269,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/CVVCodeViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/CVVCodeViewModel.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/CVVCodeViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/CVVCodeViewModel.swift",
       "kind": "StringLiteral",
       "offset": 252,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
       "kind": "StringLiteral",
       "offset": 380,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
       "kind": "StringLiteral",
       "offset": 415,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
       "kind": "StringLiteral",
       "offset": 515,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
       "kind": "StringLiteral",
       "offset": 549,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/MessageViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/MessageViewModel.swift",
       "kind": "StringLiteral",
       "offset": 234,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 239,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 155,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 177,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 202,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 155,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 177,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
       "kind": "StringLiteral",
       "offset": 202,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransitionDelegate.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransitionDelegate.swift",
       "kind": "StringLiteral",
       "offset": 138,
       "length": 32,
       "value": "\"ottu_checkout_sdk.BottomSheetTransitioningDelegate\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
       "kind": "IntegerLiteral",
       "offset": 1043,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
       "kind": "FloatLiteral",
       "offset": 1047,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/CommonViews\/SaveSwitchControl.swift",
       "kind": "BooleanLiteral",
       "offset": 946,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransition.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransition.swift",
       "kind": "BooleanLiteral",
       "offset": 365,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransition.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/BottomSheet\/BottomSheetTransition.swift",
       "kind": "StringLiteral",
       "offset": 123,
       "length": 21,
       "value": "\"ottu_checkout_sdk.BottomSheetTransition\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/OTPCode\/OTPCodeViewController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/OTPCode\/OTPCodeViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 872,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/OTPCode\/OTPCodeViewController.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/OTPCode\/OTPCodeViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 950,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1042,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1370,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Payment\/SelectPaymentMethod\/Buttons\/SelectedPaymentCardButton.swift",
       "kind": "BooleanLiteral",
       "offset": 1706,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 588,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 597,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 608,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
       "offset": 618,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Downloads\/Github\/Ottu\/ottu-ios-private\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
+      "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Theme\/CheckoutTheme.swift",
       "kind": "BooleanLiteral",
       "offset": 2389,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 657,
       "length": 29,
       "value": "\"ActionButtonBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 833,
       "length": 23,
       "value": "\"ActionButtonTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1013,
       "length": 28,
       "value": "\"CVVTextEditBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1172,
       "length": 15,
       "value": "\"IconTintColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1318,
       "length": 15,
       "value": "\"OTPErrorColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1484,
       "length": 25,
       "value": "\"OTPFieldBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1638,
       "length": 14,
       "value": "\"OTPTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1821,
       "length": 34,
       "value": "\"PayButtonApplePayBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2014,
       "length": 29,
       "value": "\"PayButtonApplePayTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2196,
       "length": 26,
       "value": "\"PayButtonBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2395,
       "length": 36,
       "value": "\"PayButtonBrandedPayBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2596,
       "length": 32,
       "value": "\"PayButtonBrandedPayBorderColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2797,
       "length": 34,
       "value": "\"PayButtonDisabledBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2990,
       "length": 29,
       "value": "\"PayButtonDisabledTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3162,
       "length": 21,
       "value": "\"PayButtonTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3368,
       "length": 42,
       "value": "\"PaymentDetailsSectionTitleLabelTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3581,
       "length": 35,
       "value": "\"PaymentDetailsTitleLabelTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3787,
       "length": 35,
       "value": "\"PaymentDetailsValueLabelTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3991,
       "length": 34,
       "value": "\"PaymentMethodTitleLabelTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4186,
       "length": 30,
       "value": "\"PhoneTextEditBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4383,
       "length": 33,
       "value": "\"ResendCodeButtonBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4571,
       "length": 27,
       "value": "\"ResendCodeButtonTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4753,
       "length": 27,
       "value": "\"SaveSTCPayBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4933,
       "length": 26,
       "value": "\"SecondaryBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5132,
       "length": 36,
       "value": "\"SelectPaymentButtonBackgroundColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5349,
       "length": 40,
       "value": "\"SelectPaymentButtonCardNumberTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5574,
       "length": 42,
       "value": "\"SelectPaymentButtonChangeMethodTextColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5779,
       "length": 31,
       "value": "\"SelectPaymentButtonTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 5983,
       "length": 36,
       "value": "\"SelectPaymentModalFeeSubtitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6186,
       "length": 33,
       "value": "\"SelectPaymentModalFeeTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6386,
       "length": 33,
       "value": "\"SelectPaymentModalSubtitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6580,
       "length": 30,
       "value": "\"SelectPaymentModalTitleColor\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 6869,
       "length": 25,
       "value": "\"applepay_paybutton_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7054,
       "length": 28,
       "value": "\"applepay_selectmethod_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7204,
       "length": 8,
       "value": "\"disket\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7376,
       "length": 30,
       "value": "\"mastercard_selectmethod_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7562,
       "length": 26,
       "value": "\"ottupg_selectmethod_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7738,
       "length": 23,
       "value": "\"stcpay_paybutton_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 7917,
       "length": 26,
       "value": "\"stcpay_selectmethod_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8091,
       "length": 22,
       "value": "\"urpay_paybutton_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8267,
       "length": 25,
       "value": "\"urpay_selectmethod_icon\""
     },
     {
-      "filePath": "\/Users\/vladimirpanchenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-alxtjlunpddekieljcdzemuvqrog\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/opylypenko\/Library\/Developer\/Xcode\/DerivedData\/ottu-checkout-sdk-eorvcucooxvjrtgvolducetesspp\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ottu_checkout_sdk\/IntermediateBuildFilesPath\/ottu-checkout-sdk.build\/Release-iphoneos\/ottu_checkout_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 8444,
       "length": 24,

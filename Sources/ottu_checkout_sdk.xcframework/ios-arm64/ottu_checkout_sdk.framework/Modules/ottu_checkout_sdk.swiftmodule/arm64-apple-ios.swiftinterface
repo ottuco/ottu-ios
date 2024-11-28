@@ -4,6 +4,7 @@
 import DeveloperToolsSupport
 import Foundation
 import PassKit
+import SVGKit
 import Sentry
 import Swift
 import SwiftUI
