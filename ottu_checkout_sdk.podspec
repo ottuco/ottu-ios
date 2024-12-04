@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "ottu_checkout_sdk"
-    s.version      = "1.0.19"
+    s.version      = "1.0.20"
     s.summary      = "The ottu_checkout_sdk iOS SDK makes it quick and easy to build an excellent payment experience in your iOS app."
     s.description  = <<-DESC
 **Simplified security**: We make it simple for you to collect sensitive data such as credit card numbers and remain PCI compliant.
