@@ -10,8 +10,8 @@ let package = Package(
     ],
 
     dependencies: [
-            .package(url: "https://github.com/getsentry/sentry-cocoa-sdk-xcframeworks", from: "8.33.0"),
-            .package(url: "https://github.com/SVGKit/SVGKit", from: "3.x")
+            .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0"),
+            .package(url: "https://github.com/SVGKit/SVGKit", from: "3.1.1")
     ],
     
     targets: [

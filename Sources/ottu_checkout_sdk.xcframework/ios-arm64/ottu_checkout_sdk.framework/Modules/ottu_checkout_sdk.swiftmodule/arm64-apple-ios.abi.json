@@ -12968,8 +12968,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Observable",
-                "printedName": "ottu_checkout_sdk.Observable<ottu_checkout_sdk.PaymentType?>",
+                "name": "OttuObservable",
+                "printedName": "ottu_checkout_sdk.OttuObservable<ottu_checkout_sdk.PaymentType?>",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -12986,12 +12986,12 @@
                     "usr": "s:Sq"
                   }
                 ],
-                "usr": "s:17ottu_checkout_sdk10ObservableC"
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA0I0CyAA0dH0OSgGvp",
-            "mangledName": "$s17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA0I0CyAA0dH0OSgGvp",
+            "usr": "s:17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA04OttuI0CyAA0dH0OSgGvp",
+            "mangledName": "$s17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA04OttuI0CyAA0dH0OSgGvp",
             "moduleName": "ottu_checkout_sdk",
             "implicit": true,
             "accessors": [
@@ -13002,8 +13002,8 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Observable",
-                    "printedName": "ottu_checkout_sdk.Observable<ottu_checkout_sdk.PaymentType?>",
+                    "name": "OttuObservable",
+                    "printedName": "ottu_checkout_sdk.OttuObservable<ottu_checkout_sdk.PaymentType?>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -13020,12 +13020,12 @@
                         "usr": "s:Sq"
                       }
                     ],
-                    "usr": "s:17ottu_checkout_sdk10ObservableC"
+                    "usr": "s:17ottu_checkout_sdk14OttuObservableC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA0I0CyAA0dH0OSgGvg",
-                "mangledName": "$s17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA0I0CyAA0dH0OSgGvg",
+                "usr": "s:17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA04OttuI0CyAA0dH0OSgGvg",
+                "mangledName": "$s17ottu_checkout_sdk11PaymentCoreC09$selectedD20MethodTypeObservableAA04OttuI0CyAA0dH0OSgGvg",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18607,8 +18607,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Observable",
-        "printedName": "Observable",
+        "name": "OttuObservable",
+        "printedName": "OttuObservable",
         "children": [
           {
             "kind": "Var",
@@ -18622,8 +18622,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk10ObservableC12wrappedValuexvp",
-            "mangledName": "$s17ottu_checkout_sdk10ObservableC12wrappedValuexvp",
+            "usr": "s:17ottu_checkout_sdk14OttuObservableC12wrappedValuexvp",
+            "mangledName": "$s17ottu_checkout_sdk14OttuObservableC12wrappedValuexvp",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -18641,8 +18641,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk10ObservableC12wrappedValuexvg",
-                "mangledName": "$s17ottu_checkout_sdk10ObservableC12wrappedValuexvg",
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC12wrappedValuexvg",
+                "mangledName": "$s17ottu_checkout_sdk14OttuObservableC12wrappedValuexvg",
                 "moduleName": "ottu_checkout_sdk",
                 "genericSig": "<τ_0_0>",
                 "sugared_genericSig": "<Value>",
@@ -18665,8 +18665,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk10ObservableC12wrappedValuexvs",
-                "mangledName": "$s17ottu_checkout_sdk10ObservableC12wrappedValuexvs",
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC12wrappedValuexvs",
+                "mangledName": "$s17ottu_checkout_sdk14OttuObservableC12wrappedValuexvs",
                 "moduleName": "ottu_checkout_sdk",
                 "genericSig": "<τ_0_0>",
                 "sugared_genericSig": "<Value>",
@@ -18684,8 +18684,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk10ObservableC12wrappedValuexvM",
-                "mangledName": "$s17ottu_checkout_sdk10ObservableC12wrappedValuexvM",
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC12wrappedValuexvM",
+                "mangledName": "$s17ottu_checkout_sdk14OttuObservableC12wrappedValuexvM",
                 "moduleName": "ottu_checkout_sdk",
                 "genericSig": "<τ_0_0>",
                 "sugared_genericSig": "<Value>",
@@ -18701,8 +18701,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Observable",
-                "printedName": "ottu_checkout_sdk.Observable<τ_0_0>",
+                "name": "OttuObservable",
+                "printedName": "ottu_checkout_sdk.OttuObservable<τ_0_0>",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -18710,12 +18710,12 @@
                     "printedName": "τ_0_0"
                   }
                 ],
-                "usr": "s:17ottu_checkout_sdk10ObservableC"
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk10ObservableC14projectedValueACyxGvp",
-            "mangledName": "$s17ottu_checkout_sdk10ObservableC14projectedValueACyxGvp",
+            "usr": "s:17ottu_checkout_sdk14OttuObservableC14projectedValueACyxGvp",
+            "mangledName": "$s17ottu_checkout_sdk14OttuObservableC14projectedValueACyxGvp",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -18728,8 +18728,8 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Observable",
-                    "printedName": "ottu_checkout_sdk.Observable<τ_0_0>",
+                    "name": "OttuObservable",
+                    "printedName": "ottu_checkout_sdk.OttuObservable<τ_0_0>",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -18737,12 +18737,12 @@
                         "printedName": "τ_0_0"
                       }
                     ],
-                    "usr": "s:17ottu_checkout_sdk10ObservableC"
+                    "usr": "s:17ottu_checkout_sdk14OttuObservableC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk10ObservableC14projectedValueACyxGvg",
-                "mangledName": "$s17ottu_checkout_sdk10ObservableC14projectedValueACyxGvg",
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC14projectedValueACyxGvg",
+                "mangledName": "$s17ottu_checkout_sdk14OttuObservableC14projectedValueACyxGvg",
                 "moduleName": "ottu_checkout_sdk",
                 "genericSig": "<τ_0_0>",
                 "sugared_genericSig": "<Value>",
@@ -18757,8 +18757,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Observable",
-                "printedName": "ottu_checkout_sdk.Observable<τ_0_0>",
+                "name": "OttuObservable",
+                "printedName": "ottu_checkout_sdk.OttuObservable<τ_0_0>",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -18766,7 +18766,7 @@
                     "printedName": "τ_0_0"
                   }
                 ],
-                "usr": "s:17ottu_checkout_sdk10ObservableC"
+                "usr": "s:17ottu_checkout_sdk14OttuObservableC"
               },
               {
                 "kind": "TypeNominal",
@@ -18775,8 +18775,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk10ObservableC12wrappedValueACyxGx_tcfc",
-            "mangledName": "$s17ottu_checkout_sdk10ObservableC12wrappedValueACyxGx_tcfc",
+            "usr": "s:17ottu_checkout_sdk14OttuObservableC12wrappedValueACyxGx_tcfc",
+            "mangledName": "$s17ottu_checkout_sdk14OttuObservableC12wrappedValueACyxGx_tcfc",
             "moduleName": "ottu_checkout_sdk",
             "genericSig": "<τ_0_0>",
             "sugared_genericSig": "<Value>",
@@ -18815,8 +18815,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17ottu_checkout_sdk10ObservableC9subscribeyAA10DisposableCyxcF",
-            "mangledName": "$s17ottu_checkout_sdk10ObservableC9subscribeyAA10DisposableCyxcF",
+            "usr": "s:17ottu_checkout_sdk14OttuObservableC9subscribeyAA10DisposableCyxcF",
+            "mangledName": "$s17ottu_checkout_sdk14OttuObservableC9subscribeyAA10DisposableCyxcF",
             "moduleName": "ottu_checkout_sdk",
             "genericSig": "<τ_0_0>",
             "sugared_genericSig": "<Value>",
@@ -18827,8 +18827,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:17ottu_checkout_sdk10ObservableC",
-        "mangledName": "$s17ottu_checkout_sdk10ObservableC",
+        "usr": "s:17ottu_checkout_sdk14OttuObservableC",
+        "mangledName": "$s17ottu_checkout_sdk14OttuObservableC",
         "moduleName": "ottu_checkout_sdk",
         "genericSig": "<τ_0_0>",
         "sugared_genericSig": "<Value>",
@@ -25412,54 +25412,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "LoadingPresenter",
-        "printedName": "LoadingPresenter",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(loadingView:core:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LoadingPresenter",
-                "printedName": "ottu_checkout_sdk.LoadingPresenter",
-                "usr": "s:17ottu_checkout_sdk16LoadingPresenterC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "LoadingView",
-                "printedName": "ottu_checkout_sdk.LoadingView",
-                "usr": "s:17ottu_checkout_sdk11LoadingViewP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PaymentCore",
-                "printedName": "ottu_checkout_sdk.PaymentCore",
-                "usr": "s:17ottu_checkout_sdk11PaymentCoreC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk16LoadingPresenterC11loadingView4coreAcA0dG0_p_AA11PaymentCoreCtcfc",
-            "mangledName": "$s17ottu_checkout_sdk16LoadingPresenterC11loadingView4coreAcA0dG0_p_AA11PaymentCoreCtcfc",
-            "moduleName": "ottu_checkout_sdk",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:17ottu_checkout_sdk16LoadingPresenterC",
-        "mangledName": "$s17ottu_checkout_sdk16LoadingPresenterC",
-        "moduleName": "ottu_checkout_sdk",
-        "declAttributes": [
-          "Final",
-          "AccessControl"
         ]
       },
       {
@@ -37670,329 +37622,329 @@
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1116,
+      "offset": 1120,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1785,
+      "offset": 1801,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1968,
+      "offset": 1984,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 2054,
+      "offset": 2070,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 2108,
+      "offset": 2124,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2349,
+      "offset": 2365,
       "length": 75,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2371,
+      "offset": 2387,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/pymt-txn\/submit\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2422,
+      "offset": 2438,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2751,
+      "offset": 2767,
       "length": 77,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2773,
+      "offset": 2789,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/concur-payer-view\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 2826,
+      "offset": 2842,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4355,
+      "offset": 4371,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4409,
+      "offset": 4425,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4583,
+      "offset": 4599,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 5565,
+      "offset": 5581,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 5660,
+      "offset": 5676,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 5951,
+      "offset": 5967,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 6270,
+      "offset": 6286,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 7012,
+      "offset": 7028,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 7634,
+      "offset": 7650,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 7763,
+      "offset": 7779,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 8642,
+      "offset": 8658,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 8836,
+      "offset": 8852,
       "length": 9,
       "value": "\"channel\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 8854,
+      "offset": 8870,
       "length": 12,
       "value": "\"mobile_sdk\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "Array",
-      "offset": 8941,
+      "offset": 8957,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 9478,
+      "offset": 9494,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 9800,
+      "offset": 9816,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 10128,
+      "offset": 10144,
       "length": 32,
       "value": "\"ApplePay service not available\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 10554,
+      "offset": 10570,
       "length": 20,
       "value": "\"Connectivity error\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 10662,
+      "offset": 10678,
       "length": 14,
       "value": "\"Invalid data\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 10994,
+      "offset": 11010,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 11603,
+      "offset": 11619,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12309,
+      "offset": 12325,
       "length": 16,
       "value": "\"payment_method\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12327,
+      "offset": 12343,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12348,
+      "offset": 12364,
       "length": 13,
       "value": "\"merchant_id\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12387,
+      "offset": 12403,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12424,
+      "offset": 12440,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12452,
+      "offset": 12468,
       "length": 5,
       "value": "\"cvv\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 12542,
+      "offset": 12558,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 12735,
+      "offset": 12751,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 12865,
+      "offset": 12881,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 13532,
+      "offset": 13548,
       "length": 154,
       "value": "\"<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>iframe{width:100%;}<\/style><\/head><body>\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 13671,
+      "offset": 13687,
       "length": 2,
       "value": "\"<\/body><\/html>\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 14491,
+      "offset": 14507,
       "length": 38,
       "value": "\"Error: \""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 14528,
+      "offset": 14544,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 14700,
+      "offset": 14716,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/opylypenko\/Plexteq\/Projects\/Ottu\/new\/ottu-sdk\/ottu_checkout_sdk\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 14891,
+      "offset": 14907,
       "length": 5,
       "value": "false"
     },
