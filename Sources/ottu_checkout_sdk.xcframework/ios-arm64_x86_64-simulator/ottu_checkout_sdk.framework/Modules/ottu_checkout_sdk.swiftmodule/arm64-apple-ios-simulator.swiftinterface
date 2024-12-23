@@ -331,10 +331,10 @@ public protocol PaymentCoreDelegate {
   func errorOccured(message: Swift.String)
 }
 public class PaymentCore {
-  @ottu_checkout_sdk.Observable @_projectedValueProperty($selectedPaymentMethodTypeObservable) public var selectedPaymentMethodTypeObservable: ottu_checkout_sdk.PaymentType? {
+  @ottu_checkout_sdk.OttuObservable @_projectedValueProperty($selectedPaymentMethodTypeObservable) public var selectedPaymentMethodTypeObservable: ottu_checkout_sdk.PaymentType? {
     get
   }
-  public var $selectedPaymentMethodTypeObservable: ottu_checkout_sdk.Observable<ottu_checkout_sdk.PaymentType?> {
+  public var $selectedPaymentMethodTypeObservable: ottu_checkout_sdk.OttuObservable<ottu_checkout_sdk.PaymentType?> {
     get
   }
   public func selectPaymentMethodType(_ type: ottu_checkout_sdk.PaymentType?)
@@ -526,17 +526,17 @@ final public class ApplePaySubmiter {
   }
   @objc deinit
 }
-@propertyWrapper public class Observable<Value> {
+@propertyWrapper public class OttuObservable<Value> {
   public typealias Observer = (Value) -> Swift.Void
   public var wrappedValue: Value {
     get
     set
   }
-  public var projectedValue: ottu_checkout_sdk.Observable<Value> {
+  public var projectedValue: ottu_checkout_sdk.OttuObservable<Value> {
     get
   }
   public init(wrappedValue: Value)
-  public func subscribe(_ observer: @escaping ottu_checkout_sdk.Observable<Value>.Observer) -> ottu_checkout_sdk.Disposable
+  public func subscribe(_ observer: @escaping ottu_checkout_sdk.OttuObservable<Value>.Observer) -> ottu_checkout_sdk.Disposable
   @objc deinit
 }
 public class Disposable {
@@ -790,10 +790,6 @@ public struct CVVCodeViewModel {
 }
 public protocol LoadingView : AnyObject {
   func display(viewModel: ottu_checkout_sdk.LoadingViewModel)
-}
-final public class LoadingPresenter {
-  public init(loadingView: any ottu_checkout_sdk.LoadingView, core: ottu_checkout_sdk.PaymentCore)
-  @objc deinit
 }
 public protocol PhoneNumberView {
   func display(viewModel: ottu_checkout_sdk.PhoneNumberViewModel)
