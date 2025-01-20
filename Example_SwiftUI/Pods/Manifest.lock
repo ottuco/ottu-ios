@@ -1,0 +1,40 @@
+PODS:
+  - CocoaLumberjack (3.8.5):
+    - CocoaLumberjack/Core (= 3.8.5)
+  - CocoaLumberjack/Core (3.8.5)
+  - ottu_checkout_sdk (1.0.21):
+    - Sentry (~> 8.33.0)
+    - SVGKit (~> 3.x)
+  - Sentry (8.33.0):
+    - Sentry/Core (= 8.33.0)
+  - Sentry/Core (8.33.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
+
+DEPENDENCIES:
+  - ottu_checkout_sdk (from `https://github.com/ottuco/ottu-ios.git`)
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - Sentry
+    - SVGKit
+
+EXTERNAL SOURCES:
+  ottu_checkout_sdk:
+    :git: https://github.com/ottuco/ottu-ios.git
+
+CHECKOUT OPTIONS:
+  ottu_checkout_sdk:
+    :commit: 21a6d83d211117f21d6163f2c71aae16e1ad794b
+    :git: https://github.com/ottuco/ottu-ios.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
+  ottu_checkout_sdk: cba0db2652dc52a48f11afaca9d9874f0842e751
+  Sentry: 8560050221424aef0bebc8e31eedf00af80f90a6
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+
+PODFILE CHECKSUM: 85c67348a8f7153171c7f1aedd0919a8cae7a0d5
+
+COCOAPODS: 1.16.2

@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-test_ottu/Pods-test_ottu-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
+${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ottu_checkout_sdk/ottu_checkout_sdk.framework/ottu_checkout_sdk

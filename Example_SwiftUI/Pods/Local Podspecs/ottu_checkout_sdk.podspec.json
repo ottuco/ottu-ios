@@ -1,0 +1,36 @@
+{
+  "name": "ottu_checkout_sdk",
+  "version": "1.0.21",
+  "summary": "The ottu_checkout_sdk iOS SDK makes it quick and easy to build an excellent payment experience in your iOS app.",
+  "description": "**Simplified security**: We make it simple for you to collect sensitive data such as credit card numbers and remain PCI compliant.\n**Apple Pay**: We provide a [seamless integration with Apple Pay]().",
+  "homepage": "https://github.com/ottuco/ottu-ios.git",
+  "license": {
+    "type": "Copyright",
+    "text": "                   Copyright 2024\n                   Permission is granted to Ottu\n"
+  },
+  "authors": {
+    "ottuco": "ottuco@ottuco.com"
+  },
+  "source": {
+    "git": "https://github.com/ottuco/ottu-ios.git",
+    "tag": "1.0.21"
+  },
+  "vendored_frameworks": "Sources/ottu_checkout_sdk.xcframework",
+  "dependencies": {
+    "Sentry": [
+      "~> 8.33.0"
+    ],
+    "SVGKit": [
+      "~> 3.x"
+    ]
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.0",
+  "static_framework": true,
+  "user_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": "\"\\$(PODS_ROOT)/ottu_checkout_sdk/ottu_checkout_sdk.xcframework\""
+  },
+  "swift_version": "5.0"
+}

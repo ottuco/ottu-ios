@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "2gp-iO-iFe"; */
+"2gp-iO-iFe.normalTitle" = "Resend";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "TS8-y3-vRu"; */
+"TS8-y3-vRu.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "I didn’t get a code"; ObjectID = "ZNM-zk-bK3"; */
+"ZNM-zk-bK3.text" = "I didn’t get a code";
+
+/* Class = "UILabel"; text = "Enter the code we sent to\n+965 1234 1234"; ObjectID = "eBw-jD-qbT"; */
+"eBw-jD-qbT.text" = "Enter the code we sent to\n+965 1234 1234";
+
+/* Class = "UILabel"; text = "OTP is invalid or expired."; ObjectID = "r3b-q4-L4i"; */
+"r3b-q4-L4i.text" = "OTP is invalid or expired.";

@@ -1,0 +1,11 @@
+framework module ottu_checkout_sdk {
+  umbrella header "ottu_checkout_sdk.h"
+  export *
+
+  module * { export * }
+}
+
+module ottu_checkout_sdk.Swift {
+  header "ottu_checkout_sdk-Swift.h"
+  requires objc
+}
