@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ottu_checkout_sdk
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import DeveloperToolsSupport
 import Foundation
 import PassKit
@@ -16,7 +16,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @_exported import ottu_checkout_sdk
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var isShimmering: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var isShimmering: Swift.Bool {
     get
     set
   }
@@ -314,7 +314,7 @@ public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: ottu_checkout_sdk.FormOfPayment, b: ottu_checkout_sdk.FormOfPayment) -> Swift.Bool
   public typealias AllCases = [ottu_checkout_sdk.FormOfPayment]
-  public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
+  nonisolated public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
     get
   }
   public var hashValue: Swift.Int {
@@ -748,6 +748,7 @@ public class LabelComponent {
 }
 public struct PaymentViewModel {
   public var selectPaymentMethodIsHidden: Swift.Bool
+  public var paymentDetailsIsHidden: Swift.Bool
   public var cvvCodeIsHidden: Swift.Bool
   public var payButtonIsHidden: Swift.Bool
 }
@@ -926,11 +927,9 @@ public struct RemoteCard : Swift.Decodable {
   public let cvv_required: Swift.Bool
   public let delete_url: Foundation.URL
   public let submit_url: Foundation.URL
-  #if compiler(>=5.3) && $EffectfulProp
   public var card: ottu_checkout_sdk.Card {
     get throws
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 public protocol ListPaymentMethodsView : AnyObject {
@@ -969,11 +968,9 @@ public struct RemotePaymentMethod : Swift.Decodable {
   public let redirect_url: Foundation.URL?
   public let can_save_card: Swift.Bool
   public let submit_url: Foundation.URL?
-  #if compiler(>=5.3) && $EffectfulProp
   public var paymentMethod: ottu_checkout_sdk.PaymentMethod {
     get throws
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RemotePaymentService : Swift.Decodable {
@@ -1002,11 +999,9 @@ public struct RemotePaymentService : Swift.Decodable {
   public let total_price: Swift.String?
   public let submit_url: Foundation.URL?
   public let payment_url: Foundation.URL
-  #if compiler(>=5.3) && $EffectfulProp
   public var applePayService: ottu_checkout_sdk.ApplePayService? {
     get throws
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RemoteResponse : Swift.Decodable {
@@ -1019,11 +1014,9 @@ public struct RemoteResponse : Swift.Decodable {
   public let redirect_url: Foundation.URL?
   public let form_of_payment: Swift.String?
   public let challenge_occurred: Swift.Bool?
-  #if compiler(>=5.3) && $EffectfulProp
   public var response: ottu_checkout_sdk.TransactionDetailsResponse {
     get throws
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct RemoteTransactionDetails : Swift.Decodable {
@@ -1041,11 +1034,9 @@ public struct RemoteTransactionDetails : Swift.Decodable {
   public let type: Swift.String
   public let is_amount_editable: Swift.Bool
   public let session_id: Swift.String
-  #if compiler(>=5.3) && $EffectfulProp
   public var transactionDetails: ottu_checkout_sdk.TransactionDetails {
     get throws
   }
-  #endif
   public init(from decoder: any Swift.Decoder) throws
 }
 extension Foundation.HTTPURLResponse {
@@ -1102,10 +1093,10 @@ final public class URLSessionHTTPClient : ottu_checkout_sdk.HTTPClient {
   @objc deinit
 }
 extension ottu_checkout_sdk.BottomSheetTransitioningDelegate : UIKit.UIViewControllerTransitioningDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor(unsafe) @objc final public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor(unsafe) @objc final public func interactionControllerForDismissal(using animator: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
+  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  @_Concurrency.MainActor @preconcurrency @objc final public func interactionControllerForDismissal(using animator: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
 }
 public class CheckoutTheme {
   public var backgroundColor: UIKit.UIColor

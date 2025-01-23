@@ -8,6 +8,7 @@ import Foundation
 import MetricKit
 import ObjectiveC.NSObjCRuntime
 import ObjectiveC
+import PhotosUI
 @_exported import Sentry
 import Swift
 import UIKit
@@ -34,7 +35,6 @@ import _SwiftConcurrencyShims
   }
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class SentryExperimentalOptions : ObjectiveC.NSObject {
-  @objc public var sessionReplay: Sentry.SentryReplayOptions
   @objc override dynamic public init()
   @objc deinit
 }
@@ -65,6 +65,7 @@ import _SwiftConcurrencyShims
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 13.0, *)
 @objcMembers public class SentryUserFeedbackConfiguration : ObjectiveC.NSObject {
+  @objc public var animations: Swift.Bool
   @objc public var configureWidget: ((Sentry.SentryUserFeedbackWidgetConfiguration) -> Swift.Void)?
   @objc public var useShakeGesture: Swift.Bool
   @objc public var showFormForScreenshots: Swift.Bool
@@ -133,7 +134,6 @@ extension Sentry.SentryLevel : Swift.CustomStringConvertible {
 @objc @_inheritsConvenienceInitializers @available(iOS 13.0, *)
 @objcMembers public class SentryUserFeedbackWidgetConfiguration : ObjectiveC.NSObject {
   @objc public var autoInject: Swift.Bool
-  @objc public var animations: Swift.Bool
   @objc public var labelText: Swift.String? {
     @objc get
     @objc set

@@ -167,7 +167,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                          "benefitpay",
                          "stc_pay",
                          "nbk-mpgs",
-                         "apple-pay-nbk"],
+                         "apple-pay-test"],
             "type": "e_commerce",
             "include_sdk_setup_preload": "true"
           ]
