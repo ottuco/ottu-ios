@@ -46,8 +46,7 @@ pod 'ottu_checkout_sdk'
 In ViewController.swift, just import Ottu framework and initalize Ottu SDK.
 
 ```swift
-import ottu_sdk
-import ottu_ios_sdk
+import ottu_checkout_sdk
 
 class ViewController: UIViewController,OttuDelegate {
 
