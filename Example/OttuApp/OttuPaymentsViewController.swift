@@ -10,12 +10,11 @@ import ottu_checkout_sdk
 
 class OttuPaymentsViewController: UIViewController {
    
-    @IBOutlet weak var paymentContainerView: UIView!
+    var paymentContainerView = UIView()
     
-    @IBOutlet weak var paymentSuccessfullLabel: UILabel!
     private var checkout: Checkout?
     
-    var formsOfPayment = [FormOfPayment]()
+    var formsOfPayment = [ottu_checkout_sdk.FormOfPayment]()
     var showPaymentDetails: Bool = true
     var sessionId: String?
     var merchantId: String?
@@ -26,10 +25,18 @@ class OttuPaymentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .orange
+
+        paymentContainerView.translatesAutoresizingMaskIntoConstraints = false
+        paymentContainerView.clipsToBounds = true
+        view.addSubview(paymentContainerView)
         
-        paymentSuccessfullLabel.isHidden = true
-        
+        NSLayoutConstraint.activate([
+            paymentContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
+            paymentContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
+        ])
+      
         guard let sessionId, let merchantId, let apiKey else { return }
         
         theme.showPaymentDetails = showPaymentDetails
@@ -46,17 +53,17 @@ class OttuPaymentsViewController: UIViewController {
         
         if let paymentViewController = self.checkout?.paymentViewController(), let paymentView = paymentViewController.view {
             
+            paymentView.translatesAutoresizingMaskIntoConstraints = false
+            
             self.addChild(paymentViewController)
             self.paymentContainerView.addSubview(paymentView)
             paymentViewController.didMove(toParent: self)
             
-            paymentView.translatesAutoresizingMaskIntoConstraints = false
-            
             NSLayoutConstraint.activate([
-                paymentView.leadingAnchor.constraint(equalTo: self.paymentContainerView.leadingAnchor),
-                self.paymentContainerView.trailingAnchor.constraint(equalTo: paymentView.trailingAnchor),
-                paymentView.topAnchor.constraint(equalTo: self.paymentContainerView.topAnchor),
-                self.paymentContainerView.bottomAnchor.constraint(equalTo: paymentView.bottomAnchor)
+                paymentContainerView.leadingAnchor.constraint(equalTo: paymentView.leadingAnchor),
+                paymentView.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
+                paymentContainerView.topAnchor.constraint(equalTo: paymentView.topAnchor),
+                paymentView.bottomAnchor.constraint(equalTo: paymentContainerView.bottomAnchor),
             ])
         }
     }
@@ -96,8 +103,7 @@ extension OttuPaymentsViewController: OttuDelegate {
     
     func successCallback(_ data: [String : Any]?) {
         DispatchQueue.main.async {
-            self.paymentContainerView.isHidden = true
-            self.paymentSuccessfullLabel.isHidden = false
+            self.replaceSDKContentToSuccessMessage()
             
             let alert = UIAlertController(title: "Success", message: data?.debugDescription ?? "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
@@ -105,4 +111,33 @@ extension OttuPaymentsViewController: OttuDelegate {
         }
     }
 
+    private func replaceSDKContentToSuccessMessage() {
+        paymentContainerView.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
+        
+        let label = successLabel()
+        paymentContainerView.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            paymentContainerView.leadingAnchor.constraint(equalTo: label.leadingAnchor),
+            label.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
+            paymentContainerView.topAnchor.constraint(equalTo: label.topAnchor),
+            label.bottomAnchor.constraint(equalTo: paymentContainerView.bottomAnchor),
+            label.heightAnchor.constraint(equalToConstant: 60)
+        ])
+    }
+    
+    private func successLabel() -> UILabel {
+        let message = NSLocalizedString("successfully", tableName: "Ottu", bundle: Bundle(for: Self.self), comment: "")
+        
+        let label = UILabel()
+        label.text = message
+        label.backgroundColor = .white
+        label.textAlignment = .center
+        
+        return label
+    }
 }

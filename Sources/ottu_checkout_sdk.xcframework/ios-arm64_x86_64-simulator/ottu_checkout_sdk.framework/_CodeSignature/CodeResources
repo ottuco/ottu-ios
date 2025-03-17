@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		LksiAWYg0HHhg1DA2vE4yZ9qULg=
+		L5ow1XSfoffCHhrjHUL3RuAt+0g=
 		</data>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/n7U-fh-g5z-view-ZqW-u2-BVo.nib</key>
 		<data>
-		g6bO5n8+8HuMUK+TIlLjEZ4BrI8=
+		OcBHnGSZDOgMR47CiyNTxyI6H0o=
 		</data>
 		<key>Base.lproj/OTPCodeViewController.storyboardc/Info.plist</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/ottu_checkout_sdk-Swift.h</key>
 		<data>
-		gDwgWmURNmMPvlDxvXE4FYlr6bQ=
+		RbJqQDbOCoxfxdwhVTQQV4AqQcw=
 		</data>
 		<key>Headers/ottu_checkout_sdk.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5o2EauKl+cQRQTOzO7EZHckoj2A=
+		s7zfPnQipt4efXMe7ViznW7S0kA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,43 +50,55 @@
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		E4twCjCa6U3+HHgeMSg7keJjC/M=
+		kkqMAUHR04EDh/fxIGJ258BTig4=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hq+SGSVHifTE3RzQsVggvfIQVno=
+		xZeYVBKrgAsxwSym3Eq1EwiG+7c=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		g94cR9i85sEaypN6BRKf64/cRmE=
+		3apAM7SrUTHzxBMAfxqX4mHixgo=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hq+SGSVHifTE3RzQsVggvfIQVno=
+		xZeYVBKrgAsxwSym3Eq1EwiG+7c=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pH4Bx03vu9D0nyMDCK8L4CBcYu0=
+		ZRr00rEUMttzGdX1U7jqCBNU8gU=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		E4twCjCa6U3+HHgeMSg7keJjC/M=
+		EnCm9FAfvReZ3ZApr6k76MJZQuk=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gO6veEZPZhJbLdOXcFfrV8Vv1iQ=
+		0TvQnpM23ulfLyI8yKcVQQoNb4Q=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vqcHMe7qpzPisoySQ1MAzG59L5g=
+		TwI2Wd6XHSjTtGobGpewZtvlgK8=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gO6veEZPZhJbLdOXcFfrV8Vv1iQ=
+		0TvQnpM23ulfLyI8yKcVQQoNb4Q=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nUE0y3SQV7Rxpw5AVho1MV1WrzE=
+		s0c1WRVK1zumAWbkb2f3HRVEs4U=
+		</data>
+		<key>NewCardViewController.storyboardc/Info.plist</key>
+		<data>
+		tBp8F5+vUrV9zE//8WhGR0o1EEA=
+		</data>
+		<key>NewCardViewController.storyboardc/UIViewController-bHz-bl-DLq.nib</key>
+		<data>
+		zLRzzux1yD/AVH7xPgzZ0otPDm8=
+		</data>
+		<key>NewCardViewController.storyboardc/bHz-bl-DLq-view-ef3-fl-8hB.nib</key>
+		<data>
+		wu733KAGgehdBLWnY7P9vpw1KSQ=
 		</data>
 		<key>PhoneNumberViewController.storyboardc/Info.plist</key>
 		<data>
@@ -102,13 +114,31 @@
 		</data>
 		<key>SaveSwitchControl.nib</key>
 		<data>
-		jz63BTITqgRceascF6476Ux1B2U=
+		+MHBKNXhkOwevbHerzVz5wZ2qks=
 		</data>
 		<key>ar.lproj/CVVTextEdit.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			e9qyl1KrDz0Z3E3STEiy+vf9yhY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/Flex.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zq9wrzS3Z58l9+voFhbU7cgxnl8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/General.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YgtNd/XaXv3N0IztBHC1HhcbLJ8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -127,6 +157,15 @@
 			<key>hash</key>
 			<data>
 			ND537CmoFarIxmtVnd8kWV/eJBk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/NewCard.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5+9+YeDv4VZUT+Is1SyW/2X1Sgo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -185,6 +224,15 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>ar.lproj/Security.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gR9UxzTxYVztUufQsavonpeq6k8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ar.lproj/SelectedPaymentMethod.strings</key>
 		<dict>
 			<key>hash</key>
@@ -203,6 +251,24 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>en.lproj/Flex.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YZvmZnFnHcnBJM8+UOpFkTlVAow=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/General.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			luXrFLgoLx5Dj1zepETCY7sKeno=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>en.lproj/ListPaymentDeleteAlert.strings</key>
 		<dict>
 			<key>hash</key>
@@ -217,6 +283,15 @@
 			<key>hash</key>
 			<data>
 			ygbC0BGHtk5nJ8k4GZUNrQ1w/R4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/NewCard.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X0U6tuIWQf9MQcihmIH/yYorXK8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -270,7 +345,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jibVgssNgHnghwUp4TikbDZz7z4=
+			Hu9I7Qwvn5RIVMtH8awhABZW9gA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/Security.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			R1FbBDd1v5hGkyh9I2RkPkOf64A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -291,7 +375,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GVELgEBWMML7xMwLvT6dlmeY0ivL0+4Do9ui00Tef6A=
+			QtNiXdkfUSJh5lOBv3gP+d+GclBsWrlvnZ/chAKLp3g=
 			</data>
 		</dict>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
@@ -312,7 +396,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2ebO4SP50GqUkEhXTlV6tTitUEhS4N7DWHANxsBrOMw=
+			e0rjhXz4ZFuv/0LbKgqT2Y2MpIYvirRgf6C2xQ9UavI=
 			</data>
 		</dict>
 		<key>Base.lproj/OTPCodeViewController.storyboardc/Info.plist</key>
@@ -340,7 +424,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VdrcqGgh2EocC/OFok4VlgOzDKWmW24uKmNfbJfVgWU=
+			mOllG+wnhXmyhhkZjvWEOZ7pDZdKEohJsGxvCSzKies=
 			</data>
 		</dict>
 		<key>Headers/ottu_checkout_sdk.h</key>
@@ -361,70 +445,91 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MIbGNXebo6VJF+td3F18CRMYMpsBnr4vP2MiilCCPMA=
+			m/6jTKhkQxBE9rHyj986jq6TdpYTeicwvMMAkKoFEQg=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ehUfRANbBRBTpYqC6cmXl6GX5MSf1mALEGx4rMmdpas=
+			j4AlJkBvMcslt0lndanY2vM6G4oNBcunY6Vk1rhJytM=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5MVPcT7Vv4BWTIpHwjeJmpfzme2RkIgqMLTo64gXClw=
+			7jU5JTybrpcPeFiEqenI3fSfgNIDVs4CdOgTZKP421w=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ehUfRANbBRBTpYqC6cmXl6GX5MSf1mALEGx4rMmdpas=
+			j4AlJkBvMcslt0lndanY2vM6G4oNBcunY6Vk1rhJytM=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V65rDiIUkA21hGNLoEZ3ZF61hObLxl5HJVOQHLvWuZg=
+			ubizCe2qKYcj/q8DBrMWpWxHak1wGfgNenmfHRIAsVQ=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MIbGNXebo6VJF+td3F18CRMYMpsBnr4vP2MiilCCPMA=
+			NlUoYW9hdgE8lHwpsUOnWa4i/qvcwKo4wDUyYm4/9WQ=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uDXPQ0SXoZY6NZImuOXaep+By4ClXdEc9jjDnJMMpfs=
+			4eriWmCi9K/fCAiaXIpLL9fL8f4gAprhuX7S/ne4r7E=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h2uVjr0wraPX3pOnfDw56YkzNZ1FVfEPUcdT4Xc3Veg=
+			fDv55KH1dEAZQ/tOyYssCyhT3ssLE9lYuZWTM+RpBG0=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uDXPQ0SXoZY6NZImuOXaep+By4ClXdEc9jjDnJMMpfs=
+			4eriWmCi9K/fCAiaXIpLL9fL8f4gAprhuX7S/ne4r7E=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MD/kxinScDcXPh2l/pf3YlWnEAizWnsLTIcUhjnys4s=
+			LLZH1tOPkNvZaDEB57VpLE9SBupbvDVLdO/RiWwmxV4=
+			</data>
+		</dict>
+		<key>NewCardViewController.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dO9KdqLmDbAqtvWEhQUX4YMvAkK3E1fPKcsdR1Pbi0o=
+			</data>
+		</dict>
+		<key>NewCardViewController.storyboardc/UIViewController-bHz-bl-DLq.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t2jDJL8GY1D/fO3VlOS8yJ0oDVHCrAUb/DbYHsIGTcg=
+			</data>
+		</dict>
+		<key>NewCardViewController.storyboardc/bHz-bl-DLq-view-ef3-fl-8hB.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qnTOgkQUBBNwtgoBdzyJxIjO7yyXJWbz/pBzX91TRS0=
 			</data>
 		</dict>
 		<key>PhoneNumberViewController.storyboardc/Info.plist</key>
@@ -452,7 +557,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cGlxd7kZ/xlHAeqgsyjNearBat94l26OBaeIvCuq5I8=
+			UUNlVKVH6nfBEtQ/OHbzGa7XrKRJvxVpHGP3CplY718=
 			</data>
 		</dict>
 		<key>ar.lproj/CVVTextEdit.strings</key>
@@ -460,6 +565,24 @@
 			<key>hash2</key>
 			<data>
 			fqeuI7SGqRmBHc8P4Ba5StCKA2YojiojppuDp9QYpsI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/Flex.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Fbi/yGAgqTv2S+evyB1jtNJtKBZHslya+or4Lsd7Rg4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/General.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0aqX9GjBtQF5roN/0eEN+wAaPOJ/D5cePH6913noLQQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -478,6 +601,15 @@
 			<key>hash2</key>
 			<data>
 			QzFVI1ahppsRCYWLbwv2MqwO0d1ALmooC9h61Ints3E=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ar.lproj/NewCard.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vPwtFprcMXeahi1exffWdy8oxASlaO3sq48iYPS0a0w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -536,6 +668,15 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>ar.lproj/Security.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/wdhtmOUxCqwhdkG1NBn+LaKd1b5vo00xjNc67PbH3M=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ar.lproj/SelectedPaymentMethod.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -554,6 +695,24 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>en.lproj/Flex.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wulJJ6YtIt2Vw5q99O40COwmZT+OYT7pYQ/PH+Z0AXA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/General.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9Z0xJ5LPgRDLjIpWXSyoGglZ+g8FsomuMHYt62mG0AY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>en.lproj/ListPaymentDeleteAlert.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -568,6 +727,15 @@
 			<key>hash2</key>
 			<data>
 			azJT0h/X0CcnisgQqOBOHAk6g5krEfrw31qDPoZjVtw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/NewCard.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V2DP0vaHAo8DJNusfqIzQDMNXElA5ZVc5KZ8ofGI6YQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -621,7 +789,16 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nei2D3qthUOh3ot2kmrBCwrZCP/LyfVUcBoDQJ10Az4=
+			Efx8zek4ADyfrjgi2Oiptyk53Ob3jhhXpB/Wiz/vZEA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en.lproj/Security.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c3FS4bSbhf5+ILYdK7nIgRt6sbujkH4zLq+KTkZRibY=
 			</data>
 			<key>optional</key>
 			<true/>

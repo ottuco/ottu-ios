@@ -1,20 +1,30 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
     name: "ottu_checkout_sdk",
-  
+    platforms: [
+        .iOS(.v14)
+    ],
     products: [
-            .library(name: "ottu_checkout_sdk", targets: ["ottu_checkout_sdk"])
+        .library(
+            name: "ottu_checkout_sdk",
+            targets: ["ottu_checkout_sdk", "ottu_checkout_sdk_dep"]
+        )
     ],
-
     dependencies: [
-            .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0"),
-            .package(url: "https://github.com/SVGKit/SVGKit", from: "3.1.1")
+        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0")
     ],
-    
     targets: [
-             .binaryTarget(name: "ottu_checkout_sdk", path: "Sources/ottu_checkout_sdk.xcframework")
+        .binaryTarget(
+            name: "ottu_checkout_sdk",
+            path: "./Sources/ottu_checkout_sdk.xcframework"
+        ),
+        .target(
+            name: "ottu_checkout_sdk_dep",
+            dependencies: [
+                         .product(name: "Sentry", package: "sentry-cocoa")
+                     ]
+        )
     ]
 )

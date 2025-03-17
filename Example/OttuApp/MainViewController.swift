@@ -16,12 +16,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var currencyCodeTextField: UITextField!
     @IBOutlet weak var customerIdTextField: UITextField!
     @IBOutlet weak var merchantIdTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var apiKeyTextField: UITextField!
-    @IBOutlet weak var applePaySwitch: UISwitch!
-    @IBOutlet weak var ottuPGSwitch: UISwitch!
-    @IBOutlet weak var stcPaySwitch: UISwitch!
-    @IBOutlet weak var redirectSwitch: UISwitch!
-    @IBOutlet weak var tokenPaySwitch: UISwitch!
+    @IBOutlet weak var cardExpiryTimeTextField: UITextField!
+    
+    @IBOutlet var formOfPaymentSwitches: [UISwitch]!
+    @IBOutlet var pgCodeSwitches: [UISwitch]!
+    
     @IBOutlet weak var noFormsOfPaymentSwitch: UISwitch!
     @IBOutlet weak var preloadSwitch: UISwitch!
     @IBOutlet weak var showPaymentDetailsSwitch: UISwitch!
@@ -38,31 +39,33 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
+        
+        amountTextField.text = "10"
+        currencyCodeTextField.text = "KWD"
+        customerIdTextField.text = "john1"
+        merchantIdTextField.text = "alpha.ottu.net"
+        apiKeyTextField.text = "cHSLW0bE.56PLGcUYEhRvzhHVVO9CbF68hmDiXcPI"
+        phoneNumberTextField.text="99459272"
+        cardExpiryTimeTextField.text = ""
+        
+        pgCodeSwitches.forEach {
+            let isOn = !($0.tag == PgCode.ottuSdk.rawValue || $0.tag == PgCode.applePay.rawValue)
+            
+            $0.setOn(isOn, animated: false)
+        }
     }
     
-    
     @IBAction private func didToggleSwith(_ sender: UISwitch) {
-        if sender.tag == 0 {
-                applePaySwitch.isOn = !sender.isOn
-                ottuPGSwitch.isOn = !sender.isOn
-                stcPaySwitch.isOn = !sender.isOn
-                redirectSwitch.isOn = !sender.isOn
-                tokenPaySwitch.isOn = !sender.isOn
-        } else {
-            if (applePaySwitch.isOn == true &&
-                ottuPGSwitch.isOn == true &&
-                stcPaySwitch.isOn == true &&
-                redirectSwitch.isOn == true &&
-                tokenPaySwitch.isOn == true) ||
-                (applePaySwitch.isOn == false &&
-                 ottuPGSwitch.isOn == false &&
-                 stcPaySwitch.isOn == false &&
-                 redirectSwitch.isOn == false &&
-                 tokenPaySwitch.isOn == false) {
-                noFormsOfPaymentSwitch.isOn = true
-            } else {
-                noFormsOfPaymentSwitch.isOn = false
+        if sender.tag == 1000 { //"No form of payments" Switch
+            formOfPaymentSwitches.forEach { $0.setOn(!sender.isOn, animated: true) }
+        } else if (1001...1999).contains(sender.tag) { //Form Of Payment Switches
+            var allSwitchesOff = true
+            formOfPaymentSwitches.forEach {
+                if $0.isOn {
+                    allSwitchesOff = false
+                }
             }
+            noFormsOfPaymentSwitch.isOn = allSwitchesOff
         }
     }
     
@@ -76,22 +79,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             destinationViewController.theme = theme
             
             if let sessionId {
-                var formOfPayments = [FormOfPayment]()
-                if applePaySwitch.isOn {
-                    formOfPayments.append(.applePay)
-                }
-                if ottuPGSwitch.isOn {
-                    formOfPayments.append(.ottuPG)
-                }
-                if stcPaySwitch.isOn {
-                    formOfPayments.append(.stcPay)
-                }
-                if redirectSwitch.isOn {
-                    formOfPayments.append(.redirect)
-                }
-                if tokenPaySwitch.isOn {
-                    formOfPayments.append(.tokenPay)
-                }
+                let formOfPayments = enabledFormsOfPayment()
                 
                 destinationViewController.sessionId = sessionId
                 destinationViewController.formsOfPayment = formOfPayments
@@ -140,6 +128,34 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "toPaymentViewController", sender: self)
     }
     
+    private func enabledFormsOfPayment() -> [ottu_checkout_sdk.FormOfPayment] {
+        var formOfPayments = [ottu_checkout_sdk.FormOfPayment]()
+        formOfPaymentSwitches.forEach {
+            if $0.isOn, let formOfPayment = FormOfPayment(rawValue: $0.tag)?.sdkValue() {
+                formOfPayments.append(formOfPayment)
+            }
+        }
+        return formOfPayments
+    }
+    
+    private func preparePgCodes() -> [String] {
+        var pgCodes = [String]()
+        pgCodeSwitches.forEach {
+            if $0.isOn, !$0.isHidden, let pgCode = PgCode(rawValue: $0.tag)?.stringValue() {
+                pgCodes.append(pgCode)
+            }
+        }
+        return pgCodes
+    }
+    
+    private func prepareMinExpiryTime() -> [String: Int]? {
+        var minExpiryTime: [String: Int]? = nil
+        if let cardExpiryTime = cardExpiryTimeTextField.text, let expiryTime = Int(cardExpiryTime) {
+            minExpiryTime = ["min_expiry_time": expiryTime]
+        }
+        return minExpiryTime
+    }
+        
     private func getSessionId(completion: @escaping (String?) -> Void) {
         guard let amount = amountTextField.text, amount != "",
               let currencyCode = currencyCodeTextField.text, currencyCode != "",
@@ -152,25 +168,32 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let merchantId = merchantIdTextField.text!
-        let isNeededPreload = preloadSwitch.isOn
+        let pgCodes = preparePgCodes()
+        let minExpiryTime = prepareMinExpiryTime()
         
-        let url = URL(string: "https://\(merchantId)/b/checkout/v1/pymt-txn/")!
+        let lang = Locale.current.languageCode == "ar" ? "ar" : "en"
         
         var json: [String: Any] = [
             "amount": amount,
             "currency_code": currencyCode,
-            "pg_codes": ["mpgs-testing",
-                         "ottu_pg_kwd_tkn",
-                         "knet-staging",
-                         "benefit",
-                         "benefitpay",
-                         "stc_pay",
-                         "nbk-mpgs",
-                         "apple-pay-test"],
+            "pg_codes": pgCodes,
             "type": "e_commerce",
-            "include_sdk_setup_preload": "true"
-          ]
+            "language": lang,
+            "customer_first_name": "John",
+            "customer_last_name": "Smith",
+            "customer_email": "john1@some.mail",
+            "billing_address": [
+              "country": "KW",
+              "city": "Kuwait City",
+              "line1": "something"
+            ],
+            "include_sdk_setup_preload": "true",
+            "card_acceptance_criteria": minExpiryTime
+        ].compactMapValues { $0 }
+        
+        if let phoneNumber = phoneNumberTextField.text, phoneNumber != "" {
+            json["customer_phone"] = phoneNumber
+        }
         
         if let customerId = customerIdTextField.text, customerId != "" {
             json["customer_id"] = customerId
@@ -178,6 +201,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
+        let merchantId = merchantIdTextField.text!
+        let isNeededPreload = preloadSwitch.isOn
+        
+        let url = URL(string: "https://\(merchantId)/b/checkout/v1/pymt-txn/")!
+        
+        requestSessionId(url, apyKey, jsonData, isNeededPreload, completion)
+    }
+    
+    private func requestSessionId(_ url: URL, _ apyKey: String, _ jsonData: Data?, _ isNeededPreload: Bool, _ completion: @escaping (String?) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Api-Key \(apyKey)", forHTTPHeaderField: "Authorization")
@@ -201,7 +233,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     } else {
                         self.transactionDetailsPreload = nil
                     }
-                        
+                    
                     completion(sessionId)
                     return
                 }
@@ -214,11 +246,28 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        if textField == cardExpiryTimeTextField {
+            let currentText = textField.text ?? ""
+            let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            
+            if prospectiveText == "" {
+                getSessionIdButton.isEnabled = true
+            } else if let number = Int(prospectiveText), (1...365).contains(number) {
+                getSessionIdButton.isEnabled = true
+            } else {
+                getSessionIdButton.isEnabled = false
+            }
+        }
+        
         payButton.isEnabled = false
         return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == cardExpiryTimeTextField {
+            textField.text = ""
+        }
         textField.resignFirstResponder()
         return true
     }
