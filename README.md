@@ -20,7 +20,7 @@ The Ottu SDK collects data to help us improve our products and prevent fraud. Th
 
 ## Requirements
 
-The Ottu requires Xcode 14.0 or later and is compatible with apps targeting iOS 13 or above.
+The Ottu requires Xcode 15.0 or later and is compatible with apps targeting iOS 14 or above.
 
 ## Getting started
 
