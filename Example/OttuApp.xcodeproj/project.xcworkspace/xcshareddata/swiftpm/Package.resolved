@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ottuco/ottu-ios.git",
       "state" : {
-        "revision" : "7784fc5ab0be98de994aa543ab9c8cc1e518e723",
-        "version" : "2.0.0"
+        "revision" : "c7d84f3a887540454dddb0935dde0062aee69e42",
+        "version" : "2.1.2"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/getsentry/sentry-cocoa",
       "state" : {
-        "revision" : "21223d1c864db0561d91f48d80f269a363a1625d",
-        "version" : "8.47.0"
+        "revision" : "930b78a63f47549c81e6e63c9172584f7d3dfdd6",
+        "version" : "8.52.1"
       }
     }
   ],

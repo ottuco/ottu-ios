@@ -26,8 +26,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var noFormsOfPaymentSwitch: UISwitch!
     @IBOutlet weak var preloadSwitch: UISwitch!
     @IBOutlet weak var showPaymentDetailsSwitch: UISwitch!
+    @IBOutlet weak var crashSwitch: UISwitch!
     @IBOutlet weak var getSessionIdButton: UIButton!
     @IBOutlet weak var payButton: UIButton!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var visibleItemsCountStack: UIStackView!
+    @IBOutlet weak var visibleItemsCountValueLabel: UILabel!
+    @IBOutlet weak var visibleItemsCountStepper: UIStepper!
+    @IBOutlet weak var defaultSelectedPgCodeTextField: UITextField!
     
     private var sessionId: String?
     private var transactionDetailsPreload: TransactionDetails?
@@ -69,6 +75,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func didChangeSegmentSelection(_ sender: UISegmentedControl) {
+        visibleItemsCountStack.isHidden = sender.selectedSegmentIndex == 0
+    }
+    
+    
+    @IBAction func didChangeStepperValue(_ sender: UIStepper) {
+        visibleItemsCountValueLabel.text = "\(Int(sender.value))"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toThemeEditorSegue", let vc = segue.destination as? ThemeEditorViewController {
             vc.theme = theme
@@ -77,6 +92,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         if let destinationViewController = segue.destination as? OttuPaymentsViewController {
             
             destinationViewController.theme = theme
+            destinationViewController.paymentOptionsDisplayMode = (segmentedControl.selectedSegmentIndex == 0) ? .bottomSheet : .list
+            destinationViewController.visibleItemsCount = UInt(visibleItemsCountStepper.value)
+            
+            let defaultSelectedPgCode = defaultSelectedPgCodeTextField.text
+            if let defaultSelectedPgCode, defaultSelectedPgCode != "" {
+                destinationViewController.defaultSelectedPgCode = defaultSelectedPgCodeTextField.text
+            }
             
             if let sessionId {
                 let formOfPayments = enabledFormsOfPayment()
@@ -87,6 +109,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 destinationViewController.merchantId = merchantIdTextField.text
                 destinationViewController.apiKey = apiKeyTextField.text
                 destinationViewController.transactionDetailsPreload = transactionDetailsPreload
+                
+                if crashSwitch.isOn {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
+                        fatalError("SDK was crashed by user request")
+                    }
+                }
             }
         }
     }

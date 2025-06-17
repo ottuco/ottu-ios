@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CC2D54D36700B837F1 /* PgCode.swift */; };
 		3726F5CF2D54D9D500B837F1 /* FormOfPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */; };
+		3756F3832E01AC3900712AB1 /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 3756F3822E01AC3900712AB1 /* ottu_checkout_sdk */; };
+		3756F3852E01ACD600712AB1 /* ResizableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */; };
+		3756F3872E01ACF200712AB1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3756F3862E01ACF200712AB1 /* Localizable.xcstrings */; };
 		377FD5FE2B9B256F001EB337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD5FD2B9B256F001EB337 /* AppDelegate.swift */; };
 		377FD6002B9B256F001EB337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */; };
 		377FD6022B9B256F001EB337 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD6012B9B256F001EB337 /* MainViewController.swift */; };
@@ -19,7 +22,6 @@
 		379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B2E2D830C740080513C /* ottu_checkout_sdk */; };
 		379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B5D2D884B120080513C /* ottu_checkout_sdk */; };
 		379FC7982C1B28D900152872 /* ThemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */; };
-		37D73A6F2D79CE2B009B3DAA /* Ottu.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 37D73A6E2D79CE2B009B3DAA /* Ottu.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3726F5CC2D54D36700B837F1 /* PgCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgCode.swift; sourceTree = "<group>"; };
 		3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOfPayment.swift; sourceTree = "<group>"; };
+		3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableContainerView.swift; sourceTree = "<group>"; };
+		3756F3862E01ACF200712AB1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		377FD5FD2B9B256F001EB337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		377FD6012B9B256F001EB337 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +55,6 @@
 		3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttuPaymentsViewController.swift; sourceTree = "<group>"; };
 		379D1B2C2D830B660080513C /* OttuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorViewController.swift; sourceTree = "<group>"; };
-		37D73A6E2D79CE2B009B3DAA /* Ottu.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Ottu.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			files = (
 				379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */,
 				379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */,
+				3756F3832E01AC3900712AB1 /* ottu_checkout_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +105,10 @@
 				377FD5FD2B9B256F001EB337 /* AppDelegate.swift */,
 				377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */,
 				377FD6012B9B256F001EB337 /* MainViewController.swift */,
+				3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */,
 				3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */,
-				37D73A6E2D79CE2B009B3DAA /* Ottu.xcstrings */,
 				379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */,
+				3756F3862E01ACF200712AB1 /* Localizable.xcstrings */,
 				377FD6032B9B256F001EB337 /* Main.storyboard */,
 				377FD6062B9B2574001EB337 /* Assets.xcassets */,
 				377FD6082B9B2574001EB337 /* LaunchScreen.storyboard */,
@@ -166,7 +171,7 @@
 			);
 			mainGroup = 377FD5F12B9B256F001EB337;
 			packageReferences = (
-				379D1B5C2D884B120080513C /* XCRemoteSwiftPackageReference "ottu-ios" */,
+				3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */,
 			);
 			productRefGroup = 377FD5FB2B9B256F001EB337 /* Products */;
 			projectDirPath = "";
@@ -183,8 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				377FD60A2B9B2574001EB337 /* LaunchScreen.storyboard in Resources */,
-				37D73A6F2D79CE2B009B3DAA /* Ottu.xcstrings in Resources */,
 				377FD6072B9B2574001EB337 /* Assets.xcassets in Resources */,
+				3756F3872E01ACF200712AB1 /* Localizable.xcstrings in Resources */,
 				377FD6052B9B256F001EB337 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +207,7 @@
 				3795E0612BC930C90058768A /* OttuPaymentsViewController.swift in Sources */,
 				377FD6002B9B256F001EB337 /* SceneDelegate.swift in Sources */,
 				3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */,
+				3756F3852E01ACD600712AB1 /* ResizableContainerView.swift in Sources */,
 				3726F5CF2D54D9D500B837F1 /* FormOfPayment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +463,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
 		379D1B2D2D830C740080513C /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
@@ -476,6 +490,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3756F3822E01AC3900712AB1 /* ottu_checkout_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */;
+			productName = ottu_checkout_sdk;
+		};
 		379D1B2E2D830C740080513C /* ottu_checkout_sdk */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 379D1B2D2D830C740080513C /* XCRemoteSwiftPackageReference "ottu-ios" */;

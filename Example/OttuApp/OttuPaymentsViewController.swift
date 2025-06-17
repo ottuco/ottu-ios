@@ -9,10 +9,11 @@ import UIKit
 import ottu_checkout_sdk
 
 class OttuPaymentsViewController: UIViewController {
-   
-    var paymentContainerView = UIView()
+    
+    var scrollView = UIScrollView()
     
     private var checkout: Checkout?
+    var theme = CheckoutTheme()
     
     var formsOfPayment = [ottu_checkout_sdk.FormOfPayment]()
     var showPaymentDetails: Bool = true
@@ -21,51 +22,160 @@ class OttuPaymentsViewController: UIViewController {
     var apiKey: String?
     var transactionDetailsPreload: TransactionDetails?
     
-    var theme = CheckoutTheme()
+    var paymentOptionsDisplayMode: PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode = .bottomSheet
+    var visibleItemsCount: UInt = 5
+    var defaultSelectedPgCode: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        
+        let contentView = UIView()
 
-        paymentContainerView.translatesAutoresizingMaskIntoConstraints = false
-        paymentContainerView.clipsToBounds = true
-        view.addSubview(paymentContainerView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+
+        NSLayoutConstraint.activate([
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+        
+        let topLabel = UILabel()
+        topLabel.text = "Some user UI elements"
+        topLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        contentView.addSubview(topLabel)
         
         NSLayoutConstraint.activate([
-            paymentContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
-            paymentContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
+            topLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            topLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
-      
+        
         guard let sessionId, let merchantId, let apiKey else { return }
-        
+
         theme.showPaymentDetails = showPaymentDetails
-      
-        self.checkout = Checkout(
-            formsOfPayments: formsOfPayment,
-            theme: theme,
-            sessionId: sessionId,
-            merchantId: merchantId,
-            apiKey: apiKey,
-            setupPreload: transactionDetailsPreload,
-            delegate: self
-        )
-        
-        if let paymentViewController = self.checkout?.paymentViewController(), let paymentView = paymentViewController.view {
-            
+
+        do {
+            self.checkout = try Checkout(
+                formsOfPayments: formsOfPayment,
+                theme: theme,
+                displaySettings: PaymentOptionsDisplaySettings(
+                    mode: paymentOptionsDisplayMode,
+                    visibleItemsCount: visibleItemsCount,
+                    defaultSelectedPgCode: defaultSelectedPgCode
+                ),
+                sessionId: sessionId,
+                merchantId: merchantId,
+                apiKey: apiKey,
+                setupPreload: transactionDetailsPreload,
+                delegate: self
+            )
+        } catch let error as LocalizedError {
+            showFailAlert(error)
+            return
+        } catch {
+            print("Unexpected error: \(error)")
+            return
+        }
+
+        if let paymentVC = self.checkout?.paymentViewController(),
+           let paymentView = paymentVC.view {
+
+            self.addChild(paymentVC)
+
+            let resizableContainer = ResizableContainerView()
+            resizableContainer.translatesAutoresizingMaskIntoConstraints = false
+            resizableContainer.addSubview(paymentView)
+            paymentVC.didMove(toParent: self)
+
             paymentView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                paymentView.topAnchor.constraint(equalTo: resizableContainer.topAnchor),
+                paymentView.bottomAnchor.constraint(equalTo: resizableContainer.bottomAnchor),
+                paymentView.leadingAnchor.constraint(equalTo: resizableContainer.leadingAnchor, constant: 16),
+                paymentView.trailingAnchor.constraint(equalTo: resizableContainer.trailingAnchor, constant: -16)
+            ])
+
+            contentView.addSubview(resizableContainer)
+
+            NSLayoutConstraint.activate([
+                resizableContainer.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 16),
+                resizableContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                resizableContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            ])
+
+            resizableContainer.sizeChangedCallback = { [weak self] _ in
+                guard let self else { return }
+                updateScrollEnabled(for: scrollView)
+            }
             
-            self.addChild(paymentViewController)
-            self.paymentContainerView.addSubview(paymentView)
-            paymentViewController.didMove(toParent: self)
+            
+            let bottomLabel = UILabel()
+            bottomLabel.text = "Some user UI elements"
+            bottomLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            contentView.addSubview(bottomLabel)
             
             NSLayoutConstraint.activate([
-                paymentContainerView.leadingAnchor.constraint(equalTo: paymentView.leadingAnchor),
-                paymentView.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
-                paymentContainerView.topAnchor.constraint(equalTo: paymentView.topAnchor),
-                paymentView.bottomAnchor.constraint(equalTo: paymentContainerView.bottomAnchor),
+                bottomLabel.topAnchor.constraint(equalTo: resizableContainer.bottomAnchor, constant: 16),
+                bottomLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                bottomLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
             ])
         }
+    }
+
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateScrollEnabled(for: scrollView)
+    }
+    
+    private func updateScrollEnabled(for scrollView: UIScrollView) {
+        scrollView.layoutIfNeeded()
+        
+        let contentHeight = scrollView.contentSize.height
+        let visibleHeight = scrollView.bounds.height
+
+        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+
+        let adjustedVisibleHeight = visibleHeight - navigationBarHeight - statusBarHeight
+
+        let shouldScroll = contentHeight > adjustedVisibleHeight
+        scrollView.isScrollEnabled = shouldScroll
+    }
+
+    private func showFailAlert(_ error: any LocalizedError) {
+        let title = NSLocalizedString(
+            "Failed",
+            tableName: "Localizable",
+            bundle: Bundle(for: Self.self),
+            comment: ""
+        )
+        let message = error.errorDescription ?? "Unknown error occurred."
+        let ok = NSLocalizedString(
+            "OK",
+            tableName: "Localizable",
+            bundle: Bundle(for: Self.self),
+            comment: ""
+        )
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: ok, style: .default))
+        self.present(alert, animated: true)
     }
 }
 
@@ -73,8 +183,6 @@ class OttuPaymentsViewController: UIViewController {
 extension OttuPaymentsViewController: OttuDelegate {
     func errorCallback(_ data: [String : Any]?) {
         DispatchQueue.main.async {
-            self.paymentContainerView.isHidden = true
-            
             let alert = UIAlertController(title: "Error", message: data?.debugDescription ?? "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(alert, animated: true)
@@ -93,17 +201,14 @@ extension OttuPaymentsViewController: OttuDelegate {
                 message = data?.debugDescription ?? ""
             }
             
-            self.paymentContainerView.isHidden = true
-            
             let alert = UIAlertController(title: "Canсel", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(alert, animated: true)
         }
     }
-    
+      
     func successCallback(_ data: [String : Any]?) {
         DispatchQueue.main.async {
-            self.replaceSDKContentToSuccessMessage()
             
             let alert = UIAlertController(title: "Success", message: data?.debugDescription ?? "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
@@ -111,33 +216,4 @@ extension OttuPaymentsViewController: OttuDelegate {
         }
     }
 
-    private func replaceSDKContentToSuccessMessage() {
-        paymentContainerView.subviews.forEach { subview in
-            subview.removeFromSuperview()
-        }
-        
-        let label = successLabel()
-        paymentContainerView.addSubview(label)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            paymentContainerView.leadingAnchor.constraint(equalTo: label.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: paymentContainerView.trailingAnchor),
-            paymentContainerView.topAnchor.constraint(equalTo: label.topAnchor),
-            label.bottomAnchor.constraint(equalTo: paymentContainerView.bottomAnchor),
-            label.heightAnchor.constraint(equalToConstant: 60)
-        ])
-    }
-    
-    private func successLabel() -> UILabel {
-        let message = NSLocalizedString("successfully", tableName: "Ottu", bundle: Bundle(for: Self.self), comment: "")
-        
-        let label = UILabel()
-        label.text = message
-        label.backgroundColor = .white
-        label.textAlignment = .center
-        
-        return label
-    }
 }
