@@ -1,0 +1,1260 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+import CommonCrypto
+import CoreText
+import Darwin
+import DeveloperToolsSupport
+import Foundation
+import MachO
+import ObjectiveC
+import PassKit
+import Sentry
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+@_exported import ottu_checkout_sdk
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var isShimmering: Swift.Bool {
+    get
+    set
+  }
+}
+public struct SentryConfig {
+  public struct Traces {
+    public let sampleRate: Foundation.NSNumber
+    public let profilingSampleRate: Foundation.NSNumber
+    public let enableAppStart: Swift.Bool
+    public init(sampleRate: Foundation.NSNumber, profilingSampleRate: Foundation.NSNumber, enableAppStart: Swift.Bool)
+  }
+  public let dsn: Swift.String
+  public let isEnabled: Swift.Bool
+  public let userInteraction: Swift.Bool
+  public let attachScreenshot: Swift.Bool
+  public let attachViewHierarchy: Swift.Bool
+  public let traces: ottu_checkout_sdk.SentryConfig.Traces
+  public init(dsn: Swift.String, isEnabled: Swift.Bool, userInteraction: Swift.Bool, attachScreenshot: Swift.Bool, attachViewHierarchy: Swift.Bool, traces: ottu_checkout_sdk.SentryConfig.Traces)
+}
+public enum PaymentModeType : Swift.String {
+  case sandbox
+  case production
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct TransactionDetails : Swift.Equatable {
+  public enum Language : Swift.String {
+    case en
+    case ar
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum State : Swift.String {
+    case created
+    case pending
+    case attempted
+    case authorized
+    case paid
+    case failed
+    case canceled
+    case expired
+    case invalided
+    case refunded
+    case cod
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var amount: Foundation.Decimal
+  public var cards: [ottu_checkout_sdk.Card]
+  public var customerId: Swift.String?
+  public var customerPhone: Swift.String?
+  public var currencyCode: Swift.String
+  public var language: ottu_checkout_sdk.TransactionDetails.Language
+  public var pymentMethods: [ottu_checkout_sdk.PaymentMethod]
+  public let flexPayments: [ottu_checkout_sdk.FlexMethod]
+  public let applePay: ottu_checkout_sdk.ApplePayWallet?
+  public let stcPay: ottu_checkout_sdk.Wallet?
+  public let urPay: ottu_checkout_sdk.Wallet?
+  public var response: ottu_checkout_sdk.TransactionDetailsResponse
+  public var state: ottu_checkout_sdk.TransactionDetails.State
+  public var type: ottu_checkout_sdk.PaymentTransactionType
+  public var isAmountEditable: Swift.Bool
+  public var sessionId: Swift.String
+  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, response: ottu_checkout_sdk.TransactionDetailsResponse, state: ottu_checkout_sdk.TransactionDetails.State, type: ottu_checkout_sdk.PaymentTransactionType, isAmountEditable: Swift.Bool, sessionId: Swift.String)
+  public static func == (a: ottu_checkout_sdk.TransactionDetails, b: ottu_checkout_sdk.TransactionDetails) -> Swift.Bool
+}
+public struct PaymentMethod : Swift.Equatable {
+  public var code: Swift.String
+  public var name: Swift.String
+  public var type: ottu_checkout_sdk.PaymentModeType
+  public var amount: Foundation.Decimal
+  public var currencyCode: Swift.String
+  public var fee: Foundation.Decimal
+  public var feeDescription: Swift.String?
+  public var icons: [Foundation.URL]
+  public var flow: ottu_checkout_sdk.PaymentMethodFlow
+  public var redirectURL: Foundation.URL?
+  public var canSaveCard: Swift.Bool
+  public var submitURL: Foundation.URL?
+  public var directPaymentURL: Foundation.URL?
+  public var directSaveCardURL: Foundation.URL?
+  public var encKeyURL: Foundation.URL?
+  public var trandata: Swift.String?
+  public init(code: Swift.String, name: Swift.String, type: ottu_checkout_sdk.PaymentModeType, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethodFlow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?)
+  public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
+}
+public struct ApplePayWallet : Swift.Equatable {
+  public var domain: Swift.String
+  public var merchantId: Swift.String
+  public var code: Swift.String
+  public var shopName: Swift.String
+  public var amount: Foundation.Decimal
+  public var fee: Foundation.Decimal
+  public var feeDescription: Swift.String
+  public var currencyCode: Swift.String
+  public var countryCode: Swift.String
+  public var validationURL: Foundation.URL
+  public var paymentURL: Foundation.URL
+  public var sessionId: Swift.String
+  public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
+  public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
+}
+public struct FlexMethod : Swift.Equatable {
+  public enum Flow : Swift.String {
+    case tabby
+    case tamara
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct PrePaymentOptions : Swift.Equatable {
+    public struct PaymentLabels : Swift.Equatable {
+      public enum PaymentType : Swift.String {
+        case payByInstalment
+        case payNow
+        public init?(rawValue: Swift.String)
+        public typealias RawValue = Swift.String
+        public var rawValue: Swift.String {
+          get
+        }
+      }
+      public let paymentType: ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentType?
+      public let instalment: Swift.Int
+      public let descriptionEn: Swift.String
+      public let descriptionAr: Swift.String
+      public static func == (a: ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels, b: ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels) -> Swift.Bool
+    }
+    public let isAvailable: Swift.Bool?
+    public let singleCheckoutEnabled: Swift.Bool?
+    public let paymentLabels: [ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels]?
+    public static func == (a: ottu_checkout_sdk.FlexMethod.PrePaymentOptions, b: ottu_checkout_sdk.FlexMethod.PrePaymentOptions) -> Swift.Bool
+  }
+  public let prePaymentOptions: ottu_checkout_sdk.FlexMethod.PrePaymentOptions
+  public let prePaymentOptionsAvailable: Swift.Bool
+  public let code: Swift.String
+  public let country: Swift.String
+  public let type: Swift.String
+  public let amount: Foundation.Decimal
+  public let currencyCode: Swift.String
+  public let fee: Foundation.Decimal
+  public let feeDescription: Swift.String
+  public let icon: Foundation.URL
+  public let publicKey: Swift.String
+  public let flow: ottu_checkout_sdk.FlexMethod.Flow
+  public let submitURL: Foundation.URL
+  public let prePaymentCheckUrl: Foundation.URL
+  public static func == (a: ottu_checkout_sdk.FlexMethod, b: ottu_checkout_sdk.FlexMethod) -> Swift.Bool
+}
+public struct PaymentOptionsDisplaySettings : Swift.Equatable {
+  public enum PaymentOptionsDisplayMode : Swift.Equatable {
+    case bottomSheet
+    case list
+    public static func == (a: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode, b: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let mode: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode
+  public let visibleItemsCount: Swift.UInt
+  public let defaultSelectedPgCode: Swift.String?
+  public init(mode: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode = .bottomSheet, visibleItemsCount: Swift.UInt = 5, defaultSelectedPgCode: Swift.String? = nil)
+  public static func == (a: ottu_checkout_sdk.PaymentOptionsDisplaySettings, b: ottu_checkout_sdk.PaymentOptionsDisplaySettings) -> Swift.Bool
+}
+final public class URLKnocker {
+  public init(url: Foundation.URL, client: any ottu_checkout_sdk.HTTPClient)
+  final public func knock()
+  @objc deinit
+}
+public struct RemoteFlexMethod : Swift.Decodable {
+  public struct PrePaymentOptions : Swift.Decodable {
+    public struct PaymentLabels : Swift.Decodable {
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let code: Swift.String
+  public let type: Swift.String
+  public let amount: Swift.String
+  public let country: Swift.String
+  public let currency_code: Swift.String
+  public let fee: Swift.String
+  public let fee_description: Swift.String
+  public let icons: ottu_checkout_sdk.RemoteIcons
+  public let flow: Swift.String
+  public let public_key: Swift.String
+  public let submit_url: Foundation.URL
+  public let pre_payment_options_available: Swift.Bool
+  public let pre_payment_check_url: Foundation.URL
+  public let pre_payment_options: ottu_checkout_sdk.RemoteFlexMethod.PrePaymentOptions
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Card : Swift.Equatable {
+  public enum Brand : Swift.String {
+    case stc
+    case visa
+    case mastercard
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let customerId: Swift.String
+  public let brand: ottu_checkout_sdk.Card.Brand
+  public let nameOnCard: Swift.String?
+  public let number: Swift.String
+  public let expiryMonth: Swift.String
+  public let expiryYear: Swift.String
+  public let token: Swift.String
+  public let isPreferred: Swift.Bool
+  public let isExpired: Swift.Bool
+  public let pgCode: Swift.String
+  public let cvvRequired: Swift.Bool
+  public let deleteURL: Foundation.URL
+  public let submitURL: Foundation.URL
+  public init(customerId: Swift.String, brand: ottu_checkout_sdk.Card.Brand, nameOnCard: Swift.String?, number: Swift.String, expiryMonth: Swift.String, expiryYear: Swift.String, token: Swift.String, isPreferred: Swift.Bool, isExpired: Swift.Bool, pgCode: Swift.String, cvvRequired: Swift.Bool, deleteURL: Foundation.URL, submitURL: Foundation.URL)
+  public static func == (a: ottu_checkout_sdk.Card, b: ottu_checkout_sdk.Card) -> Swift.Bool
+}
+public enum PaymentTransactionType : Swift.String, Swift.Decodable {
+  case eCommerce
+  case paymentRequest
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Wallet : Swift.Equatable {
+  public var code: Swift.String
+  public var name: Swift.String
+  public var amount: Foundation.Decimal
+  public var currencyCode: Swift.String
+  public var fee: Foundation.Decimal
+  public var feeDescription: Swift.String
+  public var canSaveCard: Swift.Bool
+  public var submitURL: Foundation.URL
+  public var paymentURL: Foundation.URL
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
+  public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
+}
+public struct TransactionDetailsResponse : Swift.Equatable, Swift.Encodable {
+  public enum Status : Swift.String, Swift.Encodable {
+    case error
+    case success
+    case canceled
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Operation : Swift.String, Swift.Encodable {
+    case purchase
+    case authorize
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var status: ottu_checkout_sdk.TransactionDetailsResponse.Status?
+  public var sessionId: Swift.String?
+  public var message: Swift.String?
+  public var orderNo: Swift.String?
+  public var operation: ottu_checkout_sdk.TransactionDetailsResponse.Operation?
+  public var referenceNumber: Swift.String?
+  public var redirectURL: Foundation.URL?
+  public var formOfPayment: Swift.String?
+  public var challengeOccurred: Swift.Bool?
+  public init(status: ottu_checkout_sdk.TransactionDetailsResponse.Status? = nil, sessionId: Swift.String? = nil, message: Swift.String? = nil, orderNo: Swift.String? = nil, operation: ottu_checkout_sdk.TransactionDetailsResponse.Operation? = nil, referenceNumber: Swift.String? = nil, redirectURL: Foundation.URL? = nil, formOfPayment: Swift.String? = nil, challengeOccurred: Swift.Bool? = nil, paymentGatewayInfo: Swift.String? = nil)
+  public static func == (a: ottu_checkout_sdk.TransactionDetailsResponse, b: ottu_checkout_sdk.TransactionDetailsResponse) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
+  case applePay
+  case stcPay
+  case tokenPay
+  case redirect
+  case flex
+  case cardOnsite
+  public static func == (a: ottu_checkout_sdk.FormOfPayment, b: ottu_checkout_sdk.FormOfPayment) -> Swift.Bool
+  public typealias AllCases = [ottu_checkout_sdk.FormOfPayment]
+  nonisolated public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct FontManager {
+  public static func registerFonts(_ fontFileNames: [Swift.String], from bundle: Foundation.Bundle)
+  public static func replaceCurrencySymbolIfNeeded(_ input: Swift.String?, fontSize: CoreFoundation.CGFloat) -> Foundation.NSAttributedString
+}
+extension ottu_checkout_sdk.RemoteTransactionDetails {
+  public var transactionDetails: ottu_checkout_sdk.TransactionDetails {
+    get throws
+  }
+}
+extension Foundation.Locale {
+  public func languageDirectionFromLeftToRight() -> Swift.Bool
+}
+public enum CurrencyHelper {
+  public static func formatCurrency(value: Foundation.Decimal, currencyCode: Swift.String?) -> Swift.String?
+  public static func addPlusSign(_ value: Swift.String) -> Swift.String
+}
+@_hasMissingDesignatedInitializers final public class ApplePaySessionValidatorMapper {
+  @objc deinit
+}
+public struct ApplePayPayload {
+  public let paymentData: ottu_checkout_sdk.ApplePayPayload.PaymentData
+  public let paymentMethod: ottu_checkout_sdk.ApplePayPayload.PaymentMethod
+  public let transactionIdentifier: Swift.String
+  public init(paymentData: ottu_checkout_sdk.ApplePayPayload.PaymentData, paymentMethod: ottu_checkout_sdk.ApplePayPayload.PaymentMethod, transactionIdentifier: Swift.String)
+  public struct PaymentData : Swift.Decodable {
+    public struct PaymentDataHeader : Swift.Decodable {
+      public let ephemeralPublicKey: Swift.String
+      public let publicKeyHash: Swift.String
+      public let transactionId: Swift.String
+      public init(ephemeralPublicKey: Swift.String, publicKeyHash: Swift.String, transactionId: Swift.String)
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public let version: Swift.String
+    public let data: Swift.String
+    public let signature: Swift.String
+    public let header: ottu_checkout_sdk.ApplePayPayload.PaymentData.PaymentDataHeader
+    public init(version: Swift.String, data: Swift.String, signature: Swift.String, header: ottu_checkout_sdk.ApplePayPayload.PaymentData.PaymentDataHeader)
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct PaymentMethod {
+    public let displayName: Swift.String
+    public let network: Swift.String
+    public let type: Swift.UInt
+    public init(displayName: Swift.String, network: Swift.String, type: Swift.UInt)
+  }
+}
+@_hasMissingDesignatedInitializers final public class ApplePaySubmiterMapper {
+  public struct ErrorResponse : Swift.Decodable {
+    public let message: Swift.String?
+    public let detail: Swift.String?
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc deinit
+}
+@propertyWrapper public class OttuObservable<Value> {
+  public typealias Observer = (Value) -> Swift.Void
+  public var wrappedValue: Value {
+    get
+    set
+  }
+  public var projectedValue: ottu_checkout_sdk.OttuObservable<Value> {
+    get
+  }
+  public init(wrappedValue: Value)
+  public func subscribe(_ observer: @escaping ottu_checkout_sdk.OttuObservable<Value>.Observer) -> ottu_checkout_sdk.Disposable
+  @objc deinit
+}
+public class Disposable {
+  final public let dispose: () -> Swift.Void
+  public init(_ dispose: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public struct AmountsModel {
+}
+extension ottu_checkout_sdk.RemotePaymentService {
+  public var applePay: ottu_checkout_sdk.ApplePayWallet? {
+    get throws
+  }
+}
+public protocol OttuDelegate {
+  func errorCallback(_ data: [Swift.String : Any]?)
+  func cancelCallback(_ data: [Swift.String : Any]?)
+  func successCallback(_ data: [Swift.String : Any]?)
+}
+public class ButtonComponent {
+  public var enabledTitleColor: UIKit.UIColor
+  public var disabledTitleColor: UIKit.UIColor
+  public var fontFamily: Swift.String {
+    get
+    set
+  }
+  public var enabledBackgroundColor: UIKit.UIColor
+  public var disabledBackgroundColor: UIKit.UIColor
+  public init()
+  @objc deinit
+}
+final public class Checkout {
+  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate) throws
+  final public func paymentViewController() -> UIKit.UIViewController?
+  @objc deinit
+}
+public struct OTPErrorViewModel {
+  public let errorMessage: Swift.String
+}
+@_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
+  public struct Response : Swift.Decodable {
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc deinit
+}
+public struct ResendOTPTimerViewModel {
+  public let timeLeft: Swift.Int
+  public let resendBoxInfo: Swift.String
+  public let resendBoxButtonTitle: Swift.String
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GlobalOTPCountdown : ObjectiveC.NSObject {
+  public static let shared: ottu_checkout_sdk.GlobalOTPCountdown
+  public var uuid: Swift.String? {
+    get
+  }
+  public var secondsLeft: Swift.Int {
+    get
+  }
+  public func start(seconds: Swift.Int, uuid: Swift.String, job: @escaping (Swift.Int) -> Swift.Void)
+  public func invalidate()
+  @objc deinit
+}
+public struct OTPCodeViewModel {
+  public let screenTitle: Swift.String
+  public let screenMessage: Swift.String
+  public let confirmButtonTitle: Swift.String
+}
+@_hasMissingDesignatedInitializers final public class FlexPrePaymentOptionsFetcher {
+  public struct Request {
+    public init(flow: ottu_checkout_sdk.FlexMethod.Flow)
+  }
+  @objc deinit
+}
+@objc public protocol FloatingPanelLayout {
+  @objc var position: ottu_checkout_sdk.FloatingPanelPosition { get }
+  @objc var initialState: ottu_checkout_sdk.FloatingPanelState { get }
+  @objc var anchors: [ottu_checkout_sdk.FloatingPanelState : any ottu_checkout_sdk.FloatingPanelLayoutAnchoring] { get }
+  @objc optional func prepareLayout(surfaceView: UIKit.UIView, in view: UIKit.UIView) -> [UIKit.NSLayoutConstraint]
+  @objc optional func backdropAlpha(for state: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
+}
+@objc @_inheritsConvenienceInitializers @objcMembers open class FloatingPanelBottomLayout : ObjectiveC.NSObject, ottu_checkout_sdk.FloatingPanelLayout {
+  @objc override dynamic public init()
+  @objc open var initialState: ottu_checkout_sdk.FloatingPanelState {
+    @objc get
+  }
+  @objc open var anchors: [ottu_checkout_sdk.FloatingPanelState : any ottu_checkout_sdk.FloatingPanelLayoutAnchoring] {
+    @objc get
+  }
+  @objc open var position: ottu_checkout_sdk.FloatingPanelPosition {
+    @objc get
+  }
+  @objc open func prepareLayout(surfaceView: UIKit.UIView, in view: UIKit.UIView) -> [UIKit.NSLayoutConstraint]
+  @objc open func backdropAlpha(for state: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
+  @objc deinit
+}
+@objc public enum FloatingPanelPosition : Swift.Int {
+  case top
+  case left
+  case bottom
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(FloatingPanelBackdropView) @_Concurrency.MainActor @preconcurrency open class BackdropView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency public var dismissalTapGestureRecognizer: UIKit.UITapGestureRecognizer
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class FloatingPanelState : ObjectiveC.NSObject, Foundation.NSCopying, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  required public init?(rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue)
+  @objc public init(rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue, order: Swift.Int)
+  final public let rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue
+  final public let order: Swift.Int
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public var debugDescription: Swift.String {
+    @objc get
+  }
+  @objc(Full) public static let full: ottu_checkout_sdk.FloatingPanelState
+  @objc(Half) public static let half: ottu_checkout_sdk.FloatingPanelState
+  @objc(Tip) public static let tip: ottu_checkout_sdk.FloatingPanelState
+  @objc(Hidden) public static let hidden: ottu_checkout_sdk.FloatingPanelState
+  @objc deinit
+}
+@objc public protocol FloatingPanelLayoutAnchoring {
+  @objc var referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide { get }
+  @objc func layoutConstraints(_ fpc: ottu_checkout_sdk.FloatingPanelController, for position: ottu_checkout_sdk.FloatingPanelPosition) -> [UIKit.NSLayoutConstraint]
+}
+@objc final public class FloatingPanelLayoutAnchor : ObjectiveC.NSObject, ottu_checkout_sdk.FloatingPanelLayoutAnchoring {
+  @objc public init(absoluteInset: CoreFoundation.CGFloat, edge: ottu_checkout_sdk.FloatingPanelReferenceEdge, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide)
+  @objc public init(fractionalInset: CoreFoundation.CGFloat, edge: ottu_checkout_sdk.FloatingPanelReferenceEdge, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide)
+  @objc final public let referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide
+  @objc deinit
+}
+extension ottu_checkout_sdk.FloatingPanelLayoutAnchor {
+  @objc final public func layoutConstraints(_ vc: ottu_checkout_sdk.FloatingPanelController, for position: ottu_checkout_sdk.FloatingPanelPosition) -> [UIKit.NSLayoutConstraint]
+}
+@objc final public class FloatingPanelIntrinsicLayoutAnchor : ObjectiveC.NSObject, ottu_checkout_sdk.FloatingPanelLayoutAnchoring {
+  @objc public init(absoluteOffset: CoreFoundation.CGFloat, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide = .safeArea)
+  @objc public init(fractionalOffset: CoreFoundation.CGFloat, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide = .safeArea)
+  @objc final public let referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide
+  @objc deinit
+}
+extension ottu_checkout_sdk.FloatingPanelIntrinsicLayoutAnchor {
+  @objc final public func layoutConstraints(_ vc: ottu_checkout_sdk.FloatingPanelController, for position: ottu_checkout_sdk.FloatingPanelPosition) -> [UIKit.NSLayoutConstraint]
+}
+@objc final public class FloatingPanelAdaptiveLayoutAnchor : ObjectiveC.NSObject, ottu_checkout_sdk.FloatingPanelLayoutAnchoring {
+  @objc public init(absoluteOffset: CoreFoundation.CGFloat, contentLayout: UIKit.UILayoutGuide, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide, contentBoundingGuide: ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide = .none)
+  @objc public init(fractionalOffset: CoreFoundation.CGFloat, contentLayout: UIKit.UILayoutGuide, referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide, contentBoundingGuide: ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide = .none)
+  @objc final public let referenceGuide: ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide
+  @objc final public let contentBoundingGuide: ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide
+  @objc deinit
+}
+extension ottu_checkout_sdk.FloatingPanelAdaptiveLayoutAnchor {
+  @objc final public func layoutConstraints(_ vc: ottu_checkout_sdk.FloatingPanelController, for position: ottu_checkout_sdk.FloatingPanelPosition) -> [UIKit.NSLayoutConstraint]
+}
+@objc public protocol FloatingPanelBehavior {
+  @objc optional var springDecelerationRate: CoreFoundation.CGFloat { get }
+  @objc optional var springResponseTime: CoreFoundation.CGFloat { get }
+  @objc optional var momentumProjectionRate: CoreFoundation.CGFloat { get }
+  @objc optional func shouldProjectMomentum(_ fpc: ottu_checkout_sdk.FloatingPanelController, to proposedState: ottu_checkout_sdk.FloatingPanelState) -> Swift.Bool
+  @objc optional func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
+  @objc optional func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc optional var removalInteractionVelocityThreshold: CoreFoundation.CGFloat { get }
+}
+open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavior {
+  public init()
+  @objc open var springDecelerationRate: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc open var springResponseTime: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc open var momentumProjectionRate: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc open func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
+  @objc open func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc open var removalInteractionVelocityThreshold: CoreFoundation.CGFloat
+  @objc deinit
+}
+@objc public enum FloatingPanelReferenceEdge : Swift.Int {
+  case top
+  case left
+  case bottom
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum FloatingPanelLayoutReferenceGuide : Swift.Int {
+  case superview = 0
+  case safeArea = 1
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum FloatingPanelLayoutContentBoundingGuide : Swift.Int {
+  case none = 0
+  case superview = 1
+  case safeArea = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class FloatingPanelPanGestureRecognizer : UIKit.UIPanGestureRecognizer {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  @_Concurrency.MainActor @preconcurrency @objc override weak final public var delegate: (any UIKit.UIGestureRecognizerDelegate)? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency final public var delegateOrigin: any UIKit.UIGestureRecognizerDelegate {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency weak final public var delegateProxy: (any UIKit.UIGestureRecognizerDelegate)? {
+    get
+    set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(FloatingPanelGrabberView) @_Concurrency.MainActor @preconcurrency public class GrabberView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var barColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @objc deinit
+}
+extension UIKit.UISpringTimingParameters {
+  @_Concurrency.MainActor @preconcurrency convenience public init(decelerationRate: CoreFoundation.CGFloat, frequencyResponse: CoreFoundation.CGFloat, initialVelocity: CoreFoundation.CGVector = .zero)
+  @_Concurrency.MainActor @preconcurrency convenience public init(dampingRatio: CoreFoundation.CGFloat, frequencyResponse: CoreFoundation.CGFloat, initialVelocity: CoreFoundation.CGVector = .zero)
+}
+@objc public protocol FloatingPanelControllerDelegate {
+  @objc(floatingPanel:layoutForTraitCollection:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, layoutFor newCollection: UIKit.UITraitCollection) -> any ottu_checkout_sdk.FloatingPanelLayout
+  @objc(floatingPanel:layoutForSize:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, layoutFor size: CoreFoundation.CGSize) -> any ottu_checkout_sdk.FloatingPanelLayout
+  @objc(floatingPanel:animatorForPresentingToState:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, animatorForPresentingTo state: ottu_checkout_sdk.FloatingPanelState) -> UIKit.UIViewPropertyAnimator
+  @objc(floatingPanel:animatorForDismissingWithVelocity:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, animatorForDismissingWith velocity: CoreFoundation.CGVector) -> UIKit.UIViewPropertyAnimator
+  @objc optional func floatingPanelDidChangeState(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc optional func floatingPanelShouldBeginDragging(_ fpc: ottu_checkout_sdk.FloatingPanelController) -> Swift.Bool
+  @objc optional func floatingPanelDidMove(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc optional func floatingPanelWillBeginDragging(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc optional func floatingPanelWillEndDragging(_ fpc: ottu_checkout_sdk.FloatingPanelController, withVelocity velocity: CoreFoundation.CGPoint, targetState: Swift.UnsafeMutablePointer<ottu_checkout_sdk.FloatingPanelState>)
+  @objc optional func floatingPanelDidEndDragging(_ fpc: ottu_checkout_sdk.FloatingPanelController, willAttract attract: Swift.Bool)
+  @objc optional func floatingPanelWillBeginAttracting(_ fpc: ottu_checkout_sdk.FloatingPanelController, to state: ottu_checkout_sdk.FloatingPanelState)
+  @objc optional func floatingPanelDidEndAttracting(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc(floatingPanel:shouldRemoveAtLocation:withVelocity:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, shouldRemoveAt location: CoreFoundation.CGPoint, with velocity: CoreFoundation.CGVector) -> Swift.Bool
+  @objc(floatingPanelWillRemove:) optional func floatingPanelWillRemove(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc optional func floatingPanelDidRemove(_ fpc: ottu_checkout_sdk.FloatingPanelController)
+  @objc(floatingPanel:contentOffsetForPinningScrollView:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, contentOffsetForPinning trackingScrollView: UIKit.UIScrollView) -> CoreFoundation.CGPoint
+  @objc(floatingPanel:shouldAllowToScroll:in:) optional func floatingPanel(_ fpc: ottu_checkout_sdk.FloatingPanelController, shouldAllowToScroll scrollView: UIKit.UIScrollView, in state: ottu_checkout_sdk.FloatingPanelState) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency open class FloatingPanelController : UIKit.UIViewController {
+  @objc public enum ContentInsetAdjustmentBehavior : Swift.Int {
+    case always
+    case never
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum ContentMode : Swift.Int {
+    case `static`
+    case fitToBounds
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ottu_checkout_sdk.FloatingPanelControllerDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var surfaceView: ottu_checkout_sdk.SurfaceView {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var backdropView: ottu_checkout_sdk.BackdropView {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency weak public var trackingScrollView: UIKit.UIScrollView? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var panGestureRecognizer: ottu_checkout_sdk.FloatingPanelPanGestureRecognizer {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var state: ottu_checkout_sdk.FloatingPanelState {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var isAttracting: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var layout: any ottu_checkout_sdk.FloatingPanelLayout {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var behavior: any ottu_checkout_sdk.FloatingPanelBehavior {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var adjustedContentInsets: UIKit.UIEdgeInsets {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var contentInsetAdjustmentBehavior: ottu_checkout_sdk.FloatingPanelController.ContentInsetAdjustmentBehavior
+  @objc @_Concurrency.MainActor @preconcurrency public var isRemovalInteractionEnabled: Swift.Bool {
+    @objc(isRemovalInteractionEnabled) get
+    @objc(setRemovalInteractionEnabled:) set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var contentViewController: UIKit.UIViewController? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency public var nearbyState: ottu_checkout_sdk.FloatingPanelState {
+    get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var contentMode: ottu_checkout_sdk.FloatingPanelController.ContentMode {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor @preconcurrency public init(delegate: (any ottu_checkout_sdk.FloatingPanelControllerDelegate)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func loadView()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForScreenEdgesDeferringSystemGestures: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForHomeIndicatorAutoHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @objc(show:completion:) @_Concurrency.MainActor @preconcurrency public func show(animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  @objc(hide:completion:) @_Concurrency.MainActor @preconcurrency public func hide(animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  @objc(addPanelToParent:at:animated:completion:) @_Concurrency.MainActor @preconcurrency public func addPanel(toParent parent: UIKit.UIViewController, at viewIndex: Swift.Int = -1, animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  @objc(removePanelFromParent:completion:) @_Concurrency.MainActor @preconcurrency public func removePanelFromParent(animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc(moveToState:animated:completion:) @_Concurrency.MainActor @preconcurrency public func move(to: ottu_checkout_sdk.FloatingPanelState, animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func set(contentViewController: UIKit.UIViewController?)
+  @objc(trackScrollView:) @_Concurrency.MainActor @preconcurrency public func track(scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency public func followScrollViewBouncing()
+  @objc(untrackScrollView:) @_Concurrency.MainActor @preconcurrency public func untrack(scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func accessibilityPerformEscape() -> Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public func invalidateLayout()
+  @objc @_Concurrency.MainActor @preconcurrency public func surfaceLocation(for state: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGPoint
+  @objc @_Concurrency.MainActor @preconcurrency public var surfaceLocation: CoreFoundation.CGPoint {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(FloatingPanelSurfaceAppearance) @objcMembers public class SurfaceAppearance : ObjectiveC.NSObject {
+  @_inheritsConvenienceInitializers @objc(FloatingPanelSurfaceAppearanceShadow) public class Shadow : ObjectiveC.NSObject {
+    @objc public var hidden: Swift.Bool
+    @objc public var color: UIKit.UIColor
+    @objc public var offset: CoreFoundation.CGSize
+    @objc public var opacity: Swift.Float
+    @objc public var radius: CoreFoundation.CGFloat
+    @objc public var spread: CoreFoundation.CGFloat
+    @objc override dynamic public init()
+    @objc deinit
+  }
+  @objc public var backgroundColor: UIKit.UIColor?
+  @objc public var cornerRadius: CoreFoundation.CGFloat
+  @objc @available(iOS 13.0, *)
+  public var cornerCurve: QuartzCore.CALayerCornerCurve {
+    @objc get
+    @objc set
+  }
+  @objc public var shadows: [ottu_checkout_sdk.SurfaceAppearance.Shadow]
+  @objc public var borderColor: UIKit.UIColor?
+  @objc public var borderWidth: CoreFoundation.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(FloatingPanelSurfaceView) @objcMembers @_Concurrency.MainActor @preconcurrency public class SurfaceView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency final public let grabberHandle: ottu_checkout_sdk.GrabberView
+  @objc @_Concurrency.MainActor @preconcurrency public var grabberHandlePadding: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var grabberAreaOffset: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency public var grabberHandleSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency weak public var contentView: UIKit.UIView?
+  @objc @_Concurrency.MainActor @preconcurrency public var contentPadding: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var backgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var appearance: ottu_checkout_sdk.SurfaceAppearance {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public var containerMargins: UIKit.UIEdgeInsets {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public let containerView: UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public class var requiresConstraintBasedLayout: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func updateConstraints()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc deinit
+}
+public enum PaymentMethodFlow : Swift.String {
+  case redirect
+  case ottuPG
+  case stcPay
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class LabelComponent {
+  public var color: UIKit.UIColor
+  public var fontFamily: Swift.String {
+    get
+    set
+  }
+  public init()
+  @objc deinit
+}
+public struct RemoteIcons : Swift.Decodable {
+  public var webp: Foundation.URL
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentViewModel {
+}
+public struct PhoneNumberViewModel {
+  public let screenTitle: Swift.String
+  public let screenMessage: Swift.String
+  public let phoneNumberTitle: Swift.String
+  public let phoneNumberValue: Swift.String?
+  public let sendOTPButtonTitle: Swift.String
+  public let isShowSaveCard: Swift.Bool
+}
+public enum PaymentType : Swift.Equatable {
+  case applePay
+  case stcPay
+  case urPay
+  case tokenPay(token: Swift.String)
+  case method(code: Swift.String)
+  case flex(flow: ottu_checkout_sdk.FlexMethod.Flow)
+  case onsite(code: Swift.String)
+  public static func == (a: ottu_checkout_sdk.PaymentType, b: ottu_checkout_sdk.PaymentType) -> Swift.Bool
+}
+public struct PayButtonViewModel {
+  public enum PayButtonType {
+    public enum Brand {
+      case apple
+      case stc
+      case urpay
+      public static func == (a: ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand, b: ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    case normal(title: Swift.String)
+    case branded(_: ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand)
+  }
+  public let isEnabled: Swift.Bool
+  public let type: ottu_checkout_sdk.PayButtonViewModel.PayButtonType
+}
+public struct LoadingViewModel {
+  public let isLoading: Swift.Bool
+}
+public struct PaymentDetailsViewModel {
+  public let amountTitle: Swift.String
+  public let amountValue: Swift.String
+  public let feeTitle: Swift.String
+  public let feeValue: Swift.String?
+  public let totalTitle: Swift.String
+  public let totalValue: Swift.String
+}
+public class TextFieldComponent {
+  public var label: ottu_checkout_sdk.LabelComponent
+  public var text: ottu_checkout_sdk.LabelComponent
+  public var backgroundColor: UIKit.UIColor
+  public init()
+  @objc deinit
+}
+public struct RemoteCard : Swift.Decodable {
+  public let customer_id: Swift.String
+  public let brand: Swift.String
+  public let name_on_card: Swift.String?
+  public let number: Swift.String
+  public let expiry_month: Swift.String
+  public let expiry_year: Swift.String
+  public let token: Swift.String
+  public let is_preferred: Swift.Bool
+  public let is_expired: Swift.Bool
+  public let pg_code: Swift.String
+  public let cvv_required: Swift.Bool
+  public let delete_url: Foundation.URL
+  public let submit_url: Foundation.URL
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension ottu_checkout_sdk.RemotePaymentMethod {
+  public var paymentMethod: ottu_checkout_sdk.PaymentMethod {
+    get throws
+  }
+}
+extension ottu_checkout_sdk.RemoteResponse {
+  public var response: ottu_checkout_sdk.TransactionDetailsResponse {
+    get throws
+  }
+}
+public struct RemotePaymentMethod : Swift.Decodable {
+  public let code: Swift.String
+  public let name: Swift.String
+  public let type: Swift.String
+  public let amount: Swift.String
+  public let currency_code: Swift.String
+  public let fee: Swift.String
+  public let fee_description: Swift.String?
+  public let icons: ottu_checkout_sdk.RemoteIcons
+  public let pg_icons: [ottu_checkout_sdk.RemoteIcons]?
+  public let flow: Swift.String
+  public let redirect_url: Foundation.URL?
+  public let can_save_card: Swift.Bool
+  public let submit_url: Foundation.URL?
+  public let direct_payment_url: Foundation.URL?
+  public let direct_save_card_url: Foundation.URL?
+  public let enc_key_url: Foundation.URL?
+  public let trandata: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RemotePaymentService : Swift.Decodable {
+  public let code: Swift.String
+  public let name: Swift.String?
+  public let type: Swift.String?
+  public let amount: Swift.String?
+  public let currency_code: Swift.String
+  public let fee: Swift.String
+  public let fee_description: Swift.String
+  public let icon: Foundation.URL?
+  public let flow: Swift.String
+  public let redirect_url: Foundation.URL?
+  public let can_save_card: Swift.Bool?
+  public let merchant_id: Swift.String?
+  public let country_code: Swift.String?
+  public let domain: Swift.String?
+  public let shop_name: Swift.String?
+  public let validation_url: Foundation.URL?
+  public let session_id: Swift.String?
+  public let environment: Swift.String?
+  public let gateway: Swift.String?
+  public let gateway_merchant_id: Swift.String?
+  public let merchant_name: Swift.String?
+  public let total_price: Swift.String?
+  public let submit_url: Foundation.URL?
+  public let payment_url: Foundation.URL
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class ScreenShield {
+  public static let shared: ottu_checkout_sdk.ScreenShield
+  public func protect(window: UIKit.UIWindow)
+  public func protect(view: UIKit.UIView)
+  public func protectFromScreenRecording(_ blockingScreenMessage: Swift.String? = nil)
+  @objc deinit
+}
+public struct RemoteResponse : Swift.Decodable {
+  public let status: Swift.String?
+  public let session_id: Swift.String?
+  public let message: Swift.String?
+  public let order_no: Swift.String?
+  public let operation: Swift.String?
+  public let reference_number: Swift.String?
+  public let redirect_url: Foundation.URL?
+  public let form_of_payment: Swift.String?
+  public let challenge_occurred: Swift.Bool?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RemoteTransactionDetails : Swift.Decodable {
+  public let amount: Swift.String
+  public let cards: [ottu_checkout_sdk.RemoteCard]
+  public let customer_id: Swift.String?
+  public let customer_phone: Swift.String?
+  public let currency_code: Swift.String
+  public let language: Swift.String
+  public let operation: Swift.String
+  public let payment_methods: [ottu_checkout_sdk.RemotePaymentMethod]
+  public let payment_services: [ottu_checkout_sdk.RemotePaymentService]
+  public let flex_methods: [ottu_checkout_sdk.RemoteFlexMethod]
+  public let response: ottu_checkout_sdk.RemoteResponse
+  public let state: Swift.String
+  public let type: Swift.String
+  public let is_amount_editable: Swift.Bool
+  public let session_id: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+public class IOSSecuritySuite {
+  public static func amIJailbroken() -> Swift.Bool
+  public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
+  public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [ottu_checkout_sdk.FailedCheckType])
+  public static func amIRunInEmulator() -> Swift.Bool
+  public static func amIDebugged() -> Swift.Bool
+  public static func denyDebugger()
+  public static func isParentPidUnexpected() -> Swift.Bool
+  public static func amITampered(_ checks: [ottu_checkout_sdk.FileIntegrityCheck]) -> ottu_checkout_sdk.FileIntegrityCheckResult
+  public static func amIReverseEngineered() -> Swift.Bool
+  public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [ottu_checkout_sdk.FailedCheckType])
+  @available(*, deprecated, renamed: "amIRuntimeHooked(dyldAllowList:detectionClass:selector:isClassMethod:)")
+  public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIRuntimeHooked(dyldAllowList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIProxied() -> Swift.Bool
+  @available(iOS 16, *)
+  public static func amIInLockdownMode() -> Swift.Bool
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension ottu_checkout_sdk.IOSSecuritySuite {
+  public static func amIMSHooked(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.Bool
+  public static func denyMSHook(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.UnsafeMutableRawPointer?
+  public static func denySymbolHook(_ symbol: Swift.String)
+  public static func denySymbolHook(_ symbol: Swift.String, at image: Swift.UnsafePointer<MachO.mach_header>, imageSlide slide: Swift.Int)
+  public static func getMachOFileHashValue(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> Swift.String?
+  public static func findLoadedDylibs(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> [Swift.String]?
+  public static func hasBreakpointAt(_ functionAddr: Swift.UnsafeRawPointer, functionSize: Darwin.vm_size_t?) -> Swift.Bool
+  public static func hasWatchpoint() -> Swift.Bool
+}
+@inline(__always) public func replaceSymbol(_ symbol: Swift.String, newMethod: Swift.UnsafeMutableRawPointer, oldMethod: inout Swift.UnsafeMutableRawPointer?)
+public typealias FailedCheckType = (check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)
+public enum FailedCheck : Swift.CaseIterable {
+  case urlSchemes
+  case existenceOfSuspiciousFiles
+  case suspiciousFilesCanBeOpened
+  case restrictedDirectoriesWriteable
+  case fork
+  case symbolicLinks
+  case dyld
+  case openedPorts
+  case pSelectFlag
+  case suspiciousObjCClasses
+  public static func == (a: ottu_checkout_sdk.FailedCheck, b: ottu_checkout_sdk.FailedCheck) -> Swift.Bool
+  public typealias AllCases = [ottu_checkout_sdk.FailedCheck]
+  nonisolated public static var allCases: [ottu_checkout_sdk.FailedCheck] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum DyldChainedImportFormat : Swift.UInt32 {
+  case general
+  case addend
+  case addend64
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+public enum FileIntegrityCheck {
+  case bundleID(Swift.String)
+  case mobileProvision(Swift.String)
+  case machO(Swift.String, Swift.String)
+}
+extension ottu_checkout_sdk.FileIntegrityCheck {
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias FileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [ottu_checkout_sdk.FileIntegrityCheck])
+public enum IntegrityCheckerImageTarget {
+  case `default`
+  case custom(Swift.String)
+}
+@_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
+  public struct Response : Swift.Decodable {
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc deinit
+}
+extension ottu_checkout_sdk.RemoteFlexMethod {
+  public var flexMethod: ottu_checkout_sdk.FlexMethod {
+    get throws
+  }
+}
+extension Foundation.HTTPURLResponse {
+  public var isOK: Swift.Bool {
+    get
+  }
+  public var isOkNoContent: Swift.Bool {
+    get
+  }
+  public var isBadRequest: Swift.Bool {
+    get
+  }
+  public var isAuthenticationError: Swift.Bool {
+    get
+  }
+  public var isForbidden: Swift.Bool {
+    get
+  }
+  public var isNotFound: Swift.Bool {
+    get
+  }
+  public var isUnsupportedMediaType: Swift.Bool {
+    get
+  }
+  public var isInternalServerError: Swift.Bool {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol HTTPClientTask {
+  func cancel()
+}
+public protocol HTTPClient {
+  typealias Result = Swift.Result<(Foundation.Data, Foundation.HTTPURLResponse), any Swift.Error>
+  @discardableResult
+  func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
+}
+extension ottu_checkout_sdk.HTTPClient {
+  @discardableResult
+  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
+  @discardableResult
+  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
+  @discardableResult
+  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
+}
+public enum CheckoutInitializationError : Swift.Error, Foundation.LocalizedError {
+  case invalidVisibleItemsCount
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: ottu_checkout_sdk.CheckoutInitializationError, b: ottu_checkout_sdk.CheckoutInitializationError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ottu_checkout_sdk.RemoteCard {
+  public var card: ottu_checkout_sdk.Card {
+    get throws
+  }
+}
+public class CheckoutTheme {
+  public var backgroundColor: UIKit.UIColor
+  public var backgroundColorModal: UIKit.UIColor
+  public var margins: UIKit.UIEdgeInsets
+  public var mainTitle: ottu_checkout_sdk.LabelComponent
+  public var title: ottu_checkout_sdk.LabelComponent
+  public var subtitle: ottu_checkout_sdk.LabelComponent
+  public var button: ottu_checkout_sdk.ButtonComponent
+  public var selectorButton: ottu_checkout_sdk.ButtonComponent
+  public var iconColor: UIKit.UIColor
+  public var inputTextField: ottu_checkout_sdk.TextFieldComponent
+  public var switchOnTintColor: UIKit.UIColor
+  public var errorMessage: ottu_checkout_sdk.LabelComponent
+  public var feesTitle: ottu_checkout_sdk.LabelComponent
+  public var feesSubtitle: ottu_checkout_sdk.LabelComponent
+  public var dataLabel: ottu_checkout_sdk.LabelComponent
+  public var dataValue: ottu_checkout_sdk.LabelComponent
+  public var showPaymentDetails: Swift.Bool
+  public var paymentItemBorderColor: UIKit.UIColor
+  public init()
+  @objc deinit
+}
+extension ottu_checkout_sdk.PaymentModeType : Swift.Equatable {}
+extension ottu_checkout_sdk.PaymentModeType : Swift.Hashable {}
+extension ottu_checkout_sdk.PaymentModeType : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.TransactionDetails.Language : Swift.Equatable {}
+extension ottu_checkout_sdk.TransactionDetails.Language : Swift.Hashable {}
+extension ottu_checkout_sdk.TransactionDetails.Language : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.TransactionDetails.State : Swift.Equatable {}
+extension ottu_checkout_sdk.TransactionDetails.State : Swift.Hashable {}
+extension ottu_checkout_sdk.TransactionDetails.State : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Equatable {}
+extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Hashable {}
+extension ottu_checkout_sdk.FlexMethod.Flow : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentType : Swift.Equatable {}
+extension ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentType : Swift.Hashable {}
+extension ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentType : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode : Swift.Hashable {}
+extension ottu_checkout_sdk.Card.Brand : Swift.Equatable {}
+extension ottu_checkout_sdk.Card.Brand : Swift.Hashable {}
+extension ottu_checkout_sdk.Card.Brand : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.PaymentTransactionType : Swift.Equatable {}
+extension ottu_checkout_sdk.PaymentTransactionType : Swift.Hashable {}
+extension ottu_checkout_sdk.PaymentTransactionType : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.Equatable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.Hashable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Equatable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Hashable {}
+extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FormOfPayment : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelPosition : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FloatingPanelReferenceEdge : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelReferenceEdge : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelReferenceEdge : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutReferenceGuide : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelLayoutContentBoundingGuide : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentInsetAdjustmentBehavior : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentInsetAdjustmentBehavior : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentInsetAdjustmentBehavior : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.Equatable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.Hashable {}
+extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Equatable {}
+extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Hashable {}
+extension ottu_checkout_sdk.PaymentMethodFlow : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Equatable {}
+extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Hashable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Equatable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Hashable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.Equatable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.Hashable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.HTTPMethod : Swift.Equatable {}
+extension ottu_checkout_sdk.HTTPMethod : Swift.Hashable {}
+extension ottu_checkout_sdk.HTTPMethod : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.CheckoutInitializationError : Swift.Equatable {}
+extension ottu_checkout_sdk.CheckoutInitializationError : Swift.Hashable {}
