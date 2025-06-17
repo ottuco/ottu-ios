@@ -63,6 +63,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var dataLabelFontName: UITextField!
     @IBOutlet weak var dataValueColorWell: UIColorWell!
     @IBOutlet weak var dataValueFontName: UITextField!
+    @IBOutlet weak var paymentItemBorderColor: UIColorWell!
     
     @objc func dismissPicker() {
          view.endEditing(true)
@@ -97,8 +98,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         feesSubtitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
         dataLabelColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
         dataValueColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-     
-        
+        paymentItemBorderColor.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
         guard let theme else { return }
         
         backgroundColorWell.selectedColor = theme.backgroundColor
@@ -138,6 +138,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         dataLabelFontName.text = theme.dataLabel.fontFamily
         dataValueColorWell.selectedColor = theme.dataValue.color
         dataValueFontName.text = theme.dataValue.fontFamily
+        paymentItemBorderColor.selectedColor = theme.paymentItemBorderColor
     }
     
     @objc private func colorWellChanged(_ sender: UIColorWell) {
@@ -204,6 +205,9 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             }
             if sender.tag == 21 {
                 theme?.dataValue.color = color
+            }
+            if sender.tag == 22 {
+                theme?.paymentItemBorderColor = color
             }
         }
     }

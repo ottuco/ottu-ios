@@ -41,7 +41,7 @@ pod 'ottu_checkout_sdk'
 
 ## Usage
 
-*Swift 5.1, 5.0, 4.2, 4.0*
+*Swift 5.0 and higher*
 
 In ViewController.swift, just import Ottu framework and initalize Ottu SDK.
 
@@ -59,15 +59,29 @@ class ViewController: UIViewController,OttuDelegate {
 
         guard let sessionId, let merchantId, let apiKey else { return }
 
-        self.checkout = Checkout(
-            formsOfPayments: formsOfPayment,
-            theme: theme,
-            sessionId: sessionId,
-            merchantId: merchantId,
-            apiKey: apiKey,
-            preload: transactionDetailsPreload,
-            delegate: self
-        )
+        do {
+            self.checkout = try Checkout(
+                formsOfPayments: formsOfPayment,
+                theme: theme,
+                displaySettings: PaymentOptionsDisplaySettings(
+                    mode: paymentOptionsDisplayMode,
+                    visibleItemsCount: visibleItemsCount,
+                    defaultSelectedPgCode: defaultSelectedPgCode
+                ),
+                sessionId: sessionId,
+                merchantId: merchantId,
+                apiKey: apiKey,
+                setupPreload: transactionDetailsPreload,
+                delegate: self
+            )
+        } catch let error as LocalizedError {
+            showFailAlert(error)
+            return
+        } catch {
+            print("Unexpected error: \(error)")
+            return
+        }
+
 
         
         if let paymentView = self.checkout?.paymentView() {
