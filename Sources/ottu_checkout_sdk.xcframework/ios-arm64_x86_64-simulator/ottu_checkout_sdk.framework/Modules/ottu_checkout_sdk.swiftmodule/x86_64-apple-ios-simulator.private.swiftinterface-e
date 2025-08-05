@@ -27,31 +27,7 @@ extension UIKit.UIView {
     set
   }
 }
-public struct SentryConfig {
-  public struct Traces {
-    public let sampleRate: Foundation.NSNumber
-    public let profilingSampleRate: Foundation.NSNumber
-    public let enableAppStart: Swift.Bool
-    public init(sampleRate: Foundation.NSNumber, profilingSampleRate: Foundation.NSNumber, enableAppStart: Swift.Bool)
-  }
-  public let dsn: Swift.String
-  public let isEnabled: Swift.Bool
-  public let userInteraction: Swift.Bool
-  public let attachScreenshot: Swift.Bool
-  public let attachViewHierarchy: Swift.Bool
-  public let traces: ottu_checkout_sdk.SentryConfig.Traces
-  public init(dsn: Swift.String, isEnabled: Swift.Bool, userInteraction: Swift.Bool, attachScreenshot: Swift.Bool, attachViewHierarchy: Swift.Bool, traces: ottu_checkout_sdk.SentryConfig.Traces)
-}
-public enum PaymentModeType : Swift.String {
-  case sandbox
-  case production
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct TransactionDetails : Swift.Equatable {
+public struct TransactionDetails {
   public enum Language : Swift.String {
     case en
     case ar
@@ -90,24 +66,30 @@ public struct TransactionDetails : Swift.Equatable {
   public let applePay: ottu_checkout_sdk.ApplePayWallet?
   public let stcPay: ottu_checkout_sdk.Wallet?
   public let urPay: ottu_checkout_sdk.Wallet?
-  public var response: ottu_checkout_sdk.TransactionDetailsResponse
   public var state: ottu_checkout_sdk.TransactionDetails.State
-  public var type: ottu_checkout_sdk.PaymentTransactionType
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
-  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, response: ottu_checkout_sdk.TransactionDetailsResponse, state: ottu_checkout_sdk.TransactionDetails.State, type: ottu_checkout_sdk.PaymentTransactionType, isAmountEditable: Swift.Bool, sessionId: Swift.String)
-  public static func == (a: ottu_checkout_sdk.TransactionDetails, b: ottu_checkout_sdk.TransactionDetails) -> Swift.Bool
+  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String)
 }
 public struct PaymentMethod : Swift.Equatable {
+  public enum Flow {
+    case redirect
+    case ottuPG
+    case stcPay
+    public static func == (a: ottu_checkout_sdk.PaymentMethod.Flow, b: ottu_checkout_sdk.PaymentMethod.Flow) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public var code: Swift.String
   public var name: Swift.String
-  public var type: ottu_checkout_sdk.PaymentModeType
   public var amount: Foundation.Decimal
   public var currencyCode: Swift.String
   public var fee: Foundation.Decimal
   public var feeDescription: Swift.String?
   public var icons: [Foundation.URL]
-  public var flow: ottu_checkout_sdk.PaymentMethodFlow
+  public var flow: ottu_checkout_sdk.PaymentMethod.Flow
   public var redirectURL: Foundation.URL?
   public var canSaveCard: Swift.Bool
   public var submitURL: Foundation.URL?
@@ -115,7 +97,7 @@ public struct PaymentMethod : Swift.Equatable {
   public var directSaveCardURL: Foundation.URL?
   public var encKeyURL: Foundation.URL?
   public var trandata: Swift.String?
-  public init(code: Swift.String, name: Swift.String, type: ottu_checkout_sdk.PaymentModeType, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethodFlow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?)
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?)
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
 }
 public struct ApplePayWallet : Swift.Equatable {
@@ -203,7 +185,7 @@ final public class URLKnocker {
   final public func knock()
   @objc deinit
 }
-public struct RemoteFlexMethod : Swift.Decodable {
+public struct FlexMethodResponse : Swift.Decodable {
   public struct PrePaymentOptions : Swift.Decodable {
     public struct PaymentLabels : Swift.Decodable {
       public init(from decoder: any Swift.Decoder) throws
@@ -217,23 +199,23 @@ public struct RemoteFlexMethod : Swift.Decodable {
   public let currency_code: Swift.String
   public let fee: Swift.String
   public let fee_description: Swift.String
-  public let icons: ottu_checkout_sdk.RemoteIcons
+  public let icons: ottu_checkout_sdk.IconsResponse
   public let flow: Swift.String
   public let public_key: Swift.String
   public let submit_url: Foundation.URL
   public let pre_payment_options_available: Swift.Bool
   public let pre_payment_check_url: Foundation.URL
-  public let pre_payment_options: ottu_checkout_sdk.RemoteFlexMethod.PrePaymentOptions
+  public let pre_payment_options: ottu_checkout_sdk.FlexMethodResponse.PrePaymentOptions
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Card : Swift.Equatable {
-  public enum Brand : Swift.String {
+  public enum Brand {
     case stc
     case visa
     case mastercard
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
+    public static func == (a: ottu_checkout_sdk.Card.Brand, b: ottu_checkout_sdk.Card.Brand) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
       get
     }
   }
@@ -253,15 +235,6 @@ public struct Card : Swift.Equatable {
   public init(customerId: Swift.String, brand: ottu_checkout_sdk.Card.Brand, nameOnCard: Swift.String?, number: Swift.String, expiryMonth: Swift.String, expiryYear: Swift.String, token: Swift.String, isPreferred: Swift.Bool, isExpired: Swift.Bool, pgCode: Swift.String, cvvRequired: Swift.Bool, deleteURL: Foundation.URL, submitURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Card, b: ottu_checkout_sdk.Card) -> Swift.Bool
 }
-public enum PaymentTransactionType : Swift.String, Swift.Decodable {
-  case eCommerce
-  case paymentRequest
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 public struct Wallet : Swift.Equatable {
   public var code: Swift.String
   public var name: Swift.String
@@ -274,39 +247,6 @@ public struct Wallet : Swift.Equatable {
   public var paymentURL: Foundation.URL
   public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
-}
-public struct TransactionDetailsResponse : Swift.Equatable, Swift.Encodable {
-  public enum Status : Swift.String, Swift.Encodable {
-    case error
-    case success
-    case canceled
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Operation : Swift.String, Swift.Encodable {
-    case purchase
-    case authorize
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var status: ottu_checkout_sdk.TransactionDetailsResponse.Status?
-  public var sessionId: Swift.String?
-  public var message: Swift.String?
-  public var orderNo: Swift.String?
-  public var operation: ottu_checkout_sdk.TransactionDetailsResponse.Operation?
-  public var referenceNumber: Swift.String?
-  public var redirectURL: Foundation.URL?
-  public var formOfPayment: Swift.String?
-  public var challengeOccurred: Swift.Bool?
-  public init(status: ottu_checkout_sdk.TransactionDetailsResponse.Status? = nil, sessionId: Swift.String? = nil, message: Swift.String? = nil, orderNo: Swift.String? = nil, operation: ottu_checkout_sdk.TransactionDetailsResponse.Operation? = nil, referenceNumber: Swift.String? = nil, redirectURL: Foundation.URL? = nil, formOfPayment: Swift.String? = nil, challengeOccurred: Swift.Bool? = nil, paymentGatewayInfo: Swift.String? = nil)
-  public static func == (a: ottu_checkout_sdk.TransactionDetailsResponse, b: ottu_checkout_sdk.TransactionDetailsResponse) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
 }
 public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
   case applePay
@@ -329,7 +269,7 @@ public struct FontManager {
   public static func registerFonts(_ fontFileNames: [Swift.String], from bundle: Foundation.Bundle)
   public static func replaceCurrencySymbolIfNeeded(_ input: Swift.String?, fontSize: CoreFoundation.CGFloat) -> Foundation.NSAttributedString
 }
-extension ottu_checkout_sdk.RemoteTransactionDetails {
+extension ottu_checkout_sdk.TransactionDetailsResponse {
   public var transactionDetails: ottu_checkout_sdk.TransactionDetails {
     get throws
   }
@@ -371,14 +311,6 @@ public struct ApplePayPayload {
     public init(displayName: Swift.String, network: Swift.String, type: Swift.UInt)
   }
 }
-@_hasMissingDesignatedInitializers final public class ApplePaySubmiterMapper {
-  public struct ErrorResponse : Swift.Decodable {
-    public let message: Swift.String?
-    public let detail: Swift.String?
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  @objc deinit
-}
 @propertyWrapper public class OttuObservable<Value> {
   public typealias Observer = (Value) -> Swift.Void
   public var wrappedValue: Value {
@@ -397,9 +329,7 @@ public class Disposable {
   public init(_ dispose: @escaping () -> Swift.Void)
   @objc deinit
 }
-public struct AmountsModel {
-}
-extension ottu_checkout_sdk.RemotePaymentService {
+extension ottu_checkout_sdk.PaymentServiceResponse {
   public var applePay: ottu_checkout_sdk.ApplePayWallet? {
     get throws
   }
@@ -430,9 +360,6 @@ public struct OTPErrorViewModel {
   public let errorMessage: Swift.String
 }
 @_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
-  public struct Response : Swift.Decodable {
-    public init(from decoder: any Swift.Decoder) throws
-  }
   @objc deinit
 }
 public struct ResendOTPTimerViewModel {
@@ -457,11 +384,8 @@ public struct OTPCodeViewModel {
   public let screenMessage: Swift.String
   public let confirmButtonTitle: Swift.String
 }
-@_hasMissingDesignatedInitializers final public class FlexPrePaymentOptionsFetcher {
-  public struct Request {
-    public init(flow: ottu_checkout_sdk.FlexMethod.Flow)
-  }
-  @objc deinit
+public struct CardPayResponse : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol FloatingPanelLayout {
   @objc var position: ottu_checkout_sdk.FloatingPanelPosition { get }
@@ -827,16 +751,6 @@ extension UIKit.UISpringTimingParameters {
   }
   @objc deinit
 }
-public enum PaymentMethodFlow : Swift.String {
-  case redirect
-  case ottuPG
-  case stcPay
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 public class LabelComponent {
   public var color: UIKit.UIColor
   public var fontFamily: Swift.String {
@@ -846,7 +760,7 @@ public class LabelComponent {
   public init()
   @objc deinit
 }
-public struct RemoteIcons : Swift.Decodable {
+public struct IconsResponse : Swift.Decodable {
   public var webp: Foundation.URL
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -859,16 +773,6 @@ public struct PhoneNumberViewModel {
   public let phoneNumberValue: Swift.String?
   public let sendOTPButtonTitle: Swift.String
   public let isShowSaveCard: Swift.Bool
-}
-public enum PaymentType : Swift.Equatable {
-  case applePay
-  case stcPay
-  case urPay
-  case tokenPay(token: Swift.String)
-  case method(code: Swift.String)
-  case flex(flow: ottu_checkout_sdk.FlexMethod.Flow)
-  case onsite(code: Swift.String)
-  public static func == (a: ottu_checkout_sdk.PaymentType, b: ottu_checkout_sdk.PaymentType) -> Swift.Bool
 }
 public struct PayButtonViewModel {
   public enum PayButtonType {
@@ -906,7 +810,7 @@ public class TextFieldComponent {
   public init()
   @objc deinit
 }
-public struct RemoteCard : Swift.Decodable {
+public struct CardResponse : Swift.Decodable {
   public let customer_id: Swift.String
   public let brand: Swift.String
   public let name_on_card: Swift.String?
@@ -922,17 +826,12 @@ public struct RemoteCard : Swift.Decodable {
   public let submit_url: Foundation.URL
   public init(from decoder: any Swift.Decoder) throws
 }
-extension ottu_checkout_sdk.RemotePaymentMethod {
+extension ottu_checkout_sdk.PaymentMethodResponse {
   public var paymentMethod: ottu_checkout_sdk.PaymentMethod {
     get throws
   }
 }
-extension ottu_checkout_sdk.RemoteResponse {
-  public var response: ottu_checkout_sdk.TransactionDetailsResponse {
-    get throws
-  }
-}
-public struct RemotePaymentMethod : Swift.Decodable {
+public struct PaymentMethodResponse : Swift.Decodable {
   public let code: Swift.String
   public let name: Swift.String
   public let type: Swift.String
@@ -940,8 +839,8 @@ public struct RemotePaymentMethod : Swift.Decodable {
   public let currency_code: Swift.String
   public let fee: Swift.String
   public let fee_description: Swift.String?
-  public let icons: ottu_checkout_sdk.RemoteIcons
-  public let pg_icons: [ottu_checkout_sdk.RemoteIcons]?
+  public let icons: ottu_checkout_sdk.IconsResponse
+  public let pg_icons: [ottu_checkout_sdk.IconsResponse]?
   public let flow: Swift.String
   public let redirect_url: Foundation.URL?
   public let can_save_card: Swift.Bool
@@ -952,7 +851,7 @@ public struct RemotePaymentMethod : Swift.Decodable {
   public let trandata: Swift.String?
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct RemotePaymentService : Swift.Decodable {
+public struct PaymentServiceResponse : Swift.Decodable {
   public let code: Swift.String
   public let name: Swift.String?
   public let type: Swift.String?
@@ -986,35 +885,74 @@ public struct RemotePaymentService : Swift.Decodable {
   public func protectFromScreenRecording(_ blockingScreenMessage: Swift.String? = nil)
   @objc deinit
 }
-public struct RemoteResponse : Swift.Decodable {
-  public let status: Swift.String?
-  public let session_id: Swift.String?
-  public let message: Swift.String?
-  public let order_no: Swift.String?
-  public let operation: Swift.String?
-  public let reference_number: Swift.String?
-  public let redirect_url: Foundation.URL?
-  public let form_of_payment: Swift.String?
-  public let challenge_occurred: Swift.Bool?
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct RemoteTransactionDetails : Swift.Decodable {
+public struct TransactionDetailsResponse : Swift.Decodable {
   public let amount: Swift.String
-  public let cards: [ottu_checkout_sdk.RemoteCard]
+  public let cards: [ottu_checkout_sdk.CardResponse]
   public let customer_id: Swift.String?
   public let customer_phone: Swift.String?
   public let currency_code: Swift.String
   public let language: Swift.String
   public let operation: Swift.String
-  public let payment_methods: [ottu_checkout_sdk.RemotePaymentMethod]
-  public let payment_services: [ottu_checkout_sdk.RemotePaymentService]
-  public let flex_methods: [ottu_checkout_sdk.RemoteFlexMethod]
-  public let response: ottu_checkout_sdk.RemoteResponse
+  public let payment_methods: [ottu_checkout_sdk.PaymentMethodResponse]
+  public let payment_services: [ottu_checkout_sdk.PaymentServiceResponse]
+  public let flex_methods: [ottu_checkout_sdk.FlexMethodResponse]
   public let state: Swift.String
   public let type: Swift.String
   public let is_amount_editable: Swift.Bool
   public let session_id: Swift.String
   public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
+  @objc deinit
+}
+extension ottu_checkout_sdk.FlexMethodResponse {
+  public var flexMethod: ottu_checkout_sdk.FlexMethod {
+    get throws
+  }
+}
+extension Foundation.HTTPURLResponse {
+  public var isOK: Swift.Bool {
+    get
+  }
+  public var isOkNoContent: Swift.Bool {
+    get
+  }
+  public var isBadRequest: Swift.Bool {
+    get
+  }
+  public var isAuthenticationError: Swift.Bool {
+    get
+  }
+  public var isForbidden: Swift.Bool {
+    get
+  }
+  public var isNotFound: Swift.Bool {
+    get
+  }
+  public var isUnsupportedMediaType: Swift.Bool {
+    get
+  }
+  public var isInternalServerError: Swift.Bool {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol HTTPClientTask {
+  func cancel()
+}
+public protocol HTTPClient {
+  typealias Result = Swift.Result<(Foundation.Data, Foundation.HTTPURLResponse), any Swift.Error>
+  @discardableResult
+  func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
 }
 @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
 public class IOSSecuritySuite {
@@ -1069,69 +1007,6 @@ extension ottu_checkout_sdk.FileIntegrityCheck {
   }
 }
 public typealias FileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [ottu_checkout_sdk.FileIntegrityCheck])
-@_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
-  public struct Response : Swift.Decodable {
-    public init(from decoder: any Swift.Decoder) throws
-  }
-  @objc deinit
-}
-extension ottu_checkout_sdk.RemoteFlexMethod {
-  public var flexMethod: ottu_checkout_sdk.FlexMethod {
-    get throws
-  }
-}
-extension Foundation.HTTPURLResponse {
-  public var isOK: Swift.Bool {
-    get
-  }
-  public var isOkNoContent: Swift.Bool {
-    get
-  }
-  public var isBadRequest: Swift.Bool {
-    get
-  }
-  public var isAuthenticationError: Swift.Bool {
-    get
-  }
-  public var isForbidden: Swift.Bool {
-    get
-  }
-  public var isNotFound: Swift.Bool {
-    get
-  }
-  public var isUnsupportedMediaType: Swift.Bool {
-    get
-  }
-  public var isInternalServerError: Swift.Bool {
-    get
-  }
-}
-public enum HTTPMethod : Swift.String {
-  case get
-  case post
-  case delete
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public protocol HTTPClientTask {
-  func cancel()
-}
-public protocol HTTPClient {
-  typealias Result = Swift.Result<(Foundation.Data, Foundation.HTTPURLResponse), any Swift.Error>
-  @discardableResult
-  func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
-}
-extension ottu_checkout_sdk.HTTPClient {
-  @discardableResult
-  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
-  @discardableResult
-  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
-  @discardableResult
-  public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
-}
 public enum CheckoutInitializationError : Swift.Error, Foundation.LocalizedError {
   case invalidVisibleItemsCount
   public var errorDescription: Swift.String? {
@@ -1143,7 +1018,7 @@ public enum CheckoutInitializationError : Swift.Error, Foundation.LocalizedError
     get
   }
 }
-extension ottu_checkout_sdk.RemoteCard {
+extension ottu_checkout_sdk.CardResponse {
   public var card: ottu_checkout_sdk.Card {
     get throws
   }
@@ -1170,15 +1045,14 @@ public class CheckoutTheme {
   public init()
   @objc deinit
 }
-extension ottu_checkout_sdk.PaymentModeType : Swift.Equatable {}
-extension ottu_checkout_sdk.PaymentModeType : Swift.Hashable {}
-extension ottu_checkout_sdk.PaymentModeType : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.TransactionDetails.Language : Swift.Equatable {}
 extension ottu_checkout_sdk.TransactionDetails.Language : Swift.Hashable {}
 extension ottu_checkout_sdk.TransactionDetails.Language : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.Equatable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.Hashable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Equatable {}
+extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Hashable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Equatable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Hashable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.RawRepresentable {}
@@ -1188,16 +1062,6 @@ extension ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentTy
 extension ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode : Swift.Hashable {}
 extension ottu_checkout_sdk.Card.Brand : Swift.Equatable {}
 extension ottu_checkout_sdk.Card.Brand : Swift.Hashable {}
-extension ottu_checkout_sdk.Card.Brand : Swift.RawRepresentable {}
-extension ottu_checkout_sdk.PaymentTransactionType : Swift.Equatable {}
-extension ottu_checkout_sdk.PaymentTransactionType : Swift.Hashable {}
-extension ottu_checkout_sdk.PaymentTransactionType : Swift.RawRepresentable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.Equatable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.Hashable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Status : Swift.RawRepresentable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Equatable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Hashable {}
-extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FormOfPayment : Swift.Hashable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Equatable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Hashable {}
@@ -1217,15 +1081,12 @@ extension ottu_checkout_sdk.FloatingPanelController.ContentInsetAdjustmentBehavi
 extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.Equatable {}
 extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.Hashable {}
 extension ottu_checkout_sdk.FloatingPanelController.ContentMode : Swift.RawRepresentable {}
-extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Equatable {}
-extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Hashable {}
-extension ottu_checkout_sdk.PaymentMethodFlow : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Equatable {}
 extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Hashable {}
-extension ottu_checkout_sdk.FailedCheck : Swift.Equatable {}
-extension ottu_checkout_sdk.FailedCheck : Swift.Hashable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.Equatable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.Hashable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Equatable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Hashable {}
 extension ottu_checkout_sdk.CheckoutInitializationError : Swift.Equatable {}
 extension ottu_checkout_sdk.CheckoutInitializationError : Swift.Hashable {}
