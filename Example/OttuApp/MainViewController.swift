@@ -254,7 +254,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     if isNeededPreload {
                         if let preloadPayloadDict = json["sdk_setup_preload_payload"],
                            let jsonData = try? JSONSerialization.data(withJSONObject: preloadPayloadDict, options: []),
-                           let decodedValues = try? JSONDecoder().decode(RemoteTransactionDetails.self, from: jsonData) {
+                           let decodedValues = try? JSONDecoder().decode(TransactionDetailsResponse.self, from: jsonData) {
                             
                             self.transactionDetailsPreload = try? decodedValues.transactionDetails
                         }
