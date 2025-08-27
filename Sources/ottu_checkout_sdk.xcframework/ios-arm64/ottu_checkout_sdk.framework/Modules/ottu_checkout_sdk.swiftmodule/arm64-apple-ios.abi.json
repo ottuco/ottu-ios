@@ -4571,6 +4571,91 @@
           },
           {
             "kind": "Var",
+            "name": "pgCode",
+            "printedName": "pgCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvp",
+            "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvg",
+                "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvs",
+                "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvM",
+                "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6pgCodeSSvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "shopName",
             "printedName": "shopName",
             "children": [
@@ -5337,13 +5422,19 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(domain:merchantId:code:shopName:amount:fee:feeDescription:currencyCode:countryCode:validationURL:paymentURL:sessionId:)",
+            "printedName": "init(domain:merchantId:code:pgCode:shopName:amount:fee:feeDescription:currencyCode:countryCode:validationURL:paymentURL:sessionId:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "ApplePayWallet",
                 "printedName": "ottu_checkout_sdk.ApplePayWallet",
                 "usr": "s:17ottu_checkout_sdk14ApplePayWalletV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -5419,8 +5510,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6domain10merchantId4code8shopName6amount3fee0N11Description12currencyCode07countryQ013validationURL07paymentT007sessionI0ACSS_S3SSo9NSDecimalaAQS3S10Foundation0T0VATSStcfc",
-            "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6domain10merchantId4code8shopName6amount3fee0N11Description12currencyCode07countryQ013validationURL07paymentT007sessionI0ACSS_S3SSo9NSDecimalaAQS3S10Foundation0T0VATSStcfc",
+            "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6domain10merchantId4code6pgCode8shopName6amount3fee0P11Description08currencyL007countryL013validationURL07paymentU007sessionI0ACSS_S4SSo9NSDecimalaARS3S10Foundation0U0VAUSStcfc",
+            "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6domain10merchantId4code6pgCode8shopName6amount3fee0P11Description08currencyL007countryL013validationURL07paymentU007sessionI0ACSS_S4SSo9NSDecimalaARS3S10Foundation0U0VAUSStcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -9770,6 +9861,91 @@
           },
           {
             "kind": "Var",
+            "name": "pgCode",
+            "printedName": "pgCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk6WalletV6pgCodeSSvp",
+            "mangledName": "$s17ottu_checkout_sdk6WalletV6pgCodeSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk6WalletV6pgCodeSSvg",
+                "mangledName": "$s17ottu_checkout_sdk6WalletV6pgCodeSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk6WalletV6pgCodeSSvs",
+                "mangledName": "$s17ottu_checkout_sdk6WalletV6pgCodeSSvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk6WalletV6pgCodeSSvM",
+                "mangledName": "$s17ottu_checkout_sdk6WalletV6pgCodeSSvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "name",
             "printedName": "name",
             "children": [
@@ -10451,13 +10627,19 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(code:name:amount:currencyCode:fee:feeDescription:canSaveCard:submitURL:paymentURL:)",
+            "printedName": "init(code:pgCode:name:amount:currencyCode:fee:feeDescription:canSaveCard:submitURL:paymentURL:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Wallet",
                 "printedName": "ottu_checkout_sdk.Wallet",
                 "usr": "s:17ottu_checkout_sdk6WalletV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -10515,8 +10697,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk6WalletV4code4name6amount12currencyCode3fee0J11Description11canSaveCard9submitURL07paymentP0ACSS_SSSo9NSDecimalaSSANSSSb10Foundation0P0VAQtcfc",
-            "mangledName": "$s17ottu_checkout_sdk6WalletV4code4name6amount12currencyCode3fee0J11Description11canSaveCard9submitURL07paymentP0ACSS_SSSo9NSDecimalaSSANSSSb10Foundation0P0VAQtcfc",
+            "usr": "s:17ottu_checkout_sdk6WalletV4code6pgCode4name6amount08currencyG03fee0K11Description11canSaveCard9submitURL07paymentQ0ACSS_S2SSo9NSDecimalaSSAOSSSb10Foundation0Q0VARtcfc",
+            "mangledName": "$s17ottu_checkout_sdk6WalletV4code6pgCode4name6amount08currencyG03fee0K11Description11canSaveCard9submitURL07paymentQ0ACSS_S2SSo9NSDecimalaSSAOSSSb10Foundation0Q0VARtcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -30759,6 +30941,50 @@
           },
           {
             "kind": "Var",
+            "name": "pg_code",
+            "printedName": "pg_code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk22PaymentServiceResponseV7pg_codeSSvp",
+            "mangledName": "$s17ottu_checkout_sdk22PaymentServiceResponseV7pg_codeSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk22PaymentServiceResponseV7pg_codeSSvg",
+                "mangledName": "$s17ottu_checkout_sdk22PaymentServiceResponseV7pg_codeSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "name",
             "printedName": "name",
             "children": [
@@ -40666,56 +40892,56 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3518,
+      "offset": 3522,
       "length": 75,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3540,
+      "offset": 3544,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/pymt-txn\/submit\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3591,
+      "offset": 3595,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3687,
+      "offset": 3691,
       "length": 77,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3709,
+      "offset": 3713,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/concur-payer-view\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3762,
+      "offset": 3766,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4578,
+      "offset": 4582,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4637,
+      "offset": 4641,
       "length": 5,
       "value": "false"
     },
