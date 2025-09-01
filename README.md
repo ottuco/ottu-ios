@@ -28,7 +28,6 @@ To initialize the SDK you need to create session token.
 You can create session token with our public API [Click here](https://docs-ottu.gitbook.io/o/developer/rest-api/authentication#public-key) to see more detail about our public API.
     
 ## Installation
-==========================
 
 ***Ottu:*** Ottu is available through CocoaPods and via Swift Package Manager (SwiftPM).
 
