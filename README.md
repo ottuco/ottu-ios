@@ -44,7 +44,10 @@ pod 'ottu_checkout_sdk', :git => 'https://github.com/ottuco/ottu-ios.git', :tag 
 ```
 
 #### Please note:
-* When ottu_checkout_sdk is added to the Podfile, the GitHub repository must also be specified.
+* When ottu_checkout_sdk is added to the Podfile, the GitHub repository must also be specified as the following:
+```
+pod 'ottu_checkout_sdk', :git => 'https://github.com/ottuco/ottu-ios'
+```
 * If CocoaPods returns an error like "could not find compatible versions for pod", try running the pod repo update command to resolve it.
 
 
