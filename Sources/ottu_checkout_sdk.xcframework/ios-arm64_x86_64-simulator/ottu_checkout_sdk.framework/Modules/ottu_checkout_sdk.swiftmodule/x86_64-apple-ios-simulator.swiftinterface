@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target x86_64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import CommonCrypto
 import CoreText
 import Darwin
@@ -104,6 +104,7 @@ public struct ApplePayWallet : Swift.Equatable {
   public var domain: Swift.String
   public var merchantId: Swift.String
   public var code: Swift.String
+  public var pgCode: Swift.String
   public var shopName: Swift.String
   public var amount: Foundation.Decimal
   public var fee: Foundation.Decimal
@@ -113,7 +114,7 @@ public struct ApplePayWallet : Swift.Equatable {
   public var validationURL: Foundation.URL
   public var paymentURL: Foundation.URL
   public var sessionId: Swift.String
-  public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
+  public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, pgCode: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
   public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
 }
 public struct FlexMethod : Swift.Equatable {
@@ -237,6 +238,7 @@ public struct Card : Swift.Equatable {
 }
 public struct Wallet : Swift.Equatable {
   public var code: Swift.String
+  public var pgCode: Swift.String
   public var name: Swift.String
   public var amount: Foundation.Decimal
   public var currencyCode: Swift.String
@@ -245,7 +247,7 @@ public struct Wallet : Swift.Equatable {
   public var canSaveCard: Swift.Bool
   public var submitURL: Foundation.URL
   public var paymentURL: Foundation.URL
-  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
+  public init(code: Swift.String, pgCode: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
 }
 public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
@@ -853,6 +855,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
 }
 public struct PaymentServiceResponse : Swift.Decodable {
   public let code: Swift.String
+  public let pg_code: Swift.String
   public let name: Swift.String?
   public let type: Swift.String?
   public let amount: Swift.String?
