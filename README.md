@@ -27,16 +27,36 @@ The Ottu requires Xcode 15.0 or later and is compatible with apps targeting iOS 
 To initialize the SDK you need to create session token. 
 You can create session token with our public API [Click here](https://docs-ottu.gitbook.io/o/developer/rest-api/authentication#public-key) to see more detail about our public API.
     
-Installation
+## Installation
 ==========================
 
-#### Installation with CocoaPods
+***Ottu:*** Ottu is available through CocoaPods and via Swift Package Manager (SwiftPM).
 
-***Ottu:*** Ottu is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Installation with CocoaPods
+To install the SDK via [CocoaPods](http://cocoapods.org), simply add the following line to your Podfile:
 
-```ruby
+```
 pod 'ottu_checkout_sdk'
+```
+
+Or, the full version:
+```
+pod 'ottu_checkout_sdk', :git => 'https://github.com/ottuco/ottu-ios.git', :tag => '2.1.4'
+```
+
+#### Please note:
+* When ottu_checkout_sdk is added to the Podfile, the GitHub repository must also be specified.
+* If CocoaPods returns an error like "could not find compatible versions for pod", try running the pod repo update command to resolve it.
+
+
+### Installation via Swift Package Manager 
+The [Swift Package Manager (SPM)](https://swift.org/package-manager/) is a tool designed for automating the distribution of Swift code and is integrated into the Swift compiler.
+
+Once the Swift package has been set up, adding Alamofire as a dependency requires simply including it in the dependencies value of the Package.swift file.
+```
+dependencies: [
+    .package(url: "https://github.com/ottuco/ottu-ios.git", from: "2.1.4")
+]
 ```
 
 ## Usage
