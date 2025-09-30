@@ -10,10 +10,7 @@ import ottu_checkout_sdk
 
 class OttuPaymentsViewController: UIViewController {
     
-    var scrollView = UIScrollView()
-    
     private var checkout: Checkout?
-    var theme = CheckoutTheme()
     
     var formsOfPayment = [ottu_checkout_sdk.FormOfPayment]()
     var showPaymentDetails: Bool = true
@@ -22,9 +19,14 @@ class OttuPaymentsViewController: UIViewController {
     var apiKey: String?
     var transactionDetailsPreload: TransactionDetails?
     
-    var paymentOptionsDisplayMode: PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode = .bottomSheet
+    var theme = CheckoutTheme()
+    var paymentOptionsDisplayMode = PaymentOptionsDisplaySettings
+        .PaymentOptionsDisplayMode
+        .bottomSheet
     var visibleItemsCount: UInt = 5
     var defaultSelectedPgCode: String?
+    
+    var scrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,7 @@ class OttuPaymentsViewController: UIViewController {
             topLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             topLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
+        
         
         guard let sessionId, let merchantId, let apiKey else { return }
 

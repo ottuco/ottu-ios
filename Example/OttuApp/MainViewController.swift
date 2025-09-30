@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var formOfPaymentSwitches: [UISwitch]!
     @IBOutlet var pgCodeSwitches: [UISwitch]!
     
+    @IBOutlet weak var autoDebitSwitch: UISwitch!
     @IBOutlet weak var noFormsOfPaymentSwitch: UISwitch!
     @IBOutlet weak var preloadSwitch: UISwitch!
     @IBOutlet weak var showPaymentDetailsSwitch: UISwitch!
@@ -55,7 +56,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         cardExpiryTimeTextField.text = ""
         
         pgCodeSwitches.forEach {
-            let isOn = !($0.tag == PgCode.ottuSdk.rawValue || $0.tag == PgCode.applePay.rawValue)
+            let isOn = !($0.tag == PgCode.ottuSdk.rawValue ||
+                         $0.tag == PgCode.applePay.rawValue ||
+                         $0.tag == PgCode.muscatbank.rawValue)
             
             $0.setOn(isOn, animated: false)
         }
@@ -200,6 +203,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let minExpiryTime = prepareMinExpiryTime()
         
         let lang = Locale.current.languageCode == "ar" ? "ar" : "en"
+        let isNeededPreload = preloadSwitch.isOn
         
         var json: [String: Any] = [
             "amount": amount,
@@ -215,7 +219,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
               "city": "Kuwait City",
               "line1": "something"
             ],
-            "include_sdk_setup_preload": "true",
+            "include_sdk_setup_preload": isNeededPreload ? "true": "false",
             "card_acceptance_criteria": minExpiryTime
         ].compactMapValues { $0 }
         
@@ -227,14 +231,38 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             json["customer_id"] = customerId
         }
         
+        if autoDebitSwitch.isOn {
+            json["payment_type"] = "auto_debit"
+            
+            let agreementJSON: [String: Any] = [
+                "id": generateAgreementId(),
+                "amount_variability": "fixed",
+                "expiry_date": "11/12/2100",
+                "cycle_interval_days": 3,
+                "frequency": "monthly",
+                "total_cycles": 999,
+                "type": "recurring"
+            ]
+            
+            json["agreement"] = agreementJSON
+        }
+        
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         let merchantId = merchantIdTextField.text!
-        let isNeededPreload = preloadSwitch.isOn
+
         
         let url = URL(string: "https://\(merchantId)/b/checkout/v1/pymt-txn/")!
         
         requestSessionId(url, apyKey, jsonData, isNeededPreload, completion)
+    }
+    
+    private func generateAgreementId() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd_MM_yyyy_HH_mm_ss"
+        let timestampString = formatter.string(from: date)
+        return timestampString
     }
     
     private func requestSessionId(_ url: URL, _ apyKey: String, _ jsonData: Data?, _ isNeededPreload: Bool, _ completion: @escaping (String?) -> Void) {
