@@ -63,7 +63,12 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var dataLabelFontName: UITextField!
     @IBOutlet weak var dataValueColorWell: UIColorWell!
     @IBOutlet weak var dataValueFontName: UITextField!
-    @IBOutlet weak var paymentItemBorderColor: UIColorWell!
+    @IBOutlet weak var paymentItemBorderColorWell: UIColorWell!
+    
+    @IBOutlet weak var selectPaymentMethodTitleFontName: UITextField!
+    @IBOutlet weak var selectPaymentMethodTitleColorWell: UIColorWell!
+    @IBOutlet weak var selectPaymentMethodTitleBackgroundColorWell: UIColorWell!
+    @IBOutlet weak var paymentItemBackgroundColorWell: UIColorWell!
     
     @objc func dismissPicker() {
          view.endEditing(true)
@@ -98,7 +103,11 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         feesSubtitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
         dataLabelColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
         dataValueColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        paymentItemBorderColor.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
+        paymentItemBorderColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
+        selectPaymentMethodTitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
+        selectPaymentMethodTitleBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
+        paymentItemBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
+        
         guard let theme else { return }
         
         backgroundColorWell.selectedColor = theme.backgroundColor
@@ -138,7 +147,10 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         dataLabelFontName.text = theme.dataLabel.fontFamily
         dataValueColorWell.selectedColor = theme.dataValue.color
         dataValueFontName.text = theme.dataValue.fontFamily
-        paymentItemBorderColor.selectedColor = theme.paymentItemBorderColor
+        paymentItemBorderColorWell.selectedColor = theme.paymentItemBorderColor
+        selectPaymentMethodTitleColorWell.selectedColor = theme.selectPaymentMethodTitleLabel.color
+        selectPaymentMethodTitleBackgroundColorWell.selectedColor = theme.selectPaymentMethodTitleBackgroundColor
+        paymentItemBackgroundColorWell.selectedColor = theme.paymentItemBackgroundColor
     }
     
     @objc private func colorWellChanged(_ sender: UIColorWell) {
@@ -209,6 +221,16 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             if sender.tag == 22 {
                 theme?.paymentItemBorderColor = color
             }
+            if sender.tag == 23 {
+                theme?.selectPaymentMethodTitleLabel.color = color
+            }
+            if sender.tag == 24 {
+                theme?.selectPaymentMethodTitleBackgroundColor = color
+            }
+            if sender.tag == 25 {
+                theme?.paymentItemBackgroundColor = color
+            }
+            
         }
     }
 
@@ -228,7 +250,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
     
     func setThemeFontFamily(_ fontFamily: String) {
         if activeTextField?.tag == 5 {
-            theme?.mainTitle.fontFamily = fontFamily 
+            theme?.mainTitle.fontFamily = fontFamily
         }
         if activeTextField?.tag == 6 {
             theme?.title.fontFamily = fontFamily
@@ -263,6 +285,9 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         if activeTextField?.tag == 16 {
             theme?.dataValue.fontFamily = fontFamily
         }
+        if activeTextField?.tag == 17 {
+            theme?.selectPaymentMethodTitleLabel.fontFamily = fontFamily
+        }
     }
 
     
@@ -284,8 +309,6 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         activeTextField?.text = selectedFontFamily
         setThemeFontFamily(selectedFontFamily)
     }
-
-
 }
 
 extension ThemeEditorViewController: UITextFieldDelegate {

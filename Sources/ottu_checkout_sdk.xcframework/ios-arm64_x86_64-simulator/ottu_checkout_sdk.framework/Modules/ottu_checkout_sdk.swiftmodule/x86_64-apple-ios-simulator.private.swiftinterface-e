@@ -55,6 +55,16 @@ public struct TransactionDetails {
       get
     }
   }
+  public enum PaymentType {
+    case oneOff
+    case autoDebit
+    case saveCard
+    public static func == (a: ottu_checkout_sdk.TransactionDetails.PaymentType, b: ottu_checkout_sdk.TransactionDetails.PaymentType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public var amount: Foundation.Decimal
   public var cards: [ottu_checkout_sdk.Card]
   public var customerId: Swift.String?
@@ -69,7 +79,8 @@ public struct TransactionDetails {
   public var state: ottu_checkout_sdk.TransactionDetails.State
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
-  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String)
+  public var paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?
+  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?)
 }
 public struct PaymentMethod : Swift.Equatable {
   public enum Flow {
@@ -250,20 +261,20 @@ public struct Wallet : Swift.Equatable {
   public init(code: Swift.String, pgCode: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
 }
-public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
+public enum FormOfPayment : Swift.String, Swift.Equatable, Swift.CaseIterable {
   case applePay
   case stcPay
   case tokenPay
   case redirect
   case flex
   case cardOnsite
-  public static func == (a: ottu_checkout_sdk.FormOfPayment, b: ottu_checkout_sdk.FormOfPayment) -> Swift.Bool
+  public init?(rawValue: Swift.String)
   public typealias AllCases = [ottu_checkout_sdk.FormOfPayment]
+  public typealias RawValue = Swift.String
   nonisolated public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -755,6 +766,7 @@ extension UIKit.UISpringTimingParameters {
 }
 public class LabelComponent {
   public var color: UIKit.UIColor
+  public var font: UIKit.UIFont
   public var fontFamily: Swift.String {
     get
     set
@@ -841,7 +853,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let currency_code: Swift.String
   public let fee: Swift.String
   public let fee_description: Swift.String?
-  public let icons: ottu_checkout_sdk.IconsResponse
+  public let icons: ottu_checkout_sdk.IconsResponse?
   public let pg_icons: [ottu_checkout_sdk.IconsResponse]?
   public let flow: Swift.String
   public let redirect_url: Foundation.URL?
@@ -903,6 +915,7 @@ public struct TransactionDetailsResponse : Swift.Decodable {
   public let type: Swift.String
   public let is_amount_editable: Swift.Bool
   public let session_id: Swift.String
+  public let payment_type: Swift.String?
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
@@ -1045,6 +1058,9 @@ public class CheckoutTheme {
   public var dataValue: ottu_checkout_sdk.LabelComponent
   public var showPaymentDetails: Swift.Bool
   public var paymentItemBorderColor: UIKit.UIColor
+  public var paymentItemBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodTitleLabel: ottu_checkout_sdk.LabelComponent
+  public var selectPaymentMethodTitleBackgroundColor: UIKit.UIColor
   public init()
   @objc deinit
 }
@@ -1054,6 +1070,8 @@ extension ottu_checkout_sdk.TransactionDetails.Language : Swift.RawRepresentable
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.Equatable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.Hashable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.TransactionDetails.PaymentType : Swift.Equatable {}
+extension ottu_checkout_sdk.TransactionDetails.PaymentType : Swift.Hashable {}
 extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Equatable {}
 extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Hashable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Equatable {}
@@ -1066,6 +1084,7 @@ extension ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayM
 extension ottu_checkout_sdk.Card.Brand : Swift.Equatable {}
 extension ottu_checkout_sdk.Card.Brand : Swift.Hashable {}
 extension ottu_checkout_sdk.FormOfPayment : Swift.Hashable {}
+extension ottu_checkout_sdk.FormOfPayment : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Equatable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Hashable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.RawRepresentable {}

@@ -22,6 +22,8 @@
 		379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B2E2D830C740080513C /* ottu_checkout_sdk */; };
 		379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B5D2D884B120080513C /* ottu_checkout_sdk */; };
 		379FC7982C1B28D900152872 /* ThemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */; };
+		8408A1532E8EA607003B4ACB /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 8408A1522E8EA607003B4ACB /* ottu_checkout_sdk */; };
+		84109B832E53513A001B65EA /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 84109B822E53513A001B65EA /* ottu_checkout_sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,9 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8408A1532E8EA607003B4ACB /* ottu_checkout_sdk in Frameworks */,
 				379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */,
 				379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */,
 				3756F3832E01AC3900712AB1 /* ottu_checkout_sdk in Frameworks */,
+				84109B832E53513A001B65EA /* ottu_checkout_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +175,7 @@
 			);
 			mainGroup = 377FD5F12B9B256F001EB337;
 			packageReferences = (
-				3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */,
+				8408A1512E8EA607003B4ACB /* XCRemoteSwiftPackageReference "ottu-ios" */,
 			);
 			productRefGroup = 377FD5FB2B9B256F001EB337 /* Products */;
 			projectDirPath = "";
@@ -487,6 +491,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		8408A1512E8EA607003B4ACB /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.5;
+			};
+		};
+		84109B812E53513A001B65EA /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ottuco/ottu-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -503,6 +523,16 @@
 		379D1B5D2D884B120080513C /* ottu_checkout_sdk */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 379D1B5C2D884B120080513C /* XCRemoteSwiftPackageReference "ottu-ios" */;
+			productName = ottu_checkout_sdk;
+		};
+		8408A1522E8EA607003B4ACB /* ottu_checkout_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8408A1512E8EA607003B4ACB /* XCRemoteSwiftPackageReference "ottu-ios" */;
+			productName = ottu_checkout_sdk;
+		};
+		84109B822E53513A001B65EA /* ottu_checkout_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84109B812E53513A001B65EA /* XCRemoteSwiftPackageReference "ottu-ios" */;
 			productName = ottu_checkout_sdk;
 		};
 /* End XCSwiftPackageProductDependency section */
