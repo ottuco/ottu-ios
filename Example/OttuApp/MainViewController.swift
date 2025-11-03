@@ -50,8 +50,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         amountTextField.text = "10"
         currencyCodeTextField.text = "KWD"
         customerIdTextField.text = "john1"
-        merchantIdTextField.text = "alpha.ottu.net"
-        apiKeyTextField.text = "cHSLW0bE.56PLGcUYEhRvzhHVVO9CbF68hmDiXcPI"
+        merchantIdTextField.text = "" // insert your merchant ID
+        apiKeyTextField.text = "" // insert your API key
         phoneNumberTextField.text="99459272"
         cardExpiryTimeTextField.text = ""
         

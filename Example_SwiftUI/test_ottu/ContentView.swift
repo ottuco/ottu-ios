@@ -15,9 +15,9 @@ struct ContentView: View {
                 NavigationLink(destination: OttuPaymentsView(
                     formsOfPayment: [],
                     showPaymentDetails: true,
-                    sessionId: "baf9beb0034694c43fcb7abd54bd51a67da63e93",
-                    merchantId: "alpha.ottu.net",
-                    apiKey: "cHSLW0bE.56PLGcUYEhRvzhHVVO9CbF68hmDiXcPI",
+                    sessionId: "", // insert your txn ID
+                    merchantId: "", // insert your merchant ID
+                    apiKey: "", // insert your API key
                     transactionDetailsPreload: nil
                 )) {
                     Text("Open Payment")
