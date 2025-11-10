@@ -347,7 +347,7 @@ extension ottu_checkout_sdk.PaymentServiceResponse {
     get throws
   }
 }
-public protocol OttuDelegate {
+public protocol OttuDelegate : AnyObject {
   func errorCallback(_ data: [Swift.String : Any]?)
   func cancelCallback(_ data: [Swift.String : Any]?)
   func successCallback(_ data: [Swift.String : Any]?)
@@ -368,9 +368,6 @@ final public class Checkout {
   public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate) throws
   final public func paymentViewController() -> UIKit.UIViewController?
   @objc deinit
-}
-public struct OTPErrorViewModel {
-  public let errorMessage: Swift.String
 }
 @_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
   @objc deinit
@@ -895,7 +892,6 @@ public struct PaymentServiceResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class ScreenShield {
-  public static let shared: ottu_checkout_sdk.ScreenShield
   public func protect(window: UIKit.UIWindow)
   public func protect(view: UIKit.UIView)
   public func protectFromScreenRecording(_ blockingScreenMessage: Swift.String? = nil)
