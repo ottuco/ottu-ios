@@ -13607,6 +13607,8 @@
         "usr": "s:17ottu_checkout_sdk12OttuDelegateP",
         "mangledName": "$s17ottu_checkout_sdk12OttuDelegateP",
         "moduleName": "ottu_checkout_sdk",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -14350,90 +14352,6 @@
         "printedName": "Sentry",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "OTPErrorViewModel",
-        "printedName": "OTPErrorViewModel",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "errorMessage",
-            "printedName": "errorMessage",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk17OTPErrorViewModelV12errorMessageSSvp",
-            "mangledName": "$s17ottu_checkout_sdk17OTPErrorViewModelV12errorMessageSSvp",
-            "moduleName": "ottu_checkout_sdk",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk17OTPErrorViewModelV12errorMessageSSvg",
-                "mangledName": "$s17ottu_checkout_sdk17OTPErrorViewModelV12errorMessageSSvg",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:17ottu_checkout_sdk17OTPErrorViewModelV",
-        "mangledName": "$s17ottu_checkout_sdk17OTPErrorViewModelV",
-        "moduleName": "ottu_checkout_sdk",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
       },
       {
         "kind": "Import",
@@ -32849,68 +32767,10 @@
         "moduleName": "ottu_checkout_sdk"
       },
       {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk"
-      },
-      {
         "kind": "TypeDecl",
         "name": "ScreenShield",
         "printedName": "ScreenShield",
         "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ScreenShield",
-                "printedName": "ottu_checkout_sdk.ScreenShield",
-                "usr": "s:17ottu_checkout_sdk12ScreenShieldC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk12ScreenShieldC6sharedACvpZ",
-            "mangledName": "$s17ottu_checkout_sdk12ScreenShieldC6sharedACvpZ",
-            "moduleName": "ottu_checkout_sdk",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ScreenShield",
-                    "printedName": "ottu_checkout_sdk.ScreenShield",
-                    "usr": "s:17ottu_checkout_sdk12ScreenShieldC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk12ScreenShieldC6sharedACvgZ",
-                "mangledName": "$s17ottu_checkout_sdk12ScreenShieldC6sharedACvgZ",
-                "moduleName": "ottu_checkout_sdk",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
           {
             "kind": "Function",
             "name": "protect",
@@ -40744,7 +40604,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ListPaymentMethodsPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 4911,
+      "offset": 4918,
       "length": 27,
       "value": "\"com.ottu.sharedStateQueue\""
     },
@@ -41024,63 +40884,63 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1625,
+      "offset": 1642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3522,
+      "offset": 3539,
       "length": 75,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3544,
+      "offset": 3561,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/pymt-txn\/submit\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3595,
+      "offset": 3612,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3691,
+      "offset": 3708,
       "length": 77,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3713,
+      "offset": 3730,
       "length": 1,
       "value": "\"\/b\/checkout\/api\/sdk\/v1\/concur-payer-view\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 3766,
+      "offset": 3783,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4582,
+      "offset": 4599,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/PaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4641,
+      "offset": 4658,
       "length": 5,
       "value": "false"
     },
@@ -41892,21 +41752,21 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/CVVTextEditLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 222,
+      "offset": 207,
       "length": 22,
       "value": "\"cvv_code_placeholder\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/CVVTextEditLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 265,
+      "offset": 250,
       "length": 13,
       "value": "\"CVVTextEdit\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/CVVTextEditLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 359,
+      "offset": 344,
       "length": 2,
       "value": "\"\""
     },
@@ -41941,7 +41801,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/OTPCode\/OTPCodePresenter.swift",
       "kind": "StringLiteral",
-      "offset": 2501,
+      "offset": 2373,
       "length": 5,
       "value": "\"966\""
     },
@@ -42347,7 +42207,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/NewCardViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1324,
+      "offset": 1390,
       "length": 5,
       "value": "false"
     },
@@ -43073,6 +42933,20 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Wallet\/OTPCode\/WalletPayOTPCodeUIComposer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 212,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Wallet\/OTPCode\/WalletPayOTPCodeUIComposer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 266,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/PaymentViewController.swift",
       "kind": "Array",
       "offset": 390,
@@ -43082,14 +42956,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/PaymentViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3309,
+      "offset": 3327,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/PaymentViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3462,
+      "offset": 3480,
       "length": 2,
       "value": "20"
     },
@@ -43243,42 +43117,42 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 192,
+      "offset": 177,
       "length": 22,
       "value": "\"flex_pay_tabby_title\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 249,
+      "offset": 234,
       "length": 6,
       "value": "\"Flex\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 357,
+      "offset": 342,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 418,
+      "offset": 403,
       "length": 24,
       "value": "\"flex_pay_not_available\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 477,
+      "offset": 462,
       "length": 6,
       "value": "\"Flex\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/FlexLocalizedString.swift",
       "kind": "StringLiteral",
-      "offset": 585,
+      "offset": 570,
       "length": 2,
       "value": "\"\""
     },
@@ -43302,6 +43176,27 @@
       "offset": 274,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/PayWithNewCardUIComposer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 227,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/PayWithNewCardUIComposer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 281,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/PayWithNewCardUIComposer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 344,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/Payment\/ViewModels\/PaymentDetailsViewModel.swift",
@@ -43381,9 +43276,9 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ScreenShield.swift",
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Security\/ScreenShield.swift",
       "kind": "StringLiteral",
-      "offset": 281,
+      "offset": 220,
       "length": 30,
       "value": "\"Screen recording not allowed\""
     },
