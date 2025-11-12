@@ -892,10 +892,10 @@ public struct PaymentServiceResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class ScreenShield {
+  @objc deinit
   public func protect(window: UIKit.UIWindow)
   public func protect(view: UIKit.UIView)
   public func protectFromScreenRecording(_ blockingScreenMessage: Swift.String? = nil)
-  @objc deinit
 }
 public struct TransactionDetailsResponse : Swift.Decodable {
   public let amount: Swift.String
