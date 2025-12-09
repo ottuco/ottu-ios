@@ -42434,7 +42434,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCardCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 397,
+      "offset": 405,
       "length": 5,
       "value": "false"
     },
