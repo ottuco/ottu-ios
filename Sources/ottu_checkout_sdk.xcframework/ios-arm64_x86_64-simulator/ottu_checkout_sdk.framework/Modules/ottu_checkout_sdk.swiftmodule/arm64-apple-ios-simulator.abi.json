@@ -4436,9 +4436,119 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "cvvRequired",
+            "printedName": "cvvRequired",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11cvvRequiredSbSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(code:name:amount:currencyCode:fee:feeDescription:icons:flow:redirectURL:canSaveCard:submitURL:directPaymentURL:directSaveCardURL:encKeyURL:trandata:)",
+            "printedName": "init(code:name:amount:currencyCode:fee:feeDescription:icons:flow:redirectURL:canSaveCard:submitURL:directPaymentURL:directSaveCardURL:encKeyURL:trandata:cvvRequired:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4599,11 +4709,25 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandataACSS_SSSo9NSDecimalaSSATSSSgSay10Foundation0P0VGAC4FlowOAXSgSbA0_A0_A0_A0_AUtcfc",
-            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandataACSS_SSSo9NSDecimalaSSATSSSgSay10Foundation0P0VGAC4FlowOAXSgSbA0_A0_A0_A0_AUtcfc",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequiredACSS_SSSo9NSDecimalaSSAUSSSgSay10Foundation0P0VGAC4FlowOAYSgSbA1_A1_A1_A1_AVSbSgtcfc",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequiredACSS_SSSo9NSDecimalaSSAUSSSgSay10Foundation0P0VGAC4FlowOAYSgSbA1_A1_A1_A1_AVSbSgtcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -31187,6 +31311,66 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "cvv_required",
+            "printedName": "cvv_required",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvp",
+            "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvg",
+                "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -41545,28 +41729,28 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/DirectPaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 780,
+      "offset": 781,
       "length": 8,
       "value": "\"number\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/DirectPaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 815,
+      "offset": 816,
       "length": 13,
       "value": "\"expiry_date\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/DirectPaymentCore.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 867,
       "length": 11,
       "value": "\"save_card\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/DirectPaymentCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 1184,
+      "offset": 1185,
       "length": 5,
       "value": "false"
     },

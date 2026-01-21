@@ -108,7 +108,8 @@ public struct PaymentMethod : Swift.Equatable {
   public var directSaveCardURL: Foundation.URL?
   public var encKeyURL: Foundation.URL?
   public var trandata: Swift.String?
-  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?)
+  public var cvvRequired: Swift.Bool?
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?)
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
 }
 public struct ApplePayWallet : Swift.Equatable {
@@ -860,6 +861,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let direct_save_card_url: Foundation.URL?
   public let enc_key_url: Foundation.URL?
   public let trandata: Swift.String?
+  public let cvv_required: Swift.Bool?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentServiceResponse : Swift.Decodable {
