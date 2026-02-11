@@ -7,6 +7,7 @@
 
 import UIKit
 import ottu_checkout_sdk
+import OSLog
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
@@ -35,6 +36,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var visibleItemsCountValueLabel: UILabel!
     @IBOutlet weak var visibleItemsCountStepper: UIStepper!
     @IBOutlet weak var defaultSelectedPgCodeTextField: UITextField!
+    @IBOutlet weak var failPaymentValidationSwitch: UISwitch!
+    @IBOutlet weak var useCustomTextSwitch: UISwitch!
     
     private var sessionId: String?
     private var transactionDetailsPreload: TransactionDetails?
@@ -112,6 +115,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 destinationViewController.merchantId = merchantIdTextField.text
                 destinationViewController.apiKey = apiKeyTextField.text
                 destinationViewController.transactionDetailsPreload = transactionDetailsPreload
+                destinationViewController.failPaymentValidation = failPaymentValidationSwitch.isOn
+                destinationViewController.useCustomText = useCustomTextSwitch.isOn
                 
                 if crashSwitch.isOn {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
@@ -186,7 +191,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
         return minExpiryTime
     }
-        
+    
     private func getSessionId(completion: @escaping (String?) -> Void) {
         guard let amount = amountTextField.text, amount != "",
               let currencyCode = currencyCodeTextField.text, currencyCode != "",
@@ -215,9 +220,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             "customer_last_name": "Smith",
             "customer_email": "john1@some.mail",
             "billing_address": [
-              "country": "KW",
-              "city": "Kuwait City",
-              "line1": "something"
+                "country": "KW",
+                "city": "Kuwait City",
+                "line1": "something"
             ],
             "include_sdk_setup_preload": isNeededPreload ? "true": "false",
             "card_acceptance_criteria": minExpiryTime
@@ -250,7 +255,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         let merchantId = merchantIdTextField.text!
-
+        
         
         let url = URL(string: "https://\(merchantId)/b/checkout/v1/pymt-txn/")!
         
@@ -266,6 +271,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func requestSessionId(_ url: URL, _ apyKey: String, _ jsonData: Data?, _ isNeededPreload: Bool, _ completion: @escaping (String?) -> Void) {
+        Logger.sdk.info("requestSessionId")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Api-Key \(apyKey)", forHTTPHeaderField: "Authorization")
@@ -275,7 +281,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let session = URLSession(configuration: .ephemeral)
         let task = session.dataTask(with: request) { [weak self] data, response, error in
             guard let self else { return }
-            
+            Logger.sdk.info(" \(error.debugDescription)")
             if let data, let json = try? JSONSerialization.jsonObject(with: data) as? Dictionary<String, Any> {
                 if let sessionId = json["session_id"] as? String {
                     
@@ -302,7 +308,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
         if textField == cardExpiryTimeTextField {
             let currentText = textField.text ?? ""
             let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)

@@ -7,6 +7,7 @@
 
 import UIKit
 import ottu_checkout_sdk
+import OSLog
 
 class OttuPaymentsViewController: UIViewController {
     
@@ -14,11 +15,13 @@ class OttuPaymentsViewController: UIViewController {
     
     var formsOfPayment = [ottu_checkout_sdk.FormOfPayment]()
     var showPaymentDetails: Bool = true
+    var failPaymentValidation = false
+    var useCustomText = false
     var sessionId: String?
     var merchantId: String?
     var apiKey: String?
     var transactionDetailsPreload: TransactionDetails?
-    
+
     var theme = CheckoutTheme()
     var paymentOptionsDisplayMode = PaymentOptionsDisplaySettings
         .PaymentOptionsDisplayMode
@@ -32,19 +35,19 @@ class OttuPaymentsViewController: UIViewController {
         super.viewDidLoad()
         
         let contentView = UIView()
-
+        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-
+            
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
@@ -55,7 +58,7 @@ class OttuPaymentsViewController: UIViewController {
         let topLabel = UILabel()
         topLabel.text = "Some user UI elements"
         topLabel.translatesAutoresizingMaskIntoConstraints = false
-
+        
         contentView.addSubview(topLabel)
         
         NSLayoutConstraint.activate([
@@ -65,9 +68,10 @@ class OttuPaymentsViewController: UIViewController {
         
         
         guard let sessionId, let merchantId, let apiKey else { return }
-
+        
         theme.showPaymentDetails = showPaymentDetails
-
+        let payButtonText = useCustomText ? PayButtonText(en: "Checkout", ar: "الدفع") : nil
+        
         do {
             self.checkout = try Checkout(
                 formsOfPayments: formsOfPayment,
@@ -81,26 +85,28 @@ class OttuPaymentsViewController: UIViewController {
                 merchantId: merchantId,
                 apiKey: apiKey,
                 setupPreload: transactionDetailsPreload,
-                delegate: self
+                delegate: self,
+                verifyPayment: verifyPaymentCallback,
+                payButtonText: payButtonText
             )
         } catch let error as LocalizedError {
             showFailAlert(error)
             return
         } catch {
-            print("Unexpected error: \(error)")
+            Logger.app.info("Unexpected error: \(error)")
             return
         }
-
+        
         if let paymentVC = self.checkout?.paymentViewController(),
            let paymentView = paymentVC.view {
-
+            
             self.addChild(paymentVC)
-
+            
             let resizableContainer = ResizableContainerView()
             resizableContainer.translatesAutoresizingMaskIntoConstraints = false
             resizableContainer.addSubview(paymentView)
             paymentVC.didMove(toParent: self)
-
+            
             paymentView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 paymentView.topAnchor.constraint(equalTo: resizableContainer.topAnchor),
@@ -108,15 +114,15 @@ class OttuPaymentsViewController: UIViewController {
                 paymentView.leadingAnchor.constraint(equalTo: resizableContainer.leadingAnchor, constant: 16),
                 paymentView.trailingAnchor.constraint(equalTo: resizableContainer.trailingAnchor, constant: -16)
             ])
-
+            
             contentView.addSubview(resizableContainer)
-
+            
             NSLayoutConstraint.activate([
                 resizableContainer.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 16),
                 resizableContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 resizableContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
             ])
-
+            
             resizableContainer.sizeChangedCallback = { [weak self] _ in
                 guard let self else { return }
                 updateScrollEnabled(for: scrollView)
@@ -137,7 +143,6 @@ class OttuPaymentsViewController: UIViewController {
         }
     }
 
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateScrollEnabled(for: scrollView)
@@ -148,16 +153,16 @@ class OttuPaymentsViewController: UIViewController {
         
         let contentHeight = scrollView.contentSize.height
         let visibleHeight = scrollView.bounds.height
-
+        
         let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
         let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-
+        
         let adjustedVisibleHeight = visibleHeight - navigationBarHeight - statusBarHeight
-
+        
         let shouldScroll = contentHeight > adjustedVisibleHeight
         scrollView.isScrollEnabled = shouldScroll
     }
-
+    
     private func showFailAlert(_ error: any LocalizedError) {
         let title = NSLocalizedString(
             "Failed",
@@ -209,7 +214,7 @@ extension OttuPaymentsViewController: OttuDelegate {
             self.present(alert, animated: true)
         }
     }
-      
+    
     func successCallback(_ data: [String : Any]?) {
         DispatchQueue.main.async {
             
@@ -218,5 +223,21 @@ extension OttuPaymentsViewController: OttuDelegate {
             self.present(alert, animated: true)
         }
     }
-
+    
+    private func verifyPaymentCallback(_ payload: String?) async -> CardVerificationResult<Void> {
+        Logger.app.info("OttuPaymentsViewController.verifyPaymentCallback, payload: \(String(describing: payload))")
+        let seconds = 2.0
+        try? await Task.sleep(nanoseconds: UInt64(seconds * Double(NSEC_PER_SEC)))
+        if failPaymentValidation {
+            let message = NSLocalizedString(
+                "prepayment_failure_message",
+                tableName: "Localizable",
+                bundle: Bundle(for: Self.self),
+                comment: ""
+            )
+            return CardVerificationResult.failure(message)
+        } else {
+            return CardVerificationResult.success(())
+        }
+    }
 }

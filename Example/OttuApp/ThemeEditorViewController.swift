@@ -7,9 +7,10 @@
 
 import UIKit
 import ottu_checkout_sdk
+import OSLog
 
 class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     var theme: CheckoutTheme?
     
     let fonts = UIFont.familyNames.sorted()
@@ -69,10 +70,13 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var selectPaymentMethodTitleColorWell: UIColorWell!
     @IBOutlet weak var selectPaymentMethodTitleBackgroundColorWell: UIColorWell!
     @IBOutlet weak var paymentItemBackgroundColorWell: UIColorWell!
+    @IBOutlet weak var uiModeMenuButton: UIMenu!
+    @IBOutlet weak var uiModeButton: UIButton!
+    
     
     @objc func dismissPicker() {
-         view.endEditing(true)
-     }
+        view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,6 +155,8 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         selectPaymentMethodTitleColorWell.selectedColor = theme.selectPaymentMethodTitleLabel.color
         selectPaymentMethodTitleBackgroundColorWell.selectedColor = theme.selectPaymentMethodTitleBackgroundColor
         paymentItemBackgroundColorWell.selectedColor = theme.paymentItemBackgroundColor
+        uiModeButton.setTitle(theme.uiMode.rawValue, for: .normal)
+        updateUiMode(uiMode: theme.uiMode)
     }
     
     @objc private func colorWellChanged(_ sender: UIColorWell) {
@@ -248,6 +254,14 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         }
     }
     
+    @IBAction func onUiModeSelection(_ sender: UIAction) {
+        uiModeButton.setTitle(sender.title, for: .normal)
+        let uiMode = UiMode(rawValue: sender.title) ?? UiMode.SYSTEM
+        theme?.uiMode = uiMode
+        updateUiMode(uiMode: uiMode)
+        Logger.sdk.info("uiMode has been selected: \(uiMode.rawValue)")
+    }
+    
     func setThemeFontFamily(_ fontFamily: String) {
         if activeTextField?.tag == 5 {
             theme?.mainTitle.fontFamily = fontFamily
@@ -289,25 +303,41 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             theme?.selectPaymentMethodTitleLabel.fontFamily = fontFamily
         }
     }
-
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-         1
-     }
-
-     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-         fonts.count
-     }
-
-     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-         fonts[row]
-     }
-
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        fonts.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        fonts[row]
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedFontFamily = fonts[row]
         
         activeTextField?.text = selectedFontFamily
         setThemeFontFamily(selectedFontFamily)
+    }
+    
+    private func updateUiMode(uiMode: UiMode) {
+        
+        let mode: UIUserInterfaceStyle = switch uiMode {
+        case .SYSTEM: .light
+        case .DARK: .dark
+        default: .unspecified
+            
+        }
+        
+        UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .compactMap({$0 as? UIWindowScene})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first?.overrideUserInterfaceStyle = mode
     }
 }
 

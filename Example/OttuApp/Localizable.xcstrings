@@ -34,6 +34,23 @@
           }
         }
       }
+    },
+    "prepayment_failure_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "لا يمكن دفع طلبك.\nيرجى التحقق من معلومات الشراء."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cannot pay your order.\\nPlease, check purchase information"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

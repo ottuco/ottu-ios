@@ -8,6 +8,7 @@ import Darwin
 import DeveloperToolsSupport
 import Foundation
 import MachO
+import OSLog
 import ObjectiveC
 import PassKit
 import Sentry
@@ -222,13 +223,13 @@ public struct FlexMethodResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Card : Swift.Equatable {
-  public enum Brand {
+  public enum Brand : Swift.String {
     case stc
     case visa
     case mastercard
-    public static func == (a: ottu_checkout_sdk.Card.Brand, b: ottu_checkout_sdk.Card.Brand) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
       get
     }
   }
@@ -261,6 +262,9 @@ public struct Wallet : Swift.Equatable {
   public var paymentURL: Foundation.URL
   public init(code: Swift.String, pgCode: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
+}
+public struct PayButtonText {
+  public init(en: Swift.String, ar: Swift.String)
 }
 public enum FormOfPayment : Swift.String, Swift.Equatable, Swift.CaseIterable {
   case applePay
@@ -365,8 +369,9 @@ public class ButtonComponent {
   public init()
   @objc deinit
 }
+public typealias VerifyPaymentDelegate = (Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<Swift.Void>
 final public class Checkout {
-  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate) throws
+  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil) throws
   final public func paymentViewController() -> UIKit.UIViewController?
   @objc deinit
 }
@@ -394,6 +399,16 @@ public struct OTPCodeViewModel {
   public let screenTitle: Swift.String
   public let screenMessage: Swift.String
   public let confirmButtonTitle: Swift.String
+}
+public enum UiMode : Swift.String {
+  case SYSTEM
+  case LIGHT
+  case DARK
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct CardPayResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
@@ -773,11 +788,18 @@ public class LabelComponent {
   public init()
   @objc deinit
 }
+public enum CardVerificationResult<Success> {
+  case success(Success)
+  case failure(Swift.String)
+}
 public struct IconsResponse : Swift.Decodable {
   public var webp: Foundation.URL
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentViewModel {
+}
+extension os.Logger {
+  public static let sdk: os.Logger
 }
 public struct PhoneNumberViewModel {
   public let screenTitle: Swift.String
@@ -1085,6 +1107,7 @@ public class CheckoutTheme {
   public var paymentItemBackgroundColor: UIKit.UIColor
   public var selectPaymentMethodTitleLabel: ottu_checkout_sdk.LabelComponent
   public var selectPaymentMethodTitleBackgroundColor: UIKit.UIColor
+  public var uiMode: ottu_checkout_sdk.UiMode
   public init()
   @objc deinit
 }
@@ -1107,8 +1130,12 @@ extension ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels.PaymentTy
 extension ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode : Swift.Hashable {}
 extension ottu_checkout_sdk.Card.Brand : Swift.Equatable {}
 extension ottu_checkout_sdk.Card.Brand : Swift.Hashable {}
+extension ottu_checkout_sdk.Card.Brand : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FormOfPayment : Swift.Hashable {}
 extension ottu_checkout_sdk.FormOfPayment : Swift.RawRepresentable {}
+extension ottu_checkout_sdk.UiMode : Swift.Equatable {}
+extension ottu_checkout_sdk.UiMode : Swift.Hashable {}
+extension ottu_checkout_sdk.UiMode : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Equatable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.Hashable {}
 extension ottu_checkout_sdk.FloatingPanelPosition : Swift.RawRepresentable {}
