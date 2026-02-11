@@ -136,6 +136,13 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -9355,52 +9362,53 @@
                 "moduleName": "ottu_checkout_sdk"
               },
               {
-                "kind": "Function",
-                "name": "==",
-                "printedName": "==(_:_:)",
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.Card.Brand?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Brand",
+                        "printedName": "ottu_checkout_sdk.Card.Brand",
+                        "usr": "s:17ottu_checkout_sdk4CardV5BrandO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Brand",
-                    "printedName": "ottu_checkout_sdk.Card.Brand",
-                    "usr": "s:17ottu_checkout_sdk4CardV5BrandO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Brand",
-                    "printedName": "ottu_checkout_sdk.Card.Brand",
-                    "usr": "s:17ottu_checkout_sdk4CardV5BrandO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk4CardV5BrandO2eeoiySbAE_AEtFZ",
-                "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO2eeoiySbAE_AEtFZ",
+                "declKind": "Constructor",
+                "usr": "s:17ottu_checkout_sdk4CardV5BrandO8rawValueAESgSS_tcfc",
+                "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO8rawValueAESgSS_tcfc",
                 "moduleName": "ottu_checkout_sdk",
-                "static": true,
                 "implicit": true,
-                "funcSelfKind": "NonMutating"
+                "init_kind": "Designated"
               },
               {
                 "kind": "Var",
-                "name": "hashValue",
-                "printedName": "hashValue",
+                "name": "rawValue",
+                "printedName": "rawValue",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:17ottu_checkout_sdk4CardV5BrandO9hashValueSivp",
-                "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO9hashValueSivp",
+                "usr": "s:17ottu_checkout_sdk4CardV5BrandO8rawValueSSvp",
+                "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO8rawValueSSvp",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessors": [
@@ -9411,44 +9419,19 @@
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:17ottu_checkout_sdk4CardV5BrandO9hashValueSivg",
-                    "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO9hashValueSivg",
+                    "usr": "s:17ottu_checkout_sdk4CardV5BrandO8rawValueSSvg",
+                    "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO8rawValueSSvg",
                     "moduleName": "ottu_checkout_sdk",
                     "implicit": true,
                     "accessorKind": "get"
                   }
                 ]
-              },
-              {
-                "kind": "Function",
-                "name": "hash",
-                "printedName": "hash(into:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Hasher",
-                    "printedName": "Swift.Hasher",
-                    "paramValueOwnership": "InOut",
-                    "usr": "s:s6HasherV"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk4CardV5BrandO4hash4intoys6HasherVz_tF",
-                "mangledName": "$s17ottu_checkout_sdk4CardV5BrandO4hash4intoys6HasherVz_tF",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Enum",
@@ -9458,6 +9441,7 @@
             "declAttributes": [
               "AccessControl"
             ],
+            "enumRawTypeName": "String",
             "conformances": [
               {
                 "kind": "Conformance",
@@ -9486,6 +9470,28 @@
                 "printedName": "Hashable",
                 "usr": "s:SH",
                 "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
               }
             ]
           },
@@ -11269,6 +11275,70 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "PayButtonText",
+        "printedName": "PayButtonText",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(en:ar:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PayButtonText",
+                "printedName": "ottu_checkout_sdk.PayButtonText",
+                "usr": "s:17ottu_checkout_sdk13PayButtonTextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk13PayButtonTextV2en2arACSS_SStcfc",
+            "mangledName": "$s17ottu_checkout_sdk13PayButtonTextV2en2arACSS_SStcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ottu_checkout_sdk13PayButtonTextV",
+        "mangledName": "$s17ottu_checkout_sdk13PayButtonTextV",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -11886,6 +11956,13 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk"
       },
@@ -14307,6 +14384,13 @@
         "moduleName": "ottu_checkout_sdk"
       },
       {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
         "kind": "TypeDecl",
         "name": "Checkout",
         "printedName": "Checkout",
@@ -14314,7 +14398,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(formsOfPayments:theme:displaySettings:sessionId:merchantId:apiKey:setupPreload:delegate:)",
+            "printedName": "init(formsOfPayments:theme:displaySettings:sessionId:merchantId:apiKey:setupPreload:delegate:verifyPayment:payButtonText:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -14389,11 +14473,69 @@
                 "name": "OttuDelegate",
                 "printedName": "any ottu_checkout_sdk.OttuDelegate",
                 "usr": "s:17ottu_checkout_sdk12OttuDelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<()>)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<()>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardVerificationResult",
+                        "printedName": "ottu_checkout_sdk.CardVerificationResult<()>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ],
+                        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.PayButtonText?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayButtonText",
+                    "printedName": "ottu_checkout_sdk.PayButtonText",
+                    "usr": "s:17ottu_checkout_sdk13PayButtonTextV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegateACSayAA04FormF7PaymentOG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_ptKcfc",
-            "mangledName": "$s17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegateACSayAA04FormF7PaymentOG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_ptKcfc",
+            "usr": "s:17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonTextACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgtKcfc",
+            "mangledName": "$s17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonTextACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgtKcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl",
@@ -14698,6 +14840,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "TypeDecl",
@@ -15245,6 +15394,257 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "UiMode",
+        "printedName": "UiMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "SYSTEM",
+            "printedName": "SYSTEM",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.UiMode.Type) -> ottu_checkout_sdk.UiMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.UiMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiMode",
+                        "printedName": "ottu_checkout_sdk.UiMode",
+                        "usr": "s:17ottu_checkout_sdk6UiModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk6UiModeO6SYSTEMyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk6UiModeO6SYSTEMyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "LIGHT",
+            "printedName": "LIGHT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.UiMode.Type) -> ottu_checkout_sdk.UiMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.UiMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiMode",
+                        "printedName": "ottu_checkout_sdk.UiMode",
+                        "usr": "s:17ottu_checkout_sdk6UiModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk6UiModeO5LIGHTyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk6UiModeO5LIGHTyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "DARK",
+            "printedName": "DARK",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.UiMode.Type) -> ottu_checkout_sdk.UiMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.UiMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UiMode",
+                        "printedName": "ottu_checkout_sdk.UiMode",
+                        "usr": "s:17ottu_checkout_sdk6UiModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk6UiModeO4DARKyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk6UiModeO4DARKyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.UiMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk6UiModeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s17ottu_checkout_sdk6UiModeO8rawValueACSgSS_tcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk6UiModeO8rawValueSSvp",
+            "mangledName": "$s17ottu_checkout_sdk6UiModeO8rawValueSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk6UiModeO8rawValueSSvg",
+                "mangledName": "$s17ottu_checkout_sdk6UiModeO8rawValueSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk6UiModeO",
+        "mangledName": "$s17ottu_checkout_sdk6UiModeO",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -15424,6 +15824,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "Import",
@@ -27672,6 +28079,166 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "CardVerificationResult",
+        "printedName": "CardVerificationResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (ottu_checkout_sdk.CardVerificationResult<τ_0_0>.Type) -> (τ_0_0) -> ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0) -> ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardVerificationResult",
+                        "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardVerificationResult",
+                        "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk22CardVerificationResultO7successyACyxGxcAEmlF",
+            "mangledName": "$s17ottu_checkout_sdk22CardVerificationResultO7successyACyxGxcAEmlF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "failure",
+            "printedName": "failure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "GenericFunction",
+                "printedName": "<τ_0_0> (ottu_checkout_sdk.CardVerificationResult<τ_0_0>.Type) -> (Swift.String) -> ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardVerificationResult",
+                        "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CardVerificationResult",
+                        "printedName": "ottu_checkout_sdk.CardVerificationResult<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk22CardVerificationResultO7failureyACyxGSScAEmlF",
+            "mangledName": "$s17ottu_checkout_sdk22CardVerificationResultO7failureyACyxGSScAEmlF",
+            "moduleName": "ottu_checkout_sdk"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk22CardVerificationResultO",
+        "mangledName": "$s17ottu_checkout_sdk22CardVerificationResultO",
+        "moduleName": "ottu_checkout_sdk",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Success>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -27680,6 +28247,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "TypeDecl",
@@ -27900,6 +28474,13 @@
       },
       {
         "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -27952,6 +28533,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
@@ -38395,6 +38986,92 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "uiMode",
+            "printedName": "uiMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UiMode",
+                "printedName": "ottu_checkout_sdk.UiMode",
+                "usr": "s:17ottu_checkout_sdk6UiModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovp",
+            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovg",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UiMode",
+                    "printedName": "ottu_checkout_sdk.UiMode",
+                    "usr": "s:17ottu_checkout_sdk6UiModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovs",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0Ovs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0OvM",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC6uiModeAA02UiG0OvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -38480,6 +39157,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "Import",
@@ -40189,6 +40873,100 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sdk",
+            "printedName": "sdk",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "os.Logger",
+                "usr": "s:2os6LoggerV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2os6LoggerV17ottu_checkout_sdkE0E0ACvpZ",
+            "mangledName": "$s2os6LoggerV17ottu_checkout_sdkE0E0ACvpZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Logger",
+                    "printedName": "os.Logger",
+                    "usr": "s:2os6LoggerV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2os6LoggerV17ottu_checkout_sdkE0E0ACvgZ",
+                "mangledName": "$s2os6LoggerV17ottu_checkout_sdkE0E0ACvgZ",
+                "moduleName": "ottu_checkout_sdk",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2os6LoggerV",
+        "mangledName": "$s2os6LoggerV",
+        "moduleName": "os",
+        "intro_Macosx": "11.0",
+        "intro_iOS": "14.0",
+        "intro_tvOS": "14.0",
+        "intro_watchOS": "7.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "HTTPURLResponse",
         "printedName": "HTTPURLResponse",
         "children": [
@@ -40816,7 +41594,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/PayWithNewCard\/NewCardViewProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 712,
+      "offset": 725,
       "length": 1,
       "value": "3"
     },
@@ -41866,21 +42644,21 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Fonts\/FontManager.swift",
       "kind": "Array",
-      "offset": 261,
+      "offset": 274,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Fonts\/FontManager.swift",
       "kind": "Dictionary",
-      "offset": 1916,
+      "offset": 1979,
       "length": 90,
       "value": "[(\"SAR\", \"\"), (\"AED\", \"\")]"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Fonts\/FontManager.swift",
       "kind": "Dictionary",
-      "offset": 2073,
+      "offset": 2136,
       "length": 65,
       "value": "[(\"SAR\", \"saudi_riyal\"), (\"AED\", \"UAE-dirham\")]"
     },
@@ -41971,14 +42749,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Checkout.swift",
       "kind": "BooleanLiteral",
-      "offset": 1378,
+      "offset": 1535,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/Common\/GlobalOTPCountdown.swift",
       "kind": "IntegerLiteral",
-      "offset": 418,
+      "offset": 431,
       "length": 1,
       "value": "0"
     },
@@ -41995,6 +42773,27 @@
       "offset": 2373,
       "length": 5,
       "value": "\"966\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/UiMode.swift",
+      "kind": "StringLiteral",
+      "offset": 178,
+      "length": 8,
+      "value": "\"System\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/UiMode.swift",
+      "kind": "StringLiteral",
+      "offset": 204,
+      "length": 7,
+      "value": "\"Light\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/UiMode.swift",
+      "kind": "StringLiteral",
+      "offset": 228,
+      "length": 6,
+      "value": "\"Dark\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Translations\/ListPaymentMethodsLocalizedString.swift",
@@ -42398,9 +43197,44 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/NewCardViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1390,
+      "offset": 1403,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/CardVerificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 350,
+      "length": 8,
+      "value": "\"number\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/CardVerificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 390,
+      "length": 14,
+      "value": "\"expiry_month\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/CardVerificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 435,
+      "length": 13,
+      "value": "\"expiry_year\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/CardVerificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 470,
+      "length": 7,
+      "value": "\"brand\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Core\/Cards\/CardVerificationPayload.swift",
+      "kind": "StringLiteral",
+      "offset": 500,
+      "length": 8,
+      "value": "\"scheme\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/ListPaymentMethodsViewController.swift",
@@ -43231,28 +44065,28 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/PayWithNewCard\/PayWithNewCardPresenter.swift",
       "kind": "Array",
-      "offset": 907,
+      "offset": 920,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/PayWithNewCard\/PayWithNewCardPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 663,
+      "offset": 676,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/PayWithNewCard\/PayWithNewCardPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 996,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/PayWithNewCard\/PayWithNewCardPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 1016,
+      "offset": 1029,
       "length": 2,
       "value": "\"\""
     },
@@ -43367,6 +44201,13 @@
       "offset": 274,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 258,
+      "length": 5,
+      "value": "\"sdk\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/PayWithNewCard\/PayWithNewCardUIComposer.swift",
