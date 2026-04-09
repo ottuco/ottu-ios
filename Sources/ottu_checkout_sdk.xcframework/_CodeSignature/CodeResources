@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/dSYMs/ottu_checkout_sdk.framework.dSYM/Contents/Resources/DWARF/ottu_checkout_sdk</key>
 		<data>
-		MmDP7t9PIhbbMJ/MbTBEHRp+9U4=
+		2ecldlMEc08wlZYfgskhZGyfSF0=
 		</data>
 		<key>ios-arm64/dSYMs/ottu_checkout_sdk.framework.dSYM/Contents/Resources/Relocations/aarch64/ottu_checkout_sdk.yml</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>ios-arm64/ottu_checkout_sdk.framework/Assets.car</key>
 		<data>
-		Vbwrk8Ufc3++wFygahHWb8M9qiM=
+		a/2naAx8n7CI+BJOIM9rx/tb/UE=
 		</data>
 		<key>ios-arm64/ottu_checkout_sdk.framework/Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
 		<dict>
@@ -145,7 +145,7 @@
 		</data>
 		<key>ios-arm64/ottu_checkout_sdk.framework/_CodeSignature/CodeResources</key>
 		<data>
-		/tx3Q/adQQtDInL/Jq5g8BOGoCE=
+		VoEKcwfZNaeYZHPCdvuFgDnIwmY=
 		</data>
 		<key>ios-arm64/ottu_checkout_sdk.framework/ar.lproj/CVVTextEdit.strings</key>
 		<dict>
@@ -401,7 +401,7 @@
 		</dict>
 		<key>ios-arm64/ottu_checkout_sdk.framework/ottu_checkout_sdk</key>
 		<data>
-		96NP/j2rVU0o9SdCul0dHgum99Y=
+		n7Dsy51iYqWVsWQ3jgpQnHVdOzQ=
 		</data>
 		<key>ios-arm64/ottu_checkout_sdk.framework/saudi_riyal.ttf</key>
 		<data>
@@ -848,7 +848,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			heBvC133Yrm9Z96mTYrhS0Gj5a7tZ4U2uLG6SFWOB14=
+			1xX+FGoAJZe5ulldb1lvibxy+b0lH6NOSEVaSdtiB5s=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/ottu_checkout_sdk.framework.dSYM/Contents/Resources/Relocations/aarch64/ottu_checkout_sdk.yml</key>
@@ -897,7 +897,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RzqcmqDEJBcRjzfBW7CaFyBF7GwEhrUjRNT0QMEs+MQ=
+			92FstE9aiSzGkpUMVg8WRWTKOqrlqaYuEhdaBtCthss=
 			</data>
 		</dict>
 		<key>ios-arm64/ottu_checkout_sdk.framework/Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
@@ -1064,7 +1064,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u/NzDLRD6p6HiaDOgkbqZB39mRM5//8YEFbATzWw4a4=
+			LzIRvmuWQVhqa9ybKQ4rL64oui3yl4XKhZn+a96bZ/w=
 			</data>
 		</dict>
 		<key>ios-arm64/ottu_checkout_sdk.framework/ar.lproj/CVVTextEdit.strings</key>
@@ -1323,7 +1323,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AY4NyyA9QlvvO8Ibqz/RYlMN4RyV7TrNeFOZ2nbo2vc=
+			sF76CzPBzKKY4Lxgrhv22eUy/N4FgVPzKNd4nAqybuE=
 			</data>
 		</dict>
 		<key>ios-arm64/ottu_checkout_sdk.framework/saudi_riyal.ttf</key>

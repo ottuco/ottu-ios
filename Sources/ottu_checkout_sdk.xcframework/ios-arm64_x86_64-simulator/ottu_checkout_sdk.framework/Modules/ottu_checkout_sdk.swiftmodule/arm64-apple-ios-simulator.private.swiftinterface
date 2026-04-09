@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
 // swift-module-flags: -target arm64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import CommonCrypto
 import CoreText
 import Darwin
@@ -32,7 +32,9 @@ public struct TransactionDetails {
   public enum Language : Swift.String {
     case en
     case ar
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -50,7 +52,9 @@ public struct TransactionDetails {
     case invalided
     case refunded
     case cod
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -81,7 +85,9 @@ public struct TransactionDetails {
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
   public var paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?)
+  #endif
 }
 public struct PaymentMethod : Swift.Equatable {
   public enum Flow {
@@ -110,7 +116,11 @@ public struct PaymentMethod : Swift.Equatable {
   public var encKeyURL: Foundation.URL?
   public var trandata: Swift.String?
   public var cvvRequired: Swift.Bool?
-  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?)
+  public var description: Swift.String?
+  public var brandingOption: ottu_checkout_sdk.BrandingOption?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?, description: Swift.String?, brandingOption: ottu_checkout_sdk.BrandingOption?)
+  #endif
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
 }
 public struct ApplePayWallet : Swift.Equatable {
@@ -130,11 +140,19 @@ public struct ApplePayWallet : Swift.Equatable {
   public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, pgCode: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
   public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
 }
+public struct BrandingOption : Swift.Equatable {
+  public let text: Swift.String
+  public let color: UIKit.UIColor
+  public let fontWeight: UIKit.UIFont.Weight
+  public static func == (a: ottu_checkout_sdk.BrandingOption, b: ottu_checkout_sdk.BrandingOption) -> Swift.Bool
+}
 public struct FlexMethod : Swift.Equatable {
   public enum Flow : Swift.String {
     case tabby
     case tamara
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -145,7 +163,9 @@ public struct FlexMethod : Swift.Equatable {
       public enum PaymentType : Swift.String {
         case payByInstalment
         case payNow
+        #if compiler(>=5.3) && $NonescapableTypes
         public init?(rawValue: Swift.String)
+        #endif
         public typealias RawValue = Swift.String
         public var rawValue: Swift.String {
           get
@@ -176,6 +196,8 @@ public struct FlexMethod : Swift.Equatable {
   public let flow: ottu_checkout_sdk.FlexMethod.Flow
   public let submitURL: Foundation.URL
   public let prePaymentCheckUrl: Foundation.URL
+  public let description: Swift.String?
+  public let brandingOption: ottu_checkout_sdk.BrandingOption?
   public static func == (a: ottu_checkout_sdk.FlexMethod, b: ottu_checkout_sdk.FlexMethod) -> Swift.Bool
 }
 public struct PaymentOptionsDisplaySettings : Swift.Equatable {
@@ -191,7 +213,9 @@ public struct PaymentOptionsDisplaySettings : Swift.Equatable {
   public let mode: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode
   public let visibleItemsCount: Swift.UInt
   public let defaultSelectedPgCode: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(mode: ottu_checkout_sdk.PaymentOptionsDisplaySettings.PaymentOptionsDisplayMode = .bottomSheet, visibleItemsCount: Swift.UInt = 5, defaultSelectedPgCode: Swift.String? = nil)
+  #endif
   public static func == (a: ottu_checkout_sdk.PaymentOptionsDisplaySettings, b: ottu_checkout_sdk.PaymentOptionsDisplaySettings) -> Swift.Bool
 }
 final public class URLKnocker {
@@ -220,6 +244,8 @@ public struct FlexMethodResponse : Swift.Decodable {
   public let pre_payment_options_available: Swift.Bool
   public let pre_payment_check_url: Foundation.URL
   public let pre_payment_options: ottu_checkout_sdk.FlexMethodResponse.PrePaymentOptions
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Card : Swift.Equatable {
@@ -227,7 +253,9 @@ public struct Card : Swift.Equatable {
     case stc
     case visa
     case mastercard
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -246,7 +274,9 @@ public struct Card : Swift.Equatable {
   public let cvvRequired: Swift.Bool
   public let deleteURL: Foundation.URL
   public let submitURL: Foundation.URL
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(customerId: Swift.String, brand: ottu_checkout_sdk.Card.Brand, nameOnCard: Swift.String?, number: Swift.String, expiryMonth: Swift.String, expiryYear: Swift.String, token: Swift.String, isPreferred: Swift.Bool, isExpired: Swift.Bool, pgCode: Swift.String, cvvRequired: Swift.Bool, deleteURL: Foundation.URL, submitURL: Foundation.URL)
+  #endif
   public static func == (a: ottu_checkout_sdk.Card, b: ottu_checkout_sdk.Card) -> Swift.Bool
 }
 public struct Wallet : Swift.Equatable {
@@ -273,7 +303,9 @@ public enum FormOfPayment : Swift.String, Swift.Equatable, Swift.CaseIterable {
   case redirect
   case flex
   case cardOnsite
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [ottu_checkout_sdk.FormOfPayment]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
@@ -285,7 +317,9 @@ public enum FormOfPayment : Swift.String, Swift.Equatable, Swift.CaseIterable {
 }
 public struct FontManager {
   public static func registerFonts(_ fontFileNames: [Swift.String], from bundle: Foundation.Bundle)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func replaceCurrencySymbolIfNeeded(_ input: Swift.String?, fontSize: CoreFoundation.CGFloat) -> Foundation.NSAttributedString
+  #endif
 }
 extension ottu_checkout_sdk.TransactionDetailsResponse {
   public var transactionDetails: ottu_checkout_sdk.TransactionDetails {
@@ -296,7 +330,9 @@ extension Foundation.Locale {
   public func languageDirectionFromLeftToRight() -> Swift.Bool
 }
 public enum CurrencyHelper {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func formatCurrency(value: Foundation.Decimal, currencyCode: Swift.String?) -> Swift.String?
+  #endif
   public static func addPlusSign(_ value: Swift.String) -> Swift.String
 }
 @_hasMissingDesignatedInitializers final public class ApplePaySessionValidatorMapper {
@@ -348,31 +384,47 @@ public class Disposable {
   @objc deinit
 }
 extension ottu_checkout_sdk.PaymentServiceResponse {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var applePay: ottu_checkout_sdk.ApplePayWallet? {
     get throws
   }
+  #endif
 }
 public protocol OttuDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func errorCallback(_ data: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func cancelCallback(_ data: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func successCallback(_ data: [Swift.String : Any]?)
+  #endif
 }
 public class ButtonComponent {
   public var enabledTitleColor: UIKit.UIColor
   public var disabledTitleColor: UIKit.UIColor
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public var enabledBackgroundColor: UIKit.UIColor
   public var disabledBackgroundColor: UIKit.UIColor
+  public var cornerRadius: CoreFoundation.CGFloat?
+  public var borderColor: UIKit.UIColor?
+  public var borderWidth: CoreFoundation.CGFloat?
   public init()
   @objc deinit
 }
 public typealias VerifyPaymentDelegate = (Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<Swift.Void>
 final public class Checkout {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func paymentViewController() -> UIKit.UIViewController?
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
@@ -404,7 +456,9 @@ public enum UiMode : Swift.String {
   case SYSTEM
   case LIGHT
   case DARK
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -413,7 +467,15 @@ public enum UiMode : Swift.String {
 public struct CardPayResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
+#if compiler(>=5.3) && $NonescapableTypes
 @inline(__always) public func replaceSymbol(_ symbol: Swift.String, newMethod: Swift.UnsafeMutableRawPointer, oldMethod: inout Swift.UnsafeMutableRawPointer?)
+#endif
+public struct BrandingOptionsResponse : Swift.Decodable {
+  public let text: Swift.String
+  public let color: Swift.String
+  public let font_weight: Swift.Int
+  public init(from decoder: any Swift.Decoder) throws
+}
 @objc public protocol FloatingPanelLayout {
   @objc var position: ottu_checkout_sdk.FloatingPanelPosition { get }
   @objc var initialState: ottu_checkout_sdk.FloatingPanelState { get }
@@ -441,7 +503,9 @@ public struct CardPayResponse : Swift.Decodable {
   case left
   case bottom
   case right
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -450,16 +514,22 @@ public struct CardPayResponse : Swift.Decodable {
 @objc(FloatingPanelBackdropView) @_Concurrency.MainActor @preconcurrency open class BackdropView : UIKit.UIView {
   @objc @_Concurrency.MainActor @preconcurrency public var dismissalTapGestureRecognizer: UIKit.UITapGestureRecognizer
   @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc open class FloatingPanelState : ObjectiveC.NSObject, Foundation.NSCopying, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   required public init?(rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue)
+  #endif
   @objc public init(rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue, order: Swift.Int)
   final public let rawValue: ottu_checkout_sdk.FloatingPanelState.RawValue
   final public let order: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  #endif
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -510,7 +580,7 @@ extension ottu_checkout_sdk.FloatingPanelAdaptiveLayoutAnchor {
   @objc optional var momentumProjectionRate: CoreFoundation.CGFloat { get }
   @objc optional func shouldProjectMomentum(_ fpc: ottu_checkout_sdk.FloatingPanelController, to proposedState: ottu_checkout_sdk.FloatingPanelState) -> Swift.Bool
   @objc optional func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc optional func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc optional func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc optional var removalInteractionVelocityThreshold: CoreFoundation.CGFloat { get }
 }
 open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavior {
@@ -525,7 +595,7 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
     @objc get
   }
   @objc open func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc open func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc open func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc open var removalInteractionVelocityThreshold: CoreFoundation.CGFloat
   @objc deinit
 }
@@ -534,7 +604,9 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
   case left
   case bottom
   case right
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -543,7 +615,9 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
 @objc public enum FloatingPanelLayoutReferenceGuide : Swift.Int {
   case superview = 0
   case safeArea = 1
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -553,7 +627,9 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
   case none = 0
   case superview = 1
   case safeArea = 2
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -561,10 +637,12 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class FloatingPanelPanGestureRecognizer : UIKit.UIPanGestureRecognizer {
   @_Concurrency.MainActor @preconcurrency @objc override final public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override weak final public var delegate: (any UIKit.UIGestureRecognizerDelegate)? {
     @objc get
     @objc set
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency final public var delegateOrigin: any UIKit.UIGestureRecognizerDelegate {
     get
   }
@@ -579,9 +657,13 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  #endif
   @objc deinit
 }
 extension UIKit.UISpringTimingParameters {
@@ -611,7 +693,9 @@ extension UIKit.UISpringTimingParameters {
   @objc public enum ContentInsetAdjustmentBehavior : Swift.Int {
     case always
     case never
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -620,7 +704,9 @@ extension UIKit.UISpringTimingParameters {
   @objc public enum ContentMode : Swift.Int {
     case `static`
     case fitToBounds
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -637,9 +723,11 @@ extension UIKit.UISpringTimingParameters {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency weak public var trackingScrollView: UIKit.UIScrollView? {
     @objc get
   }
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency public var panGestureRecognizer: ottu_checkout_sdk.FloatingPanelPanGestureRecognizer {
     @objc get
   }
@@ -665,10 +753,12 @@ extension UIKit.UISpringTimingParameters {
     @objc(isRemovalInteractionEnabled) get
     @objc(setRemovalInteractionEnabled:) set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public var contentViewController: UIKit.UIViewController? {
     @objc get
     @objc set
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var nearbyState: ottu_checkout_sdk.FloatingPanelState {
     get
   }
@@ -676,32 +766,56 @@ extension UIKit.UISpringTimingParameters {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public init(delegate: (any ottu_checkout_sdk.FloatingPanelControllerDelegate)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func loadView()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarHidden: UIKit.UIViewController? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForScreenEdgesDeferringSystemGestures: UIKit.UIViewController? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForHomeIndicatorAutoHidden: UIKit.UIViewController? {
     @objc get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(show:completion:) @_Concurrency.MainActor @preconcurrency public func show(animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(hide:completion:) @_Concurrency.MainActor @preconcurrency public func hide(animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(addPanelToParent:at:animated:completion:) @_Concurrency.MainActor @preconcurrency public func addPanel(toParent parent: UIKit.UIViewController, at viewIndex: Swift.Int = -1, animated: Swift.Bool = false, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(removePanelFromParent:completion:) @_Concurrency.MainActor @preconcurrency public func removePanelFromParent(animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(moveToState:animated:completion:) @_Concurrency.MainActor @preconcurrency public func move(to: ottu_checkout_sdk.FloatingPanelState, animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func set(contentViewController: UIKit.UIViewController?)
+  #endif
   @objc(trackScrollView:) @_Concurrency.MainActor @preconcurrency public func track(scrollView: UIKit.UIScrollView)
   @_Concurrency.MainActor @preconcurrency public func followScrollViewBouncing()
   @objc(untrackScrollView:) @_Concurrency.MainActor @preconcurrency public func untrack(scrollView: UIKit.UIScrollView)
@@ -754,10 +868,12 @@ extension UIKit.UISpringTimingParameters {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var backgroundColor: UIKit.UIColor? {
     @objc get
     @objc set
   }
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency public var appearance: ottu_checkout_sdk.SurfaceAppearance {
     @objc get
     @objc set
@@ -770,7 +886,9 @@ extension UIKit.UISpringTimingParameters {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public class var requiresConstraintBasedLayout: Swift.Bool {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func updateConstraints()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
@@ -780,11 +898,11 @@ extension UIKit.UISpringTimingParameters {
 }
 public class LabelComponent {
   public var color: UIKit.UIColor
-  public var font: UIKit.UIFont
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public init()
   @objc deinit
 }
@@ -876,6 +994,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let fee_description: Swift.String?
   public let icons: ottu_checkout_sdk.IconsResponse?
   public let pg_icons: [ottu_checkout_sdk.IconsResponse]?
+  public let icon: Swift.String?
   public let flow: Swift.String
   public let redirect_url: Foundation.URL?
   public let can_save_card: Swift.Bool
@@ -885,6 +1004,8 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let enc_key_url: Foundation.URL?
   public let trandata: Swift.String?
   public let cvv_required: Swift.Bool?
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentServiceResponse : Swift.Decodable {
@@ -919,7 +1040,9 @@ public struct PaymentServiceResponse : Swift.Decodable {
   @objc deinit
   public func protect(window: UIKit.UIWindow)
   public func protect(view: UIKit.UIView)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func protectFromScreenRecording(_ blockingScreenMessage: Swift.String? = nil)
+  #endif
 }
 public struct TransactionDetailsResponse : Swift.Decodable {
   public let amount: Swift.String
@@ -977,7 +1100,9 @@ public enum HTTPMethod : Swift.String {
   case get
   case post
   case delete
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -988,8 +1113,10 @@ public protocol HTTPClientTask {
 }
 public protocol HTTPClient {
   typealias Result = Swift.Result<(Foundation.Data, Foundation.HTTPURLResponse), any Swift.Error>
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, payload: [Swift.String : Any]?, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
+  #endif
 }
 @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
 public class IOSSecuritySuite {
@@ -1014,12 +1141,20 @@ public class IOSSecuritySuite {
 @available(iOSApplicationExtension, unavailable)
 extension ottu_checkout_sdk.IOSSecuritySuite {
   public static func amIMSHooked(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func denyMSHook(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.UnsafeMutableRawPointer?
+  #endif
   public static func denySymbolHook(_ symbol: Swift.String)
   public static func denySymbolHook(_ symbol: Swift.String, at image: Swift.UnsafePointer<MachO.mach_header>, imageSlide slide: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getMachOFileHashValue(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func findLoadedDylibs(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> [Swift.String]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func hasBreakpointAt(_ functionAddr: Swift.UnsafeRawPointer, functionSize: Darwin.vm_size_t?) -> Swift.Bool
+  #endif
   public static func hasWatchpoint() -> Swift.Bool
 }
 public typealias FailedCheckType = (check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)
@@ -1044,11 +1179,15 @@ public enum FailedCheck : Swift.CaseIterable {
     get
   }
 }
+public struct ConfigHelper {
+}
 public enum DyldChainedImportFormat : Swift.UInt32 {
   case general
   case addend
   case addend64
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt32)
+  #endif
   public typealias RawValue = Swift.UInt32
   public var rawValue: Swift.UInt32 {
     get
@@ -1071,9 +1210,11 @@ public enum IntegrityCheckerImageTarget {
 }
 public enum CheckoutInitializationError : Swift.Error, Foundation.LocalizedError {
   case invalidVisibleItemsCount
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public static func == (a: ottu_checkout_sdk.CheckoutInitializationError, b: ottu_checkout_sdk.CheckoutInitializationError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -1103,10 +1244,13 @@ public class CheckoutTheme {
   public var dataLabel: ottu_checkout_sdk.LabelComponent
   public var dataValue: ottu_checkout_sdk.LabelComponent
   public var showPaymentDetails: Swift.Bool
-  public var paymentItemBorderColor: UIKit.UIColor
   public var paymentItemBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodDescriptionTextColor: UIKit.UIColor?
+  public var selectPaymentMethodBorderColor: UIKit.UIColor
   public var selectPaymentMethodTitleLabel: ottu_checkout_sdk.LabelComponent
   public var selectPaymentMethodTitleBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodBorderWidth: CoreFoundation.CGFloat?
+  public var selectPaymentMethodCornerRadius: CoreFoundation.CGFloat?
   public var uiMode: ottu_checkout_sdk.UiMode
   public init()
   @objc deinit
