@@ -4,7 +4,8 @@
 <dict>
 	<key>com.apple.developer.in-app-payments</key>
 	<array>
-		<string>merchant.dummy.net</string>
+		<string>merchant.alpha.ottu.net</string>
+		<string>merchant.pay.ottu.com</string>
 	</array>
 </dict>
 </plist>

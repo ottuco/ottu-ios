@@ -7,34 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141D76882F34E9A100EBBA82 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D76872F34E9A100EBBA82 /* Logger.swift */; };
+		371B03CD2BC9471800E73FFE /* ottu_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */; };
+		371B03CE2BC9471800E73FFE /* ottu_ios_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		371B03D32BC9477E00E73FFE /* ottu_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */; };
+		371B03D42BC9477E00E73FFE /* ottu_ios_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CC2D54D36700B837F1 /* PgCode.swift */; };
 		3726F5CF2D54D9D500B837F1 /* FormOfPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */; };
-		3756F3832E01AC3900712AB1 /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 3756F3822E01AC3900712AB1 /* ottu_checkout_sdk */; };
-		3756F3852E01ACD600712AB1 /* ResizableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */; };
-		3756F3872E01ACF200712AB1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3756F3862E01ACF200712AB1 /* Localizable.xcstrings */; };
+		376B80C12C497CB400386E25 /* ottu_checkout_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376B80C02C497CB400386E25 /* ottu_checkout_sdk.framework */; };
+		376B80C22C497CB400386E25 /* ottu_checkout_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376B80C02C497CB400386E25 /* ottu_checkout_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		377FD5FE2B9B256F001EB337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD5FD2B9B256F001EB337 /* AppDelegate.swift */; };
 		377FD6002B9B256F001EB337 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */; };
 		377FD6022B9B256F001EB337 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD6012B9B256F001EB337 /* MainViewController.swift */; };
 		377FD6052B9B256F001EB337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FD6032B9B256F001EB337 /* Main.storyboard */; };
 		377FD6072B9B2574001EB337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377FD6062B9B2574001EB337 /* Assets.xcassets */; };
 		377FD60A2B9B2574001EB337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FD6082B9B2574001EB337 /* LaunchScreen.storyboard */; };
+		377FD6152B9B2574001EB337 /* OttuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD6142B9B2574001EB337 /* OttuAppTests.swift */; };
+		377FD61F2B9B2574001EB337 /* OttuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD61E2B9B2574001EB337 /* OttuAppUITests.swift */; };
+		377FD6212B9B2574001EB337 /* OttuAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FD6202B9B2574001EB337 /* OttuAppUITestsLaunchTests.swift */; };
 		3795E0612BC930C90058768A /* OttuPaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */; };
-		379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B2E2D830C740080513C /* ottu_checkout_sdk */; };
-		379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 379D1B5D2D884B120080513C /* ottu_checkout_sdk */; };
 		379FC7982C1B28D900152872 /* ThemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */; };
-		8408A1532E8EA607003B4ACB /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 8408A1522E8EA607003B4ACB /* ottu_checkout_sdk */; };
-		84109B832E53513A001B65EA /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 84109B822E53513A001B65EA /* ottu_checkout_sdk */; };
-		84F604E12F3CA343003BBF7D /* ottu_checkout_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 84F604E02F3CA343003BBF7D /* ottu_checkout_sdk */; };
-		84F604E32F3CA58F003BBF7D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F604E22F3CA58F003BBF7D /* Logger.swift */; };
+		37EC2E822DCA1CDE0025A20E /* ResizableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EC2E812DCA1CDE0025A20E /* ResizableContainerView.swift */; };
+		37EE9E3F2DD47E9600AE0229 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 37EE9E3E2DD47E9600AE0229 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		377FD6112B9B2574001EB337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 377FD5F22B9B256F001EB337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377FD5F92B9B256F001EB337;
+			remoteInfo = OttuApp;
+		};
+		377FD61B2B9B2574001EB337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 377FD5F22B9B256F001EB337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377FD5F92B9B256F001EB337;
+			remoteInfo = OttuApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		371B03CF2BC9471800E73FFE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				371B03CE2BC9471800E73FFE /* ottu_ios_sdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		371B03D22BC9473700E73FFE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				376B80C22C497CB400386E25 /* ottu_checkout_sdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371B03D52BC9477E00E73FFE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				371B03D42BC9477E00E73FFE /* ottu_ios_sdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,10 +85,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141D76872F34E9A100EBBA82 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3726F5CC2D54D36700B837F1 /* PgCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgCode.swift; sourceTree = "<group>"; };
 		3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOfPayment.swift; sourceTree = "<group>"; };
-		3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableContainerView.swift; sourceTree = "<group>"; };
-		3756F3862E01ACF200712AB1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		376B80C02C497CB400386E25 /* ottu_checkout_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ottu_checkout_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		377FD5FA2B9B256F001EB337 /* OttuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377FD5FD2B9B256F001EB337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		377FD6012B9B256F001EB337 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -53,13 +97,20 @@
 		377FD6062B9B2574001EB337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377FD6092B9B2574001EB337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		377FD60B2B9B2574001EB337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377FD6102B9B2574001EB337 /* OttuAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OttuAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377FD6142B9B2574001EB337 /* OttuAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttuAppTests.swift; sourceTree = "<group>"; };
+		377FD61A2B9B2574001EB337 /* OttuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OttuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377FD61E2B9B2574001EB337 /* OttuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttuAppUITests.swift; sourceTree = "<group>"; };
+		377FD6202B9B2574001EB337 /* OttuAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttuAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ottu_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		377FD6712B9B2A99001EB337 /* ottu_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ottu_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378A44812BFCB86400128BC3 /* OttuApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OttuApp.entitlements; sourceTree = "<group>"; };
 		3795E0452BC6A6C10058768A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		3795E0462BC6A6C10058768A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttuPaymentsViewController.swift; sourceTree = "<group>"; };
-		379D1B2C2D830B660080513C /* OttuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OttuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorViewController.swift; sourceTree = "<group>"; };
-		84F604E22F3CA58F003BBF7D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		37EC2E812DCA1CDE0025A20E /* ResizableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableContainerView.swift; sourceTree = "<group>"; };
+		37EE9E3E2DD47E9600AE0229 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +118,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8408A1532E8EA607003B4ACB /* ottu_checkout_sdk in Frameworks */,
-				379D1B2F2D830C740080513C /* ottu_checkout_sdk in Frameworks */,
-				379D1B5E2D884B120080513C /* ottu_checkout_sdk in Frameworks */,
-				3756F3832E01AC3900712AB1 /* ottu_checkout_sdk in Frameworks */,
-				84109B832E53513A001B65EA /* ottu_checkout_sdk in Frameworks */,
-				84F604E12F3CA343003BBF7D /* ottu_checkout_sdk in Frameworks */,
+				376B80C12C497CB400386E25 /* ottu_checkout_sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377FD60D2B9B2574001EB337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371B03D32BC9477E00E73FFE /* ottu_ios_sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377FD6172B9B2574001EB337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371B03CD2BC9471800E73FFE /* ottu_ios_sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				377FD5FC2B9B256F001EB337 /* OttuApp */,
+				377FD6132B9B2574001EB337 /* OttuAppTests */,
+				377FD61D2B9B2574001EB337 /* OttuAppUITests */,
 				377FD5FB2B9B256F001EB337 /* Products */,
 				377FD66F2B9B2A99001EB337 /* Frameworks */,
 			);
@@ -100,7 +164,9 @@
 		377FD5FB2B9B256F001EB337 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				379D1B2C2D830B660080513C /* OttuApp.app */,
+				377FD5FA2B9B256F001EB337 /* OttuApp.app */,
+				377FD6102B9B2574001EB337 /* OttuAppTests.xctest */,
+				377FD61A2B9B2574001EB337 /* OttuAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,27 +174,47 @@
 		377FD5FC2B9B256F001EB337 /* OttuApp */ = {
 			isa = PBXGroup;
 			children = (
+				141D76872F34E9A100EBBA82 /* Logger.swift */,
 				378A44812BFCB86400128BC3 /* OttuApp.entitlements */,
 				3726F5D02D54DDB700B837F1 /* enums */,
 				377FD5FD2B9B256F001EB337 /* AppDelegate.swift */,
 				377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */,
 				377FD6012B9B256F001EB337 /* MainViewController.swift */,
-				3756F3842E01ACD600712AB1 /* ResizableContainerView.swift */,
 				3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */,
+				37EC2E812DCA1CDE0025A20E /* ResizableContainerView.swift */,
 				379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */,
-				84F604E22F3CA58F003BBF7D /* Logger.swift */,
-				3756F3862E01ACF200712AB1 /* Localizable.xcstrings */,
 				377FD6032B9B256F001EB337 /* Main.storyboard */,
 				377FD6062B9B2574001EB337 /* Assets.xcassets */,
 				377FD6082B9B2574001EB337 /* LaunchScreen.storyboard */,
 				377FD60B2B9B2574001EB337 /* Info.plist */,
+				37EE9E3E2DD47E9600AE0229 /* Localizable.xcstrings */,
 			);
 			path = OttuApp;
+			sourceTree = "<group>";
+		};
+		377FD6132B9B2574001EB337 /* OttuAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				377FD6142B9B2574001EB337 /* OttuAppTests.swift */,
+			);
+			path = OttuAppTests;
+			sourceTree = "<group>";
+		};
+		377FD61D2B9B2574001EB337 /* OttuAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				377FD61E2B9B2574001EB337 /* OttuAppUITests.swift */,
+				377FD6202B9B2574001EB337 /* OttuAppUITestsLaunchTests.swift */,
+			);
+			path = OttuAppUITests;
 			sourceTree = "<group>";
 		};
 		377FD66F2B9B2A99001EB337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				376B80C02C497CB400386E25 /* ottu_checkout_sdk.framework */,
+				377FD6702B9B2A99001EB337 /* ottu_ios_sdk.framework */,
+				377FD6712B9B2A99001EB337 /* ottu_sdk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,8 +237,46 @@
 			);
 			name = OttuApp;
 			productName = OttuApp;
-			productReference = 379D1B2C2D830B660080513C /* OttuApp.app */;
+			productReference = 377FD5FA2B9B256F001EB337 /* OttuApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		377FD60F2B9B2574001EB337 /* OttuAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377FD6272B9B2574001EB337 /* Build configuration list for PBXNativeTarget "OttuAppTests" */;
+			buildPhases = (
+				377FD60C2B9B2574001EB337 /* Sources */,
+				377FD60D2B9B2574001EB337 /* Frameworks */,
+				377FD60E2B9B2574001EB337 /* Resources */,
+				371B03D52BC9477E00E73FFE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				377FD6122B9B2574001EB337 /* PBXTargetDependency */,
+			);
+			name = OttuAppTests;
+			productName = OttuAppTests;
+			productReference = 377FD6102B9B2574001EB337 /* OttuAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		377FD6192B9B2574001EB337 /* OttuAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377FD62A2B9B2574001EB337 /* Build configuration list for PBXNativeTarget "OttuAppUITests" */;
+			buildPhases = (
+				377FD6162B9B2574001EB337 /* Sources */,
+				377FD6172B9B2574001EB337 /* Frameworks */,
+				377FD6182B9B2574001EB337 /* Resources */,
+				371B03CF2BC9471800E73FFE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				377FD61C2B9B2574001EB337 /* PBXTargetDependency */,
+			);
+			name = OttuAppUITests;
+			productName = OttuAppUITests;
+			productReference = 377FD61A2B9B2574001EB337 /* OttuAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -162,10 +286,18 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					377FD5F92B9B256F001EB337 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					377FD60F2B9B2574001EB337 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 377FD5F92B9B256F001EB337;
+					};
+					377FD6192B9B2574001EB337 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 377FD5F92B9B256F001EB337;
 					};
 				};
 			};
@@ -179,14 +311,13 @@
 				ar,
 			);
 			mainGroup = 377FD5F12B9B256F001EB337;
-			packageReferences = (
-				84F604DF2F3CA343003BBF7D /* XCRemoteSwiftPackageReference "ottu-ios" */,
-			);
 			productRefGroup = 377FD5FB2B9B256F001EB337 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				377FD5F92B9B256F001EB337 /* OttuApp */,
+				377FD60F2B9B2574001EB337 /* OttuAppTests */,
+				377FD6192B9B2574001EB337 /* OttuAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,8 +329,22 @@
 			files = (
 				377FD60A2B9B2574001EB337 /* LaunchScreen.storyboard in Resources */,
 				377FD6072B9B2574001EB337 /* Assets.xcassets in Resources */,
-				3756F3872E01ACF200712AB1 /* Localizable.xcstrings in Resources */,
+				37EE9E3F2DD47E9600AE0229 /* Localizable.xcstrings in Resources */,
 				377FD6052B9B256F001EB337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377FD60E2B9B2574001EB337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377FD6182B9B2574001EB337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,15 +359,45 @@
 				379FC7982C1B28D900152872 /* ThemeEditorViewController.swift in Sources */,
 				377FD5FE2B9B256F001EB337 /* AppDelegate.swift in Sources */,
 				3795E0612BC930C90058768A /* OttuPaymentsViewController.swift in Sources */,
-				84F604E32F3CA58F003BBF7D /* Logger.swift in Sources */,
+				141D76882F34E9A100EBBA82 /* Logger.swift in Sources */,
 				377FD6002B9B256F001EB337 /* SceneDelegate.swift in Sources */,
 				3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */,
-				3756F3852E01ACD600712AB1 /* ResizableContainerView.swift in Sources */,
+				37EC2E822DCA1CDE0025A20E /* ResizableContainerView.swift in Sources */,
 				3726F5CF2D54D9D500B837F1 /* FormOfPayment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		377FD60C2B9B2574001EB337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377FD6152B9B2574001EB337 /* OttuAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		377FD6162B9B2574001EB337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377FD6212B9B2574001EB337 /* OttuAppUITestsLaunchTests.swift in Sources */,
+				377FD61F2B9B2574001EB337 /* OttuAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		377FD6122B9B2574001EB337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 377FD5F92B9B256F001EB337 /* OttuApp */;
+			targetProxy = 377FD6112B9B2574001EB337 /* PBXContainerItemProxy */;
+		};
+		377FD61C2B9B2574001EB337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 377FD5F92B9B256F001EB337 /* OttuApp */;
+			targetProxy = 377FD61B2B9B2574001EB337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		377FD6032B9B256F001EB337 /* Main.storyboard */ = {
@@ -249,6 +424,7 @@
 		377FD6222B9B2574001EB337 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -316,6 +492,7 @@
 		377FD6232B9B2574001EB337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -449,6 +626,82 @@
 			};
 			name = Release;
 		};
+		377FD6282B9B2574001EB337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM764UJ9JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ottu.OttuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttuApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OttuApp";
+			};
+			name = Debug;
+		};
+		377FD6292B9B2574001EB337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM764UJ9JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ottu.OttuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttuApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OttuApp";
+			};
+			name = Release;
+		};
+		377FD62B2B9B2574001EB337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM764UJ9JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ottu.OttuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OttuApp;
+			};
+			name = Debug;
+		};
+		377FD62C2B9B2574001EB337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM764UJ9JN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ottu.OttuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OttuApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,91 +723,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		377FD6272B9B2574001EB337 /* Build configuration list for PBXNativeTarget "OttuAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377FD6282B9B2574001EB337 /* Debug */,
+				377FD6292B9B2574001EB337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		377FD62A2B9B2574001EB337 /* Build configuration list for PBXNativeTarget "OttuAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377FD62B2B9B2574001EB337 /* Debug */,
+				377FD62C2B9B2574001EB337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.2;
-			};
-		};
-		379D1B2D2D830C740080513C /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.22;
-			};
-		};
-		379D1B5C2D884B120080513C /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		8408A1512E8EA607003B4ACB /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.5;
-			};
-		};
-		84109B812E53513A001B65EA /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.3;
-			};
-		};
-		84F604DF2F3CA343003BBF7D /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3756F3822E01AC3900712AB1 /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3756F3812E01AC3900712AB1 /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-		379D1B2E2D830C740080513C /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 379D1B2D2D830C740080513C /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-		379D1B5D2D884B120080513C /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 379D1B5C2D884B120080513C /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-		8408A1522E8EA607003B4ACB /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8408A1512E8EA607003B4ACB /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-		84109B822E53513A001B65EA /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84109B812E53513A001B65EA /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-		84F604E02F3CA343003BBF7D /* ottu_checkout_sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84F604DF2F3CA343003BBF7D /* XCRemoteSwiftPackageReference "ottu-ios" */;
-			productName = ottu_checkout_sdk;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 377FD5F22B9B256F001EB337 /* Project object */;
 }

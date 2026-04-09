@@ -5,115 +5,246 @@
 //  Created by Ottu on 13.06.2024.
 //
 
+import OSLog
 import UIKit
 import ottu_checkout_sdk
-import OSLog
 
-class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate,
+    UIPickerViewDataSource
+{
+
     var theme: CheckoutTheme?
-    
-    let fonts = UIFont.familyNames.sorted()
+
+    lazy var fonts = {
+        var sysFonts = UIFont.familyNames
+        sysFonts.insert(
+            contentsOf: [
+                "Almarai-Bold", "Almarai-ExtraBold", "Almarai-Light",
+                "Almarai-Regular",
+            ],
+            at: 0
+        )
+        sysFonts = sysFonts.sorted()
+        return sysFonts
+    }()
     let pickerView = UIPickerView()
-    
+
     var activeTextField: UITextField?
-    
+
     @IBOutlet weak var backgroundColorWell: UIColorWell!
     @IBOutlet weak var backgroundColorModalWell: UIColorWell!
     @IBOutlet weak var leadMargin: UITextField!
     @IBOutlet weak var trailingMargin: UITextField!
     @IBOutlet weak var topMargin: UITextField!
     @IBOutlet weak var bottomMargin: UITextField!
-    
+
     @IBOutlet weak var mainTitleColorWell: UIColorWell!
     @IBOutlet weak var mainTitleFontName: UITextField!
     @IBOutlet weak var titleColorWell: UIColorWell!
     @IBOutlet weak var titleFontName: UITextField!
     @IBOutlet weak var subtitleColorWell: UIColorWell!
     @IBOutlet weak var subtitleFontName: UITextField!
-    
+
     @IBOutlet weak var buttonEnabledTextColorWell: UIColorWell!
     @IBOutlet weak var buttonDisabledTextColorWell: UIColorWell!
     @IBOutlet weak var buttonEnabledBackgroundColorWell: UIColorWell!
     @IBOutlet weak var buttonDisabledBackgroundColorWell: UIColorWell!
+    @IBOutlet weak var buttonBorderColorWell: UIColorWell!
+    @IBOutlet weak var buttonBorderWidth: UITextField!
+    @IBOutlet weak var buttonCornerRadius: UITextField!
     @IBOutlet weak var buttonFontName: UITextField!
-    
+
     @IBOutlet weak var selectorButtonTextColorWell: UIColorWell!
     @IBOutlet weak var selectorButtonBackgroundColorWell: UIColorWell!
     @IBOutlet weak var selectorButtonFontName: UITextField!
-    
+
     @IBOutlet weak var iconColorWell: UIColorWell!
-    
+
     @IBOutlet weak var inputLabelColorWell: UIColorWell!
     @IBOutlet weak var inputLabelFontName: UITextField!
     @IBOutlet weak var inputTextColorWell: UIColorWell!
     @IBOutlet weak var inputTextFontName: UITextField!
     @IBOutlet weak var inputBackgroundColorWell: UIColorWell!
-    
+
     @IBOutlet weak var switchOnColorWell: UIColorWell!
-    
+
     @IBOutlet weak var errorMessageColorWell: UIColorWell!
     @IBOutlet weak var errorMessageFontName: UITextField!
-    
+
     @IBOutlet weak var feesTitleColorWell: UIColorWell!
     @IBOutlet weak var feesTitleFontName: UITextField!
     @IBOutlet weak var feesSubtitleColorWell: UIColorWell!
     @IBOutlet weak var feesSubtitleFontName: UITextField!
-    
+
     @IBOutlet weak var dataLabelColorWell: UIColorWell!
     @IBOutlet weak var dataLabelFontName: UITextField!
     @IBOutlet weak var dataValueColorWell: UIColorWell!
     @IBOutlet weak var dataValueFontName: UITextField!
-    @IBOutlet weak var paymentItemBorderColorWell: UIColorWell!
-    
+
     @IBOutlet weak var selectPaymentMethodTitleFontName: UITextField!
     @IBOutlet weak var selectPaymentMethodTitleColorWell: UIColorWell!
     @IBOutlet weak var selectPaymentMethodTitleBackgroundColorWell: UIColorWell!
+    @IBOutlet weak var selectPaymentMethodDescriptionColorWell: UIColorWell!
+    @IBOutlet weak var selectPaymentMethodBorderColorWell: UIColorWell!
+    @IBOutlet weak var selectPaymentMethodBorderWidth: UITextField!
+    @IBOutlet weak var selectPaymentMethodCornerRadius: UITextField!
     @IBOutlet weak var paymentItemBackgroundColorWell: UIColorWell!
     @IBOutlet weak var uiModeMenuButton: UIMenu!
     @IBOutlet weak var uiModeButton: UIButton!
-    
-    
+
     @objc func dismissPicker() {
         view.endEditing(true)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         pickerView.delegate = self
         pickerView.dataSource = self
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissPicker))
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissPicker)
+        )
         view.addGestureRecognizer(tapGesture)
-        
-        backgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        backgroundColorModalWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        mainTitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        titleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        subtitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        buttonEnabledTextColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        buttonDisabledTextColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        buttonEnabledBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        buttonDisabledBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        selectorButtonTextColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        selectorButtonBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        iconColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        inputLabelColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        inputTextColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        inputBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        switchOnColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        errorMessageColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        feesTitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        feesSubtitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        dataLabelColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        dataValueColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        paymentItemBorderColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        selectPaymentMethodTitleColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        selectPaymentMethodTitleBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        paymentItemBackgroundColorWell.addTarget(self, action: #selector(colorWellChanged), for: .valueChanged)
-        
+
+        backgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        backgroundColorModalWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        mainTitleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        titleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        subtitleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        buttonEnabledTextColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        buttonDisabledTextColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        buttonEnabledBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        buttonDisabledBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        buttonBorderColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectorButtonTextColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectorButtonBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        iconColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        inputLabelColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        inputTextColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        inputBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        switchOnColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        errorMessageColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        feesTitleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        feesSubtitleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        dataLabelColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        dataValueColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectPaymentMethodTitleColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectPaymentMethodTitleBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectPaymentMethodDescriptionColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        paymentItemBackgroundColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+        selectPaymentMethodBorderColorWell.addTarget(
+            self,
+            action: #selector(colorWellChanged),
+            for: .valueChanged
+        )
+
         guard let theme else { return }
-        
+
         backgroundColorWell.selectedColor = theme.backgroundColor
         backgroundColorModalWell.selectedColor = theme.backgroundColorModal
         leadMargin.text = "\(theme.margins.left)"
@@ -126,13 +257,25 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         titleFontName.text = theme.title.fontFamily
         subtitleColorWell.selectedColor = theme.subtitle.color
         subtitleFontName.text = theme.subtitle.fontFamily
-        buttonEnabledTextColorWell.selectedColor = theme.button.enabledTitleColor
-        buttonDisabledTextColorWell.selectedColor = theme.button.disabledTitleColor
-        buttonEnabledBackgroundColorWell.selectedColor = theme.button.enabledBackgroundColor
-        buttonDisabledBackgroundColorWell.selectedColor = theme.button.disabledBackgroundColor
+        buttonBorderColorWell.selectedColor =
+            theme.button.borderColor
+        buttonBorderWidth.text =
+            "\(theme.button.borderWidth ?? 0.0)"
+        buttonCornerRadius.text =
+            "\(theme.button.cornerRadius ?? 0.0)"
+        buttonEnabledTextColorWell.selectedColor =
+            theme.button.enabledTitleColor
+        buttonDisabledTextColorWell.selectedColor =
+            theme.button.disabledTitleColor
+        buttonEnabledBackgroundColorWell.selectedColor =
+            theme.button.enabledBackgroundColor
+        buttonDisabledBackgroundColorWell.selectedColor =
+            theme.button.disabledBackgroundColor
         buttonFontName.text = theme.button.fontFamily
-        selectorButtonTextColorWell.selectedColor = theme.selectorButton.enabledTitleColor
-        selectorButtonBackgroundColorWell.selectedColor = theme.selectorButton.enabledBackgroundColor
+        selectorButtonTextColorWell.selectedColor =
+            theme.selectorButton.enabledTitleColor
+        selectorButtonBackgroundColorWell.selectedColor =
+            theme.selectorButton.enabledBackgroundColor
         selectorButtonFontName.text = theme.selectorButton.fontFamily
         iconColorWell.selectedColor = theme.iconColor
         inputLabelColorWell.selectedColor = theme.inputTextField.label.color
@@ -151,16 +294,24 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         dataLabelFontName.text = theme.dataLabel.fontFamily
         dataValueColorWell.selectedColor = theme.dataValue.color
         dataValueFontName.text = theme.dataValue.fontFamily
-        paymentItemBorderColorWell.selectedColor = theme.paymentItemBorderColor
-        selectPaymentMethodTitleColorWell.selectedColor = theme.selectPaymentMethodTitleLabel.color
-        selectPaymentMethodTitleBackgroundColorWell.selectedColor = theme.selectPaymentMethodTitleBackgroundColor
-        paymentItemBackgroundColorWell.selectedColor = theme.paymentItemBackgroundColor
+        selectPaymentMethodTitleColorWell.selectedColor =
+            theme.selectPaymentMethodTitleLabel.color
+        selectPaymentMethodTitleBackgroundColorWell.selectedColor =
+            theme.selectPaymentMethodTitleBackgroundColor
+        selectPaymentMethodDescriptionColorWell.selectedColor =
+            theme.selectPaymentMethodDescriptionTextColor
+        selectPaymentMethodBorderColorWell.selectedColor = theme.selectPaymentMethodBorderColor
+        selectPaymentMethodBorderWidth.text = "\(theme.selectPaymentMethodBorderWidth ?? 0.0)"
+        selectPaymentMethodCornerRadius.text = "\(theme.selectPaymentMethodCornerRadius ?? 0.0)" 
+        paymentItemBackgroundColorWell.selectedColor =
+            theme.paymentItemBackgroundColor
         uiModeButton.setTitle(theme.uiMode.rawValue, for: .normal)
         updateUiMode(uiMode: theme.uiMode)
     }
-    
+
     @objc private func colorWellChanged(_ sender: UIColorWell) {
         if let color = sender.selectedColor {
+            Logger.app.log("colorWellChanged, new color: \(color)")
             if sender.tag == 1 {
                 theme?.backgroundColor = color
             }
@@ -224,9 +375,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             if sender.tag == 21 {
                 theme?.dataValue.color = color
             }
-            if sender.tag == 22 {
-                theme?.paymentItemBorderColor = color
-            }
+            
             if sender.tag == 23 {
                 theme?.selectPaymentMethodTitleLabel.color = color
             }
@@ -236,15 +385,23 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             if sender.tag == 25 {
                 theme?.paymentItemBackgroundColor = color
             }
-            
+            if sender.tag == 26 {
+                theme?.selectPaymentMethodDescriptionTextColor = color
+            }
+            if sender.tag == 27 {
+                theme?.button.borderColor = color
+            }
+            if sender.tag == 28 {
+                theme?.selectPaymentMethodBorderColor = color
+            }
+
         }
     }
 
     @IBAction func textFieldValueChanged(_ sender: UITextField) {
-        if sender.tag == 1 ||
-            sender.tag == 2 ||
-            sender.tag == 3 ||
-            sender.tag == 4 {
+        if sender.tag == 1 || sender.tag == 2 || sender.tag == 3
+            || sender.tag == 4
+        {
             theme?.margins = UIEdgeInsets(
                 top: CGFloat(Float(topMargin.text ?? "0") ?? 0),
                 left: CGFloat(Float(leadMargin.text ?? "0") ?? 0),
@@ -253,7 +410,38 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             )
         }
     }
-    
+
+    @IBAction func selectPaymentMethodBorderWidthValueChanged(
+        _ sender: UITextField
+    ) {
+        if let width = sender.text {
+            theme?.selectPaymentMethodBorderWidth = CGFloat(Float(width) ?? 0)
+        }
+    }
+
+    @IBAction func selectPaymentMethodCornerRadiusValueChanged(
+        _ sender: UITextField
+    ) {
+        if let radius = sender.text {
+            theme?.selectPaymentMethodCornerRadius = CGFloat(Float(radius) ?? 0)
+        }
+    }
+
+    @IBAction func buttonBorderWidthTextFieldValueChanged(_ sender: UITextField)
+    {
+        if let width = sender.text {
+            theme?.button.borderWidth = CGFloat(Float(width) ?? 0)
+        }
+    }
+
+    @IBAction func buttonCornerRadiusTextFieldValueChanged(
+        _ sender: UITextField
+    ) {
+        if let radius = sender.text {
+            theme?.button.cornerRadius = CGFloat(Float(radius) ?? 0)
+        }
+    }
+
     @IBAction func onUiModeSelection(_ sender: UIAction) {
         uiModeButton.setTitle(sender.title, for: .normal)
         let uiMode = UiMode(rawValue: sender.title) ?? UiMode.SYSTEM
@@ -261,7 +449,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
         updateUiMode(uiMode: uiMode)
         Logger.sdk.info("uiMode has been selected: \(uiMode.rawValue)")
     }
-    
+
     func setThemeFontFamily(_ fontFamily: String) {
         if activeTextField?.tag == 5 {
             theme?.mainTitle.fontFamily = fontFamily
@@ -303,41 +491,52 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate, UI
             theme?.selectPaymentMethodTitleLabel.fontFamily = fontFamily
         }
     }
-    
-    
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+    func pickerView(
+        _ pickerView: UIPickerView,
+        numberOfRowsInComponent component: Int
+    ) -> Int {
         fonts.count
     }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+    func pickerView(
+        _ pickerView: UIPickerView,
+        titleForRow row: Int,
+        forComponent component: Int
+    ) -> String? {
         fonts[row]
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+    func pickerView(
+        _ pickerView: UIPickerView,
+        didSelectRow row: Int,
+        inComponent component: Int
+    ) {
         let selectedFontFamily = fonts[row]
-        
+
         activeTextField?.text = selectedFontFamily
         setThemeFontFamily(selectedFontFamily)
     }
-    
+
     private func updateUiMode(uiMode: UiMode) {
-        
-        let mode: UIUserInterfaceStyle = switch uiMode {
-        case .SYSTEM: .light
-        case .DARK: .dark
-        default: .unspecified
-            
-        }
-        
+
+        let mode: UIUserInterfaceStyle =
+            switch uiMode {
+            case .SYSTEM: .light
+            case .DARK: .dark
+            default: .unspecified
+
+            }
+
         UIApplication.shared.connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .compactMap({$0 as? UIWindowScene})
+            .filter({ $0.activationState == .foregroundActive })
+            .compactMap({ $0 as? UIWindowScene })
             .first?.windows
-            .filter({$0.isKeyWindow}).first?.overrideUserInterfaceStyle = mode
+            .filter({ $0.isKeyWindow }).first?.overrideUserInterfaceStyle = mode
     }
 }
 
@@ -348,5 +547,3 @@ extension ThemeEditorViewController: UITextFieldDelegate {
         pickerView.selectRow(0, inComponent: 0, animated: true)
     }
 }
-
-
