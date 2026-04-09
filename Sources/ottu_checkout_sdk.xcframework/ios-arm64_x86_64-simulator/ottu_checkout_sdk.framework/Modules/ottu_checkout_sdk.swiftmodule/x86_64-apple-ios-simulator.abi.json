@@ -4553,9 +4553,229 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV11descriptionSSSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandingOption",
+            "printedName": "brandingOption",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.BrandingOption?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BrandingOption",
+                    "printedName": "ottu_checkout_sdk.BrandingOption",
+                    "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.BrandingOption?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BrandingOption",
+                        "printedName": "ottu_checkout_sdk.BrandingOption",
+                        "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.BrandingOption?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BrandingOption",
+                        "printedName": "ottu_checkout_sdk.BrandingOption",
+                        "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV14brandingOptionAA08BrandingG0VSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(code:name:amount:currencyCode:fee:feeDescription:icons:flow:redirectURL:canSaveCard:submitURL:directPaymentURL:directSaveCardURL:encKeyURL:trandata:cvvRequired:)",
+            "printedName": "init(code:name:amount:currencyCode:fee:feeDescription:icons:flow:redirectURL:canSaveCard:submitURL:directPaymentURL:directSaveCardURL:encKeyURL:trandata:cvvRequired:description:brandingOption:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4730,11 +4950,39 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.BrandingOption?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BrandingOption",
+                    "printedName": "ottu_checkout_sdk.BrandingOption",
+                    "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequiredACSS_SSSo9NSDecimalaSSAUSSSgSay10Foundation0P0VGAC4FlowOAYSgSbA1_A1_A1_A1_AVSbSgtcfc",
-            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequiredACSS_SSSo9NSDecimalaSSAUSSSgSay10Foundation0P0VGAC4FlowOAYSgSbA1_A1_A1_A1_AVSbSgtcfc",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequired11description14brandingOptionACSS_SSSo9NSDecimalaSSAWSSSgSay10Foundation0P0VGAC4FlowOA_SgSbA3_A3_A3_A3_AXSbSgAxA14BrandingOptionVSgtcfc",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4code4name6amount12currencyCode3fee0K11Description5icons4flow11redirectURL11canSaveCard06submitP006directdP00ursP006encKeyP08trandata11cvvRequired11description14brandingOptionACSS_SSSo9NSDecimalaSSAWSSSgSay10Foundation0P0VGAC4FlowOA_SgSbA3_A3_A3_A3_AXSbSgAxA14BrandingOptionVSgtcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl"
@@ -6096,6 +6344,217 @@
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BrandingOption",
+        "printedName": "BrandingOption",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV4textSSvp",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV4textSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV4textSSvg",
+                "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV4textSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV5colorSo7UIColorCvp",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV5colorSo7UIColorCvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV5colorSo7UIColorCvg",
+                "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV5colorSo7UIColorCvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontWeight",
+            "printedName": "fontWeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Weight",
+                "printedName": "UIKit.UIFont.Weight",
+                "usr": "c:@T@UIFontWeight"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV10fontWeightSo06UIFontG0avp",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV10fontWeightSo06UIFontG0avp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Weight",
+                    "printedName": "UIKit.UIFont.Weight",
+                    "usr": "c:@T@UIFontWeight"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV10fontWeightSo06UIFontG0avg",
+                "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV10fontWeightSo06UIFontG0avg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BrandingOption",
+                "printedName": "ottu_checkout_sdk.BrandingOption",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BrandingOption",
+                "printedName": "ottu_checkout_sdk.BrandingOption",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV2eeoiySbAC_ACtFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ottu_checkout_sdk14BrandingOptionV",
+        "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
         ]
       },
       {
@@ -7702,6 +8161,126 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk10FlexMethodV11descriptionSSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk10FlexMethodV11descriptionSSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk10FlexMethodV11descriptionSSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk10FlexMethodV11descriptionSSSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "brandingOption",
+            "printedName": "brandingOption",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.BrandingOption?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BrandingOption",
+                    "printedName": "ottu_checkout_sdk.BrandingOption",
+                    "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk10FlexMethodV14brandingOptionAA08BrandingG0VSgvp",
+            "mangledName": "$s17ottu_checkout_sdk10FlexMethodV14brandingOptionAA08BrandingG0VSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.BrandingOption?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BrandingOption",
+                        "printedName": "ottu_checkout_sdk.BrandingOption",
+                        "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk10FlexMethodV14brandingOptionAA08BrandingG0VSgvg",
+                "mangledName": "$s17ottu_checkout_sdk10FlexMethodV14brandingOptionAA08BrandingG0VSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -9093,6 +9672,126 @@
                 "declKind": "Accessor",
                 "usr": "s:17ottu_checkout_sdk18FlexMethodResponseV19pre_payment_optionsAC17PrePaymentOptionsVvg",
                 "mangledName": "$s17ottu_checkout_sdk18FlexMethodResponseV19pre_payment_optionsAC17PrePaymentOptionsVvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk18FlexMethodResponseV11descriptionSSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk18FlexMethodResponseV11descriptionSSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk18FlexMethodResponseV11descriptionSSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk18FlexMethodResponseV11descriptionSSSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "branding_options",
+            "printedName": "branding_options",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.BrandingOptionsResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BrandingOptionsResponse",
+                    "printedName": "ottu_checkout_sdk.BrandingOptionsResponse",
+                    "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk18FlexMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvp",
+            "mangledName": "$s17ottu_checkout_sdk18FlexMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.BrandingOptionsResponse?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BrandingOptionsResponse",
+                        "printedName": "ottu_checkout_sdk.BrandingOptionsResponse",
+                        "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk18FlexMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvg",
+                "mangledName": "$s17ottu_checkout_sdk18FlexMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvg",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "get"
@@ -13870,13 +14569,20 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "TypeDecl",
@@ -14059,23 +14765,22 @@
           },
           {
             "kind": "Var",
-            "name": "fontFamily",
-            "printedName": "fontFamily",
+            "name": "font",
+            "printedName": "font",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
               }
             ],
             "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvp",
-            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvp",
+            "usr": "s:17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvp",
+            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvp",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "accessors": [
               {
@@ -14085,14 +14790,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvg",
-                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvg",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvg",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvg",
                 "moduleName": "ottu_checkout_sdk",
                 "accessorKind": "get"
               },
@@ -14108,14 +14813,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvs",
-                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvs",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvs",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvs",
                 "moduleName": "ottu_checkout_sdk",
                 "accessorKind": "set"
               },
@@ -14131,8 +14836,119 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvM",
-                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSvM",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvM",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC4fontSo6UIFontCvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontFamily",
+            "printedName": "fontFamily",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvs",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvM",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC10fontFamilySSSgvM",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -14314,6 +15130,339 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "cornerRadius",
+            "printedName": "cornerRadius",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk15ButtonComponentC12cornerRadius14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC12cornerRadius12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC12cornerRadius14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC12cornerRadius12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC12cornerRadius14CoreFoundation7CGFloatVSgvs",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC12cornerRadius12CoreGraphics7CGFloatVSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC12cornerRadius14CoreFoundation7CGFloatVSgvM",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC12cornerRadius12CoreGraphics7CGFloatVSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderColor",
+            "printedName": "borderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvp",
+            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvg",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvs",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvM",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderColorSo7UIColorCSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderWidth",
+            "printedName": "borderWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderWidth14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderWidth12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderWidth14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderWidth12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderWidth14CoreFoundation7CGFloatVSgvs",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderWidth12CoreGraphics7CGFloatVSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk15ButtonComponentC11borderWidth14CoreFoundation7CGFloatVSgvM",
+                "mangledName": "$s17ottu_checkout_sdk15ButtonComponentC11borderWidth12CoreGraphics7CGFloatVSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -14361,8 +15510,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
@@ -14385,8 +15534,8 @@
       },
       {
         "kind": "Import",
-        "name": "OSLog",
-        "printedName": "OSLog",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk"
       },
@@ -15803,6 +16952,202 @@
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BrandingOptionsResponse",
+        "printedName": "BrandingOptionsResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV4textSSvp",
+            "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV4textSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV4textSSvg",
+                "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV4textSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV5colorSSvp",
+            "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV5colorSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV5colorSSvg",
+                "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV5colorSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "font_weight",
+            "printedName": "font_weight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV11font_weightSivp",
+            "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV11font_weightSivp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV11font_weightSivg",
+                "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV11font_weightSivg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BrandingOptionsResponse",
+                "printedName": "ottu_checkout_sdk.BrandingOptionsResponse",
+                "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV",
+        "mangledName": "$s17ottu_checkout_sdk23BrandingOptionsResponseV",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
         ]
       },
       {
@@ -21448,13 +22793,20 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "Import",
@@ -27744,13 +29096,20 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "TypeDecl",
@@ -27861,11 +29220,8 @@
             "mangledName": "$s17ottu_checkout_sdk14LabelComponentC4fontSo6UIFontCvp",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -27883,7 +29239,6 @@
                 "usr": "s:17ottu_checkout_sdk14LabelComponentC4fontSo6UIFontCvg",
                 "mangledName": "$s17ottu_checkout_sdk14LabelComponentC4fontSo6UIFontCvg",
                 "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -27907,7 +29262,6 @@
                 "usr": "s:17ottu_checkout_sdk14LabelComponentC4fontSo6UIFontCvs",
                 "mangledName": "$s17ottu_checkout_sdk14LabelComponentC4fontSo6UIFontCvs",
                 "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -27937,24 +29291,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSvp",
-            "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSvp",
-            "moduleName": "ottu_checkout_sdk",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "name": "Optional",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -27963,10 +29301,46 @@
                     "usr": "s:SS"
                   }
                 ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSvg",
-                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSvg",
+                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvg",
                 "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -27981,15 +29355,24 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSvs",
-                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSvs",
+                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvs",
+                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvs",
                 "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -28004,8 +29387,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSvM",
-                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSvM",
+                "usr": "s:17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvM",
+                "mangledName": "$s17ottu_checkout_sdk14LabelComponentC10fontFamilySSSgvM",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -30912,6 +32295,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -31399,6 +32792,66 @@
                 "declKind": "Accessor",
                 "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV8pg_iconsSayAA05IconsF0VGSgvg",
                 "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV8pg_iconsSayAA05IconsF0VGSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icon",
+            "printedName": "icon",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV4iconSSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV4iconSSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV4iconSSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV4iconSSSgvg",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "get"
@@ -31907,6 +33360,126 @@
                 "declKind": "Accessor",
                 "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvg",
                 "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV12cvv_requiredSbSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV11descriptionSSSgvp",
+            "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV11descriptionSSSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV11descriptionSSSgvg",
+                "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV11descriptionSSSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "branding_options",
+            "printedName": "branding_options",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.BrandingOptionsResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BrandingOptionsResponse",
+                    "printedName": "ottu_checkout_sdk.BrandingOptionsResponse",
+                    "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvp",
+            "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.BrandingOptionsResponse?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BrandingOptionsResponse",
+                        "printedName": "ottu_checkout_sdk.BrandingOptionsResponse",
+                        "usr": "s:17ottu_checkout_sdk23BrandingOptionsResponseV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk21PaymentMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvg",
+                "mangledName": "$s17ottu_checkout_sdk21PaymentMethodResponseV16branding_optionsAA015BrandingOptionsF0VSgvg",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "get"
@@ -34650,6 +36223,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -36430,6 +38013,35 @@
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConfigHelper",
+        "printedName": "ConfigHelper",
+        "declKind": "Struct",
+        "usr": "s:17ottu_checkout_sdk12ConfigHelperV",
+        "mangledName": "$s17ottu_checkout_sdk12ConfigHelperV",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -38643,92 +40255,6 @@
           },
           {
             "kind": "Var",
-            "name": "paymentItemBorderColor",
-            "printedName": "paymentItemBorderColor",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvp",
-            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvp",
-            "moduleName": "ottu_checkout_sdk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvg",
-                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvg",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvs",
-                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvs",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvM",
-                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC22paymentItemBorderColorSo7UIColorCvM",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "paymentItemBackgroundColor",
             "printedName": "paymentItemBackgroundColor",
             "children": [
@@ -38807,6 +40333,202 @@
                 "declKind": "Accessor",
                 "usr": "s:17ottu_checkout_sdk13CheckoutThemeC26paymentItemBackgroundColorSo7UIColorCvM",
                 "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC26paymentItemBackgroundColorSo7UIColorCvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selectPaymentMethodDescriptionTextColor",
+            "printedName": "selectPaymentMethodDescriptionTextColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodDescriptionTextColorSo7UIColorCSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selectPaymentMethodBorderColor",
+            "printedName": "selectPaymentMethodBorderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvp",
+            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvg",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvs",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvM",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderColorSo7UIColorCvM",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -38979,6 +40701,226 @@
                 "declKind": "Accessor",
                 "usr": "s:17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodTitleBackgroundColorSo7UIColorCvM",
                 "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC39selectPaymentMethodTitleBackgroundColorSo7UIColorCvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selectPaymentMethodBorderWidth",
+            "printedName": "selectPaymentMethodBorderWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth14CoreFoundation7CGFloatVSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth12CoreGraphics7CGFloatVSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth14CoreFoundation7CGFloatVSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC30selectPaymentMethodBorderWidth12CoreGraphics7CGFloatVSgvM",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selectPaymentMethodCornerRadius",
+            "printedName": "selectPaymentMethodCornerRadius",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius14CoreFoundation7CGFloatVSgvp",
+            "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius12CoreGraphics7CGFloatVSgvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius14CoreFoundation7CGFloatVSgvg",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius12CoreGraphics7CGFloatVSgvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGFloat?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGFloat",
+                        "printedName": "CoreGraphics.CGFloat",
+                        "usr": "s:14CoreFoundation7CGFloatV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius14CoreFoundation7CGFloatVSgvs",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius12CoreGraphics7CGFloatVSgvs",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius14CoreFoundation7CGFloatVSgvM",
+                "mangledName": "$s17ottu_checkout_sdk13CheckoutThemeC31selectPaymentMethodCornerRadius12CoreGraphics7CGFloatVSgvM",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -41566,7 +43508,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ListPaymentMethodsPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 4918,
+      "offset": 4990,
       "length": 27,
       "value": "\"com.ottu.sharedStateQueue\""
     },
@@ -41704,58 +43646,16 @@
       "value": "5"
     },
     {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1156,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1202,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1255,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1327,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1373,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCell.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1426,
-      "length": 2,
-      "value": "16"
-    },
-    {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/CVVCardCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 835,
+      "offset": 839,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/CVVCardCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 867,
+      "offset": 871,
       "length": 4,
       "value": "true"
     },
@@ -42630,14 +44530,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/ListPaymentViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1878,
+      "offset": 1872,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/ListPaymentViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1953,
+      "offset": 1947,
       "length": 1,
       "value": "5"
     },
@@ -42665,7 +44565,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/Cells\/ListCardCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 405,
+      "offset": 392,
       "length": 5,
       "value": "false"
     },
@@ -42742,14 +44642,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/Components\/ButtonComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 424,
+      "offset": 212,
       "length": 2,
       "value": "17"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Checkout.swift",
       "kind": "BooleanLiteral",
-      "offset": 1535,
+      "offset": 1515,
       "length": 5,
       "value": "false"
     },
@@ -42903,14 +44803,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/MultiIconsCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 665,
+      "offset": 732,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/MultiIconsCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 697,
+      "offset": 764,
       "length": 4,
       "value": "true"
     },
@@ -43246,14 +45146,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/RegularPaymentCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 598,
+      "offset": 698,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/RegularPaymentCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 630,
+      "offset": 730,
       "length": 4,
       "value": "true"
     },
@@ -43743,14 +45643,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/FloatingPanel\/FloatingPanelFramework\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 2765,
+      "offset": 2835,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/FloatingPanel\/FloatingPanelFramework\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 2797,
+      "offset": 2875,
       "length": 3,
       "value": "1.0"
     },
@@ -43981,21 +45881,21 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/PaymentViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3327,
+      "offset": 3404,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/PaymentViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3480,
+      "offset": 3557,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/Components\/LabelComponent.swift",
       "kind": "IntegerLiteral",
-      "offset": 269,
+      "offset": 209,
       "length": 2,
       "value": "14"
     },
@@ -44182,6 +46082,13 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/Payment\/PaymentIconLoaderAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3039,
+      "length": 19,
+      "value": "\"prepareIcons.sync\""
+    },
+    {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Entities\/CardPay.swift",
       "kind": "StringLiteral",
       "offset": 236,
@@ -44275,35 +46182,35 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 247,
+      "offset": 243,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 281,
+      "offset": 277,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 318,
+      "offset": 310,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "Array",
-      "offset": 354,
+      "offset": 342,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ViewModels\/ListPaymentCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 387,
+      "offset": 375,
       "length": 5,
       "value": "false"
     },
@@ -44331,14 +46238,14 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/TamaraCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 718,
+      "offset": 755,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/ListPaymentMethod\/CellContollers\/TamaraCellController.swift",
       "kind": "BooleanLiteral",
-      "offset": 750,
+      "offset": 787,
       "length": 4,
       "value": "true"
     },
@@ -44534,21 +46441,21 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/SelectPaymentMethod\/List\/PaymentMethodsListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 697,
+      "offset": 781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/SelectPaymentMethod\/List\/PaymentMethodsListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 742,
+      "offset": 826,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Payment\/SelectPaymentMethod\/List\/PaymentMethodsListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 933,
+      "offset": 1018,
       "length": 1,
       "value": "5"
     },
@@ -44604,35 +46511,35 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
-      "offset": 588,
+      "offset": 589,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
-      "offset": 597,
+      "offset": 606,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
-      "offset": 608,
+      "offset": 625,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/CheckoutTheme.swift",
       "kind": "IntegerLiteral",
-      "offset": 618,
+      "offset": 643,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/UI\/Theme\/CheckoutTheme.swift",
       "kind": "BooleanLiteral",
-      "offset": 2389,
+      "offset": 2375,
       "length": 4,
       "value": "true"
     },

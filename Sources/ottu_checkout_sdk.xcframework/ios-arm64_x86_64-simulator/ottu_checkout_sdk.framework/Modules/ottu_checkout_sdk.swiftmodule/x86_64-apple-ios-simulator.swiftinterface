@@ -110,7 +110,9 @@ public struct PaymentMethod : Swift.Equatable {
   public var encKeyURL: Foundation.URL?
   public var trandata: Swift.String?
   public var cvvRequired: Swift.Bool?
-  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?)
+  public var description: Swift.String?
+  public var brandingOption: ottu_checkout_sdk.BrandingOption?
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?, description: Swift.String?, brandingOption: ottu_checkout_sdk.BrandingOption?)
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
 }
 public struct ApplePayWallet : Swift.Equatable {
@@ -129,6 +131,12 @@ public struct ApplePayWallet : Swift.Equatable {
   public var sessionId: Swift.String
   public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, pgCode: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
   public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
+}
+public struct BrandingOption : Swift.Equatable {
+  public let text: Swift.String
+  public let color: UIKit.UIColor
+  public let fontWeight: UIKit.UIFont.Weight
+  public static func == (a: ottu_checkout_sdk.BrandingOption, b: ottu_checkout_sdk.BrandingOption) -> Swift.Bool
 }
 public struct FlexMethod : Swift.Equatable {
   public enum Flow : Swift.String {
@@ -176,6 +184,8 @@ public struct FlexMethod : Swift.Equatable {
   public let flow: ottu_checkout_sdk.FlexMethod.Flow
   public let submitURL: Foundation.URL
   public let prePaymentCheckUrl: Foundation.URL
+  public let description: Swift.String?
+  public let brandingOption: ottu_checkout_sdk.BrandingOption?
   public static func == (a: ottu_checkout_sdk.FlexMethod, b: ottu_checkout_sdk.FlexMethod) -> Swift.Bool
 }
 public struct PaymentOptionsDisplaySettings : Swift.Equatable {
@@ -220,6 +230,8 @@ public struct FlexMethodResponse : Swift.Decodable {
   public let pre_payment_options_available: Swift.Bool
   public let pre_payment_check_url: Foundation.URL
   public let pre_payment_options: ottu_checkout_sdk.FlexMethodResponse.PrePaymentOptions
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Card : Swift.Equatable {
@@ -360,12 +372,16 @@ public protocol OttuDelegate : AnyObject {
 public class ButtonComponent {
   public var enabledTitleColor: UIKit.UIColor
   public var disabledTitleColor: UIKit.UIColor
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public var enabledBackgroundColor: UIKit.UIColor
   public var disabledBackgroundColor: UIKit.UIColor
+  public var cornerRadius: CoreFoundation.CGFloat?
+  public var borderColor: UIKit.UIColor?
+  public var borderWidth: CoreFoundation.CGFloat?
   public init()
   @objc deinit
 }
@@ -411,6 +427,12 @@ public enum UiMode : Swift.String {
   }
 }
 public struct CardPayResponse : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BrandingOptionsResponse : Swift.Decodable {
+  public let text: Swift.String
+  public let color: Swift.String
+  public let font_weight: Swift.Int
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol FloatingPanelLayout {
@@ -779,11 +801,11 @@ extension UIKit.UISpringTimingParameters {
 }
 public class LabelComponent {
   public var color: UIKit.UIColor
-  public var font: UIKit.UIFont
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public init()
   @objc deinit
 }
@@ -875,6 +897,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let fee_description: Swift.String?
   public let icons: ottu_checkout_sdk.IconsResponse?
   public let pg_icons: [ottu_checkout_sdk.IconsResponse]?
+  public let icon: Swift.String?
   public let flow: Swift.String
   public let redirect_url: Foundation.URL?
   public let can_save_card: Swift.Bool
@@ -884,6 +907,8 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let enc_key_url: Foundation.URL?
   public let trandata: Swift.String?
   public let cvv_required: Swift.Bool?
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentServiceResponse : Swift.Decodable {
@@ -1032,6 +1057,8 @@ public enum FailedCheck : Swift.CaseIterable {
     get
   }
 }
+public struct ConfigHelper {
+}
 public enum FileIntegrityCheck {
   case bundleID(Swift.String)
   case mobileProvision(Swift.String)
@@ -1077,10 +1104,13 @@ public class CheckoutTheme {
   public var dataLabel: ottu_checkout_sdk.LabelComponent
   public var dataValue: ottu_checkout_sdk.LabelComponent
   public var showPaymentDetails: Swift.Bool
-  public var paymentItemBorderColor: UIKit.UIColor
   public var paymentItemBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodDescriptionTextColor: UIKit.UIColor?
+  public var selectPaymentMethodBorderColor: UIKit.UIColor
   public var selectPaymentMethodTitleLabel: ottu_checkout_sdk.LabelComponent
   public var selectPaymentMethodTitleBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodBorderWidth: CoreFoundation.CGFloat?
+  public var selectPaymentMethodCornerRadius: CoreFoundation.CGFloat?
   public var uiMode: ottu_checkout_sdk.UiMode
   public init()
   @objc deinit

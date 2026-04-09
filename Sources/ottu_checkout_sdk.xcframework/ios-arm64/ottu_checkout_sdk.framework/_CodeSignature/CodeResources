@@ -4,6 +4,22 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Almarai-Bold.ttf</key>
+		<data>
+		KdoMsTo1aeRNmDpUl/BdY39wClI=
+		</data>
+		<key>Almarai-ExtraBold.ttf</key>
+		<data>
+		ECfv93zvV6R8u0hCpktH+8TDC6Q=
+		</data>
+		<key>Almarai-Light.ttf</key>
+		<data>
+		iyv+6KWSyK/RYW/9f1Uv5wUBF90=
+		</data>
+		<key>Almarai-Regular.ttf</key>
+		<data>
+		cHF7JDPDkxQN4WCPGx3FB3M0LZ4=
+		</data>
 		<key>Assets.car</key>
 		<data>
 		+iHGIIoXhCvvS3fI/irwGpvwqh0=
@@ -18,7 +34,7 @@
 		</data>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/n7U-fh-g5z-view-ZqW-u2-BVo.nib</key>
 		<data>
-		1e4yug8znWXZc0jpS4+F7fPvxjY=
+		Vc/aLQzLKihPggy9xalnSODBm5E=
 		</data>
 		<key>Headers/ottu_checkout_sdk-Swift.h</key>
 		<data>
@@ -30,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ihbtZnuFoP0Dn978h+ejrLhnwPU=
+		Y5u1TG+mPhFrNevPooiUocyoBu8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -38,23 +54,23 @@
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		C3JYbMhV36j0Zkanst8qb+J8xs4=
+		cl2jVHGvBdY7hxu5RSdiKM5bqj8=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Y6n1yqeCHL51umhydye1a0ARr9Q=
+		ZLlfGR8XqPXPZgAFkQVACSR1XKA=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		h+mZlAZ+JiStYjJqnvvFDnepBak=
+		quv9ecViWQprIh2OpjFBPXTLM6A=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Y6n1yqeCHL51umhydye1a0ARr9Q=
+		ZLlfGR8XqPXPZgAFkQVACSR1XKA=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		dFuPfALv3aZb38keh3nGGV4idmo=
+		afo1NYNgQ+fJ0x8366JgMrDJEyU=
 		</data>
 		<key>NewCardViewController.storyboardc/Info.plist</key>
 		<data>
@@ -359,6 +375,34 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Almarai-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NTxSX4r8RhymIT7iEOd7hl8paa0SIqLPxjRoDx9GIdk=
+			</data>
+		</dict>
+		<key>Almarai-ExtraBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RyRglp0Igrz78nNdDDxblS1fKqFhHVQlXdcO9tSyuyQ=
+			</data>
+		</dict>
+		<key>Almarai-Light.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l4ZCmI+doA0aC7E8GpAWW+VYTIjA4I2xORALPimZzeo=
+			</data>
+		</dict>
+		<key>Almarai-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lMwDqKZoqGV3NaOZR/xKsmpF9g394g6JL11LrpaFY8A=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
@@ -384,7 +428,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pyGiSIBV3R2tTiXbSRGyifToap+gkaHSEiQmnSI0t1U=
+			UYALv5cIscJdi1QA78v+i0d1JEZ5JsBEuYdWS1EuHTg=
 			</data>
 		</dict>
 		<key>Headers/ottu_checkout_sdk-Swift.h</key>
@@ -412,35 +456,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EqXVvJ4rRnPV23zJiuTF/hwmCFkiifkpDvkpQ+/gU0I=
+			7YU30VMkGxJvjwSva0mEKja07TJDp78H8E6l1ICmi5I=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c5Ga6BvGPsrZPLgvnM6rou/uuX5nT4xpRKLdRAHo8LY=
+			eryVpcs+ioKFnAcLG+0Ez/fZR0bc6ro7ZyJNCBXZeRs=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nucqmn53ftkyLaWoNJOXUic1ZNuzqV6DayAwC2NLDRE=
+			3AUdClD59ptS5Q4b6KH+oKFHayPmnkY9SDyyz50jBcw=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c5Ga6BvGPsrZPLgvnM6rou/uuX5nT4xpRKLdRAHo8LY=
+			eryVpcs+ioKFnAcLG+0Ez/fZR0bc6ro7ZyJNCBXZeRs=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			czr6iKooH5CqhodmKhfkhRqkLoKylXEmPFWVkjavFTA=
+			1keuJKf5e3/szG+Wo6ZUznFjC6hMhA/hBrCtqEDPB5k=
 			</data>
 		</dict>
 		<key>NewCardViewController.storyboardc/Info.plist</key>

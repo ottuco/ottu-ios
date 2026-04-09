@@ -19,7 +19,10 @@ enum PgCode: Int {
     case tapPg = 2011
     case ottuSdk = 2012
     case muscatbank = 2013
-    
+    case cod = 2014
+    case jamiawallet = 2015
+    case cs = 2016
+
     func stringValue() -> String {
         switch self {
         case .applePay: return "apple-pay"
@@ -35,6 +38,9 @@ enum PgCode: Int {
         case .tapPg: return "tap_pg"
         case .ottuSdk: return "ottu_sdk"
         case .muscatbank: return "muscatbank_demo"
+        case .cod: return "cod"
+        case .jamiawallet: return "jamiawallet"
+        case .cs: return "cs"
         }
     }
 }
