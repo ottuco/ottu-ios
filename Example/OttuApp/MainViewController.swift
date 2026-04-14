@@ -56,10 +56,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         amountTextField.text = "10"
         currencyCodeTextField.text = "KWD"
         customerIdTextField.text = "john1"
-        merchantIdTextField.text = "alpha.ottu.net"
-        //merchantIdTextField.text = "staging4.ottu.dev"
-        apiKeyTextField.text = "cHSLW0bE.56PLGcUYEhRvzhHVVO9CbF68hmDiXcPI"  //alpha
-        //apiKeyTextField.text = "kZia0dfY.vEWS0cUV5gWV1JDzIvzDfSxKLUh4qAa3" //stage4
+        merchantIdTextField.text = ""
+        apiKeyTextField.text = ""
         phoneNumberTextField.text = "99459272"
         cardExpiryTimeTextField.text = ""
 
