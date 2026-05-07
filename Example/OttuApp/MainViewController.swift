@@ -38,11 +38,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var defaultSelectedPgCodeTextField: UITextField!
     @IBOutlet weak var failPaymentValidationSwitch: UISwitch!
     @IBOutlet weak var useCustomTextSwitch: UISwitch!
+    @IBOutlet weak var languageMenuButton: UIMenu!
+    @IBOutlet weak var languageButton: UIButton!
+
 
     private var sessionId: String?
     private var transactionDetailsPreload: TransactionDetails?
 
     var theme = CheckoutTheme()
+    private var language: String = Locale.current.languageCode ?? "en"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +73,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
             $0.setOn(isOn, animated: false)
         }
+        
+        languageButton.setTitle(language, for: .normal)
     }
 
     @IBAction private func didToggleSwith(_ sender: UISwitch) {
@@ -86,6 +92,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             noFormsOfPaymentSwitch.isOn = allSwitchesOff
         }
     }
+    
+    @IBAction func onLanguageSelection(_ sender: UIAction) {
+        languageButton.setTitle(sender.title, for: .normal)
+        language = sender.title
+        Logger.app.info("language has been selected: \(self.language)")
+    }
+
 
     @IBAction func didChangeSegmentSelection(_ sender: UISegmentedControl) {
         visibleItemsCountStack.isHidden = sender.selectedSegmentIndex == 0
@@ -233,7 +246,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let pgCodes = preparePgCodes()
         let minExpiryTime = prepareMinExpiryTime()
 
-        let lang = Locale.current.languageCode == "ar" ? "ar" : "en"
         let isNeededPreload = preloadSwitch.isOn
 
         var json: [String: Any] = [
@@ -241,7 +253,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             "currency_code": currencyCode,
             "pg_codes": pgCodes,
             "type": "e_commerce",
-            "language": lang,
+            "language": language,
             "customer_first_name": "John",
             "customer_last_name": "Smith",
             "customer_email": "john1@some.mail",
@@ -372,6 +384,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             forHTTPHeaderField: "Authorization"
         )
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(language, forHTTPHeaderField: "Accept-Language")
+
         request.httpBody = jsonData
 
         let session = URLSession(configuration: .ephemeral)
