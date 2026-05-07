@@ -7,5 +7,4 @@ framework module ottu_checkout_sdk {
 
 module ottu_checkout_sdk.Swift {
   header "ottu_checkout_sdk-Swift.h"
-  requires objc
 }

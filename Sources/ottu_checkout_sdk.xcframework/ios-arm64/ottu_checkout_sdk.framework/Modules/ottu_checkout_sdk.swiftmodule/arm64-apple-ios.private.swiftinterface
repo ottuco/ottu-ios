@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios15 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios15 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import CommonCrypto
 import CoreText
 import Darwin
@@ -15,7 +15,7 @@ import Sentry
 import Swift
 import SwiftUI
 import UIKit
-import WebKit
+@preconcurrency import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -532,7 +532,7 @@ extension ottu_checkout_sdk.FloatingPanelAdaptiveLayoutAnchor {
   @objc optional var momentumProjectionRate: CoreFoundation.CGFloat { get }
   @objc optional func shouldProjectMomentum(_ fpc: ottu_checkout_sdk.FloatingPanelController, to proposedState: ottu_checkout_sdk.FloatingPanelState) -> Swift.Bool
   @objc optional func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc optional func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc optional func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc optional var removalInteractionVelocityThreshold: CoreFoundation.CGFloat { get }
 }
 open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavior {
@@ -547,7 +547,7 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
     @objc get
   }
   @objc open func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc open func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc open func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc open var removalInteractionVelocityThreshold: CoreFoundation.CGFloat
   @objc deinit
 }
