@@ -396,6 +396,20 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -942,6 +956,20 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -1062,52 +1090,53 @@
                 "moduleName": "ottu_checkout_sdk"
               },
               {
-                "kind": "Function",
-                "name": "==",
-                "printedName": "==(_:_:)",
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.TransactionDetails.PaymentType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentType",
+                        "printedName": "ottu_checkout_sdk.TransactionDetails.PaymentType",
+                        "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "PaymentType",
-                    "printedName": "ottu_checkout_sdk.TransactionDetails.PaymentType",
-                    "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PaymentType",
-                    "printedName": "ottu_checkout_sdk.TransactionDetails.PaymentType",
-                    "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO2eeoiySbAE_AEtFZ",
-                "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO2eeoiySbAE_AEtFZ",
+                "declKind": "Constructor",
+                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueAESgSS_tcfc",
+                "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueAESgSS_tcfc",
                 "moduleName": "ottu_checkout_sdk",
-                "static": true,
                 "implicit": true,
-                "funcSelfKind": "NonMutating"
+                "init_kind": "Designated"
               },
               {
                 "kind": "Var",
-                "name": "hashValue",
-                "printedName": "hashValue",
+                "name": "rawValue",
+                "printedName": "rawValue",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO9hashValueSivp",
-                "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO9hashValueSivp",
+                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueSSvp",
+                "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueSSvp",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessors": [
@@ -1118,44 +1147,19 @@
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO9hashValueSivg",
-                    "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO9hashValueSivg",
+                    "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueSSvg",
+                    "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO8rawValueSSvg",
                     "moduleName": "ottu_checkout_sdk",
                     "implicit": true,
                     "accessorKind": "get"
                   }
                 ]
-              },
-              {
-                "kind": "Function",
-                "name": "hash",
-                "printedName": "hash(into:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Hasher",
-                    "printedName": "Swift.Hasher",
-                    "paramValueOwnership": "InOut",
-                    "usr": "s:s6HasherV"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO4hash4intoys6HasherVz_tF",
-                "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV11PaymentTypeO4hash4intoys6HasherVz_tF",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Enum",
@@ -1165,6 +1169,7 @@
             "declAttributes": [
               "AccessControl"
             ],
+            "enumRawTypeName": "String",
             "conformances": [
               {
                 "kind": "Conformance",
@@ -1193,6 +1198,42 @@
                 "printedName": "Hashable",
                 "usr": "s:SH",
                 "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -2497,6 +2538,61 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransactionDetails",
+                "printedName": "ottu_checkout_sdk.TransactionDetails",
+                "usr": "s:17ottu_checkout_sdk18TransactionDetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk18TransactionDetailsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk18TransactionDetailsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk18TransactionDetailsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(amount:cards:customerId:customerPhone:currencyCode:language:pymentMethods:flexPayments:applePay:stcPay:urPay:state:isAmountEditable:sessionId:paymentType:)",
             "children": [
               {
@@ -2695,6 +2791,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
@@ -2834,52 +2944,53 @@
                 "moduleName": "ottu_checkout_sdk"
               },
               {
-                "kind": "Function",
-                "name": "==",
-                "printedName": "==(_:_:)",
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Optional",
+                    "printedName": "ottu_checkout_sdk.PaymentMethod.Flow?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Flow",
+                        "printedName": "ottu_checkout_sdk.PaymentMethod.Flow",
+                        "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Flow",
-                    "printedName": "ottu_checkout_sdk.PaymentMethod.Flow",
-                    "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Flow",
-                    "printedName": "ottu_checkout_sdk.PaymentMethod.Flow",
-                    "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO2eeoiySbAE_AEtFZ",
-                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO2eeoiySbAE_AEtFZ",
+                "declKind": "Constructor",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueAESgSS_tcfc",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueAESgSS_tcfc",
                 "moduleName": "ottu_checkout_sdk",
-                "static": true,
                 "implicit": true,
-                "funcSelfKind": "NonMutating"
+                "init_kind": "Designated"
               },
               {
                 "kind": "Var",
-                "name": "hashValue",
-                "printedName": "hashValue",
+                "name": "rawValue",
+                "printedName": "rawValue",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO9hashValueSivp",
-                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO9hashValueSivp",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueSSvp",
+                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueSSvp",
                 "moduleName": "ottu_checkout_sdk",
                 "implicit": true,
                 "accessors": [
@@ -2890,44 +3001,19 @@
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO9hashValueSivg",
-                    "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO9hashValueSivg",
+                    "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueSSvg",
+                    "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO8rawValueSSvg",
                     "moduleName": "ottu_checkout_sdk",
                     "implicit": true,
                     "accessorKind": "get"
                   }
                 ]
-              },
-              {
-                "kind": "Function",
-                "name": "hash",
-                "printedName": "hash(into:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Hasher",
-                    "printedName": "Swift.Hasher",
-                    "paramValueOwnership": "InOut",
-                    "usr": "s:s6HasherV"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:17ottu_checkout_sdk13PaymentMethodV4FlowO4hash4intoys6HasherVz_tF",
-                "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4FlowO4hash4intoys6HasherVz_tF",
-                "moduleName": "ottu_checkout_sdk",
-                "implicit": true,
-                "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Enum",
@@ -2937,6 +3023,7 @@
             "declAttributes": [
               "AccessControl"
             ],
+            "enumRawTypeName": "String",
             "conformances": [
               {
                 "kind": "Conformance",
@@ -2965,6 +3052,42 @@
                 "printedName": "Hashable",
                 "usr": "s:SH",
                 "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -4990,6 +5113,32 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentMethod",
+                "printedName": "ottu_checkout_sdk.PaymentMethod",
+                "usr": "s:17ottu_checkout_sdk13PaymentMethodV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -5020,6 +5169,31 @@
             "static": true,
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk13PaymentMethodV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk13PaymentMethodV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -5043,6 +5217,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -6273,6 +6461,32 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ApplePayWallet",
+                "printedName": "ottu_checkout_sdk.ApplePayWallet",
+                "usr": "s:17ottu_checkout_sdk14ApplePayWalletV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk14ApplePayWalletV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -6303,6 +6517,31 @@
             "static": true,
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk14ApplePayWalletV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk14ApplePayWalletV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -6326,6 +6565,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -6494,6 +6747,100 @@
             ]
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(text:color:fontWeight:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BrandingOption",
+                "printedName": "ottu_checkout_sdk.BrandingOption",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Weight",
+                "printedName": "UIKit.UIFont.Weight",
+                "usr": "c:@T@UIFontWeight"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV4text5color10fontWeightACSS_So7UIColorCSo06UIFontI0atcfc",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV4text5color10fontWeightACSS_So7UIColorCSo06UIFontI0atcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BrandingOption",
+                "printedName": "ottu_checkout_sdk.BrandingOption",
+                "usr": "s:17ottu_checkout_sdk14BrandingOptionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk14BrandingOptionV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk14BrandingOptionV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -6547,6 +6894,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -6802,6 +7163,20 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -7025,6 +7400,20 @@
                         ],
                         "usr": "s:SY",
                         "mangledName": "$sSY"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Decodable",
+                        "printedName": "Decodable",
+                        "usr": "s:Se",
+                        "mangledName": "$sSe"
+                      },
+                      {
+                        "kind": "Conformance",
+                        "name": "Encodable",
+                        "printedName": "Encodable",
+                        "usr": "s:SE",
+                        "mangledName": "$sSE"
                       }
                     ]
                   },
@@ -7221,6 +7610,32 @@
                     ]
                   },
                   {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(from:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentLabels",
+                        "printedName": "ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels",
+                        "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV0G6LabelsV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Decoder",
+                        "printedName": "any Swift.Decoder",
+                        "usr": "s:s7DecoderP"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV0G6LabelsV4fromAGs7Decoder_p_tKcfc",
+                    "mangledName": "$s17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV0G6LabelsV4fromAGs7Decoder_p_tKcfc",
+                    "moduleName": "ottu_checkout_sdk",
+                    "implicit": true,
+                    "throwing": true,
+                    "init_kind": "Designated"
+                  },
+                  {
                     "kind": "Function",
                     "name": "==",
                     "printedName": "==(_:_:)",
@@ -7251,6 +7666,31 @@
                     "static": true,
                     "implicit": true,
                     "funcSelfKind": "NonMutating"
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "encode",
+                    "printedName": "encode(to:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Encoder",
+                        "printedName": "any Swift.Encoder",
+                        "usr": "s:s7EncoderP"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV0G6LabelsV6encode2toys7Encoder_p_tKF",
+                    "mangledName": "$s17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV0G6LabelsV6encode2toys7Encoder_p_tKF",
+                    "moduleName": "ottu_checkout_sdk",
+                    "implicit": true,
+                    "throwing": true,
+                    "funcSelfKind": "NonMutating"
                   }
                 ],
                 "declKind": "Struct",
@@ -7274,6 +7714,20 @@
                     "printedName": "Equatable",
                     "usr": "s:SQ",
                     "mangledName": "$sSQ"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Decodable",
+                    "printedName": "Decodable",
+                    "usr": "s:Se",
+                    "mangledName": "$sSe"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Encodable",
+                    "printedName": "Encodable",
+                    "usr": "s:SE",
+                    "mangledName": "$sSE"
                   },
                   {
                     "kind": "Conformance",
@@ -7481,6 +7935,32 @@
                 ]
               },
               {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrePaymentOptions",
+                    "printedName": "ottu_checkout_sdk.FlexMethod.PrePaymentOptions",
+                    "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
                 "kind": "Function",
                 "name": "==",
                 "printedName": "==(_:_:)",
@@ -7511,6 +7991,31 @@
                 "static": true,
                 "implicit": true,
                 "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s17ottu_checkout_sdk10FlexMethodV17PrePaymentOptionsV6encode2toys7Encoder_p_tKF",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Struct",
@@ -7534,6 +8039,20 @@
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               },
               {
                 "kind": "Conformance",
@@ -8281,6 +8800,32 @@
             ]
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FlexMethod",
+                "printedName": "ottu_checkout_sdk.FlexMethod",
+                "usr": "s:17ottu_checkout_sdk10FlexMethodV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk10FlexMethodV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk10FlexMethodV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -8311,6 +8856,31 @@
             "static": true,
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk10FlexMethodV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk10FlexMethodV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -8334,6 +8904,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -10191,6 +10775,20 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
               }
             ]
           },
@@ -10890,6 +11488,32 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Card",
+                "printedName": "ottu_checkout_sdk.Card",
+                "usr": "s:17ottu_checkout_sdk4CardV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk4CardV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk4CardV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -10920,6 +11544,31 @@
             "static": true,
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk4CardV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk4CardV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -10943,6 +11592,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -11910,6 +12573,32 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Wallet",
+                "printedName": "ottu_checkout_sdk.Wallet",
+                "usr": "s:17ottu_checkout_sdk6WalletV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk6WalletV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17ottu_checkout_sdk6WalletV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -11940,6 +12629,31 @@
             "static": true,
             "implicit": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk6WalletV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17ottu_checkout_sdk6WalletV6encode2toys7Encoder_p_tKF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -11963,6 +12677,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -16795,13 +17523,20 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "OSLog",
+        "printedName": "OSLog",
         "declKind": "Import",
         "moduleName": "ottu_checkout_sdk",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
       },
       {
         "kind": "Import",

@@ -28,8 +28,8 @@ extension UIKit.UIView {
     set
   }
 }
-public struct TransactionDetails {
-  public enum Language : Swift.String {
+public struct TransactionDetails : Swift.Codable {
+  public enum Language : Swift.String, Swift.Codable {
     case en
     case ar
     public init?(rawValue: Swift.String)
@@ -38,7 +38,7 @@ public struct TransactionDetails {
       get
     }
   }
-  public enum State : Swift.String {
+  public enum State : Swift.String, Swift.Codable {
     case created
     case pending
     case attempted
@@ -56,13 +56,13 @@ public struct TransactionDetails {
       get
     }
   }
-  public enum PaymentType {
+  public enum PaymentType : Swift.String, Swift.Codable {
     case oneOff
     case autoDebit
     case saveCard
-    public static func == (a: ottu_checkout_sdk.TransactionDetails.PaymentType, b: ottu_checkout_sdk.TransactionDetails.PaymentType) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
       get
     }
   }
@@ -81,16 +81,18 @@ public struct TransactionDetails {
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
   public var paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?)
 }
-public struct PaymentMethod : Swift.Equatable {
-  public enum Flow {
+public struct PaymentMethod : Swift.Equatable, Swift.Codable {
+  public enum Flow : Swift.String, Swift.Codable {
     case redirect
     case ottuPG
     case stcPay
-    public static func == (a: ottu_checkout_sdk.PaymentMethod.Flow, b: ottu_checkout_sdk.PaymentMethod.Flow) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
       get
     }
   }
@@ -114,8 +116,10 @@ public struct PaymentMethod : Swift.Equatable {
   public var brandingOption: ottu_checkout_sdk.BrandingOption?
   public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?, description: Swift.String?, brandingOption: ottu_checkout_sdk.BrandingOption?)
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public struct ApplePayWallet : Swift.Equatable {
+public struct ApplePayWallet : Swift.Equatable, Swift.Codable {
   public var domain: Swift.String
   public var merchantId: Swift.String
   public var code: Swift.String
@@ -131,15 +135,20 @@ public struct ApplePayWallet : Swift.Equatable {
   public var sessionId: Swift.String
   public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, pgCode: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
   public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public struct BrandingOption : Swift.Equatable {
+public struct BrandingOption : Swift.Equatable, Swift.Codable {
   public let text: Swift.String
   public let color: UIKit.UIColor
   public let fontWeight: UIKit.UIFont.Weight
+  public init(text: Swift.String, color: UIKit.UIColor, fontWeight: UIKit.UIFont.Weight)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: ottu_checkout_sdk.BrandingOption, b: ottu_checkout_sdk.BrandingOption) -> Swift.Bool
 }
-public struct FlexMethod : Swift.Equatable {
-  public enum Flow : Swift.String {
+public struct FlexMethod : Swift.Equatable, Swift.Codable {
+  public enum Flow : Swift.String, Swift.Codable {
     case tabby
     case tamara
     public init?(rawValue: Swift.String)
@@ -148,9 +157,9 @@ public struct FlexMethod : Swift.Equatable {
       get
     }
   }
-  public struct PrePaymentOptions : Swift.Equatable {
-    public struct PaymentLabels : Swift.Equatable {
-      public enum PaymentType : Swift.String {
+  public struct PrePaymentOptions : Swift.Equatable, Swift.Codable {
+    public struct PaymentLabels : Swift.Equatable, Swift.Codable {
+      public enum PaymentType : Swift.String, Swift.Codable {
         case payByInstalment
         case payNow
         public init?(rawValue: Swift.String)
@@ -164,11 +173,15 @@ public struct FlexMethod : Swift.Equatable {
       public let descriptionEn: Swift.String
       public let descriptionAr: Swift.String
       public static func == (a: ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels, b: ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels) -> Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
     }
     public let isAvailable: Swift.Bool?
     public let singleCheckoutEnabled: Swift.Bool?
     public let paymentLabels: [ottu_checkout_sdk.FlexMethod.PrePaymentOptions.PaymentLabels]?
     public static func == (a: ottu_checkout_sdk.FlexMethod.PrePaymentOptions, b: ottu_checkout_sdk.FlexMethod.PrePaymentOptions) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public let prePaymentOptions: ottu_checkout_sdk.FlexMethod.PrePaymentOptions
   public let prePaymentOptionsAvailable: Swift.Bool
@@ -187,6 +200,8 @@ public struct FlexMethod : Swift.Equatable {
   public let description: Swift.String?
   public let brandingOption: ottu_checkout_sdk.BrandingOption?
   public static func == (a: ottu_checkout_sdk.FlexMethod, b: ottu_checkout_sdk.FlexMethod) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentOptionsDisplaySettings : Swift.Equatable {
   public enum PaymentOptionsDisplayMode : Swift.Equatable {
@@ -234,8 +249,8 @@ public struct FlexMethodResponse : Swift.Decodable {
   public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct Card : Swift.Equatable {
-  public enum Brand : Swift.String {
+public struct Card : Swift.Equatable, Swift.Codable {
+  public enum Brand : Swift.String, Swift.Codable {
     case stc
     case visa
     case mastercard
@@ -260,8 +275,10 @@ public struct Card : Swift.Equatable {
   public let submitURL: Foundation.URL
   public init(customerId: Swift.String, brand: ottu_checkout_sdk.Card.Brand, nameOnCard: Swift.String?, number: Swift.String, expiryMonth: Swift.String, expiryYear: Swift.String, token: Swift.String, isPreferred: Swift.Bool, isExpired: Swift.Bool, pgCode: Swift.String, cvvRequired: Swift.Bool, deleteURL: Foundation.URL, submitURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Card, b: ottu_checkout_sdk.Card) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public struct Wallet : Swift.Equatable {
+public struct Wallet : Swift.Equatable, Swift.Codable {
   public var code: Swift.String
   public var pgCode: Swift.String
   public var name: Swift.String
@@ -274,6 +291,8 @@ public struct Wallet : Swift.Equatable {
   public var paymentURL: Foundation.URL
   public init(code: Swift.String, pgCode: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String, canSaveCard: Swift.Bool, submitURL: Foundation.URL, paymentURL: Foundation.URL)
   public static func == (a: ottu_checkout_sdk.Wallet, b: ottu_checkout_sdk.Wallet) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct PayButtonText {
   public init(en: Swift.String, ar: Swift.String)
@@ -1123,8 +1142,10 @@ extension ottu_checkout_sdk.TransactionDetails.State : Swift.Hashable {}
 extension ottu_checkout_sdk.TransactionDetails.State : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.TransactionDetails.PaymentType : Swift.Equatable {}
 extension ottu_checkout_sdk.TransactionDetails.PaymentType : Swift.Hashable {}
+extension ottu_checkout_sdk.TransactionDetails.PaymentType : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Equatable {}
 extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.Hashable {}
+extension ottu_checkout_sdk.PaymentMethod.Flow : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Equatable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.Hashable {}
 extension ottu_checkout_sdk.FlexMethod.Flow : Swift.RawRepresentable {}
