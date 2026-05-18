@@ -43430,7 +43430,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/ListPayment\/ListPaymentMethodsPresenter.swift",
       "kind": "StringLiteral",
-      "offset": 4990,
+      "offset": 4997,
       "length": 27,
       "value": "\"com.ottu.sharedStateQueue\""
     },
