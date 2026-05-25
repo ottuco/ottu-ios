@@ -271,7 +271,7 @@
 			);
 			mainGroup = 377FD5F12B9B256F001EB337;
 			packageReferences = (
-				841914B62FBC5FC40005FB2A /* XCRemoteSwiftPackageReference "ottu-ios" */,
+				8479D4482FC41580004B7F2D /* XCRemoteSwiftPackageReference "ottu-ios" */,
 			);
 			productRefGroup = 377FD5FB2B9B256F001EB337 /* Products */;
 			projectDirPath = "";
@@ -700,12 +700,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		841914B62FBC5FC40005FB2A /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
+		8479D4482FC41580004B7F2D /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.7;
+				minimumVersion = 2.2.8;
 			};
 		};
 		84CAD1802F87E3360002E556 /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
