@@ -25,7 +25,6 @@ import os
 extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var isShimmering: Swift.Bool {
     get
-    set
   }
 }
 public struct TransactionDetails {
