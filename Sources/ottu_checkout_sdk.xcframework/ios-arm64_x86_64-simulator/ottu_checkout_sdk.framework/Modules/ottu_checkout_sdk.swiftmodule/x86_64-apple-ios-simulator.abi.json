@@ -42317,6 +42317,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "SentryAttributeValue",
+            "printedName": "SentryAttributeValue",
+            "usr": "s:6Sentry0A14AttributeValueP",
+            "mangledName": "$s6Sentry0A14AttributeValueP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SentryUrlMatchable",
+            "printedName": "SentryUrlMatchable",
+            "usr": "s:6Sentry0A12UrlMatchableP",
+            "mangledName": "$s6Sentry0A12UrlMatchableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "BidirectionalCollection",
             "printedName": "BidirectionalCollection",
             "children": [
