@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.46.0")
+        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "9.16.0")
     ],
     targets: [
         .binaryTarget(
