@@ -386,7 +386,7 @@ public class ButtonComponent {
 }
 public typealias VerifyPaymentDelegate = (Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<Swift.Void>
 final public class Checkout {
-  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil, useSentry: Swift.Bool? = true) throws
+  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil) throws
   final public func paymentViewController() -> UIKit.UIViewController?
   @objc deinit
 }

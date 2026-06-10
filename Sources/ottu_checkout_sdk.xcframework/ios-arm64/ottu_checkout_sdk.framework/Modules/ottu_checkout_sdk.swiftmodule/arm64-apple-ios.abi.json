@@ -15547,7 +15547,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(formsOfPayments:theme:displaySettings:sessionId:merchantId:apiKey:setupPreload:delegate:verifyPayment:payButtonText:useSentry:)",
+            "printedName": "init(formsOfPayments:theme:displaySettings:sessionId:merchantId:apiKey:setupPreload:delegate:verifyPayment:payButtonText:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15680,26 +15680,11 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonText9useSentryACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgSbSgtKcfc",
-            "mangledName": "$s17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonText9useSentryACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgSbSgtKcfc",
+            "usr": "s:17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonTextACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgtKcfc",
+            "mangledName": "$s17ottu_checkout_sdk8CheckoutC15formsOfPayments5theme15displaySettings9sessionId08merchantL06apiKey12setupPreload8delegate13verifyPayment13payButtonTextACSayAA04FormfT0OG_AA0D5ThemeCAA0t14OptionsDisplayJ0VS3SAA18TransactionDetailsVSgAA12OttuDelegate_pAA22CardVerificationResultOyytGSSSgYacSgAA03PayvW0VSgtKcfc",
             "moduleName": "ottu_checkout_sdk",
             "declAttributes": [
               "AccessControl",
@@ -45161,13 +45146,6 @@
       "offset": 1515,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Checkout.swift",
-      "kind": "BooleanLiteral",
-      "offset": 5723,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Presentation\/Common\/GlobalOTPCountdown.swift",

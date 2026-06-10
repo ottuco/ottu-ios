@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ottu_checkout_sdk",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "9.16.0")
+        .package(url: "https://github.com/ihorbenko/sentry-cocoa", from: "1.0.0")
     ],
     targets: [
         .binaryTarget(
