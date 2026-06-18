@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ottuco/ottu-ios.git",
       "state" : {
-        "revision" : "cdb96ea7f421b80b056de5571fb801257d607909",
-        "version" : "2.2.8"
+        "revision" : "5195095c4c22132ac78ecf1d0621cddaf0df00cf",
+        "version" : "2.2.12"
       }
     },
     {
