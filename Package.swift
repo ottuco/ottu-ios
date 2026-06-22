@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ottu_checkout_sdk_sentry",
+    name: "ottu_checkout_sdk",
     platforms: [
         .iOS(.v15)
     ],
