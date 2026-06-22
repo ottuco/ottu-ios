@@ -7,24 +7,28 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(
+    	.library(
             name: "ottu_checkout_sdk_sentry",
-            targets: ["ottu_checkout_sdk_sentry", "ottu_checkout_sdk_sentry_dep"]
+            targets: ["ottu_checkout_sdk_sentry_wrapper"]
         )
     ],
+
     dependencies: [
         .package(url: "https://github.com/getsentry/sentry-cocoa", from: "9.0.0")
     ],
+
     targets: [
         .binaryTarget(
             name: "ottu_checkout_sdk_sentry",
             path: "./Sources/ottu_checkout_sdk_sentry.xcframework"
         ),
+
         .target(
-            name: "ottu_checkout_sdk_sentry_dep",
+            name: "ottu_checkout_sdk_sentry_wrapper",
             dependencies: [
-                         .product(name: "Sentry", package: "sentry-cocoa")
-                     ]
+                "ottu_checkout_sdk_sentry",
+                .product(name: "Sentry", package: "sentry-cocoa")
+            ]
         )
     ]
 )
