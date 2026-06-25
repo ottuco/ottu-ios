@@ -13,7 +13,7 @@ let package = Package(
         ),
         .library(
             name: "ottu_checkout_sdk_sentry",
-            targets: ["ottu_checkout_sdk_sentry_dep"]
+            targets: ["ottu_checkout_sdk_sentry", "ottu_checkout_sdk_sentry_dep"]
         )
     ],
     dependencies: [
