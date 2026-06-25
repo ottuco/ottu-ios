@@ -31,10 +31,8 @@ let package = Package(
         .target(
             name: "ottu_checkout_sdk_sentry_dep",
             dependencies: [
-                "ottu_checkout_sdk_sentry",
                 .product(name: "Sentry", package: "sentry-cocoa")
-            ],
-            path: "Sources/ottu_checkout_sdk_sentry_dep"
+            ]
         )
     ]
 )
