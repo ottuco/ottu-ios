@@ -2,11 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "ottu_checkout_sdk_sentry",
+    name: "ottu_checkout_sdk",
     platforms: [
         .iOS(.v15)
     ],
     products: [
+        .library(
+            name: "ottu_checkout_sdk",
+            targets: ["ottu_checkout_sdk_dep"]
+        ),
         .library(
             name: "ottu_checkout_sdk_sentry",
             targets: ["ottu_checkout_sdk_sentry_dep"]
@@ -17,8 +21,19 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
+            name: "ottu_checkout_sdk",
+            path: "Sources/ottu_checkout_sdk.xcframework"
+        ),
+        .binaryTarget(
             name: "ottu_checkout_sdk_sentry",
             path: "Sources/ottu_checkout_sdk_sentry.xcframework"
+        ),
+        .target(
+            name: "ottu_checkout_sdk_dep",
+            dependencies: [
+                "ottu_checkout_sdk"
+            ],
+            path: "Sources/ottu_checkout_sdk_dep"
         ),
         .target(
             name: "ottu_checkout_sdk_sentry_dep",
