@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ottu_checkout_sdk",
-            targets: ["ottu_checkout_sdk_dep"]
+            targets: ["ottu_checkout_sdk"]
         ),
         .library(
             name: "ottu_checkout_sdk_sentry",
@@ -27,13 +27,6 @@ let package = Package(
         .binaryTarget(
             name: "ottu_checkout_sdk_sentry",
             path: "Sources/ottu_checkout_sdk_sentry.xcframework"
-        ),
-        .target(
-            name: "ottu_checkout_sdk_dep",
-            dependencies: [
-                "ottu_checkout_sdk"
-            ],
-            path: "Sources/ottu_checkout_sdk_dep"
         ),
         .target(
             name: "ottu_checkout_sdk_sentry_dep",
