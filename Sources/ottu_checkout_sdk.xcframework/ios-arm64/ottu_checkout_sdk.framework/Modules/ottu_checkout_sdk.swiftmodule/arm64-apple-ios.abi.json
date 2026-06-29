@@ -15527,13 +15527,6 @@
       },
       {
         "kind": "Import",
-        "name": "Sentry",
-        "printedName": "Sentry",
-        "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -45129,7 +45122,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Checkout.swift",
       "kind": "BooleanLiteral",
-      "offset": 1515,
+      "offset": 1501,
       "length": 5,
       "value": "false"
     },
