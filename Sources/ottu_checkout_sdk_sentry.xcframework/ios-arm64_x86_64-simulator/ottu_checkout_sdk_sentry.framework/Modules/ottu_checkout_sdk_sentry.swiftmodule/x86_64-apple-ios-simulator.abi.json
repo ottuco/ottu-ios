@@ -23332,7 +23332,10 @@
         "name": "Sentry",
         "printedName": "Sentry",
         "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk_sentry"
+        "moduleName": "ottu_checkout_sdk_sentry",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -40723,13 +40726,6 @@
         "moduleName": "ottu_checkout_sdk_sentry"
       },
       {
-        "kind": "Import",
-        "name": "Sentry",
-        "printedName": "Sentry",
-        "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk_sentry"
-      },
-      {
         "kind": "TypeDecl",
         "name": "Checkout",
         "printedName": "Checkout",
@@ -44472,6 +44468,48 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 146,
+      "length": 13,
+      "value": "\"Merchant-Id\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 195,
+      "length": 7,
+      "value": "\"Alias\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 240,
+      "length": 9,
+      "value": "\"Channel\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 12,
+      "value": "\"User-Agent\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 12,
+      "value": "\"mobile_sdk\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Helpers\/HttpHeaders.swift",
+      "kind": "StringLiteral",
+      "offset": 448,
+      "length": 103,
+      "value": "\"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/149.0.0.0 Safari\/537.36\""
+    },
+    {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Domain\/Entities\/CardPay.swift",
       "kind": "StringLiteral",
       "offset": 255,
@@ -46126,7 +46164,7 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Checkout.swift",
       "kind": "BooleanLiteral",
-      "offset": 1546,
+      "offset": 1501,
       "length": 5,
       "value": "false"
     },

@@ -11,7 +11,6 @@ import MachO
 import OSLog
 import ObjectiveC
 import PassKit
-import Sentry
 import Swift
 import SwiftUI
 import UIKit
