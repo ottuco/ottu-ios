@@ -15759,7 +15759,10 @@
         "name": "Sentry",
         "printedName": "Sentry",
         "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk"
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
