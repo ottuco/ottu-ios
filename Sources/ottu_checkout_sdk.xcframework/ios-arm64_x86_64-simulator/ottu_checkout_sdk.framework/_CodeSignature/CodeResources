@@ -22,7 +22,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		qAaD0IsuMBIamQUj/nuFN8SVuaw=
+		c54qrp6DABH/77tS+5VUJXoKXQw=
 		</data>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FZLuBzvR62wGM/9iA710U2EpbLQ=
+		Wm5CfAe77SZtcWuuY0tb2lhw1sY=
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WAz2msndDzBN8yJ2siR0tIe6iS0=
+		L0heTkzHI+Vc6DtK2SAuZ3bsaWk=
 		</data>
 		<key>NewCardViewController.storyboardc/Info.plist</key>
 		<data>
@@ -463,7 +463,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HJihXEHLD7y6FPCfECkVSfrrVdPayKFzunY78qSYlkc=
+			ad95Xfrs7sRFF6WQOn4ISHoK72UeUCChnCmrL7r8//g=
 			</data>
 		</dict>
 		<key>Base.lproj/ListPaymentMethodsViewController.storyboardc/Info.plist</key>
@@ -540,7 +540,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			00/HSc+yJcjoKGAGHSb+sxWu7bHvX0rJhXFdFG51hT4=
+			TUHNPcKQyxv5c40GK58vBoHkRd/wJRdSETfic24aIGw=
 			</data>
 		</dict>
 		<key>Modules/ottu_checkout_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -575,7 +575,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SjfMJzIDgXIGRJi1DT2xN1vgXaYDk4LlTtFHNcarJbY=
+			AkO8oAZX1/qxPbcH5H9aCTI72G9EBCNtnE88k17oNJM=
 			</data>
 		</dict>
 		<key>NewCardViewController.storyboardc/Info.plist</key>
