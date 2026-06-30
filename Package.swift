@@ -23,7 +23,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ottu_checkout_sdk_sentry",
-            path: "Sources/ottu_checkout_sdk_sentry.xcframework"
+            url: "https://github.com/ottuco/ottu-ios/releases/download/2.2.12-no-deps-5/ottu_checkout_sdk_sentry.xcframework.zip",
+            checksum: "ed5559912955dedcef42f2113a0a7fcba8777c498d90b0f22f0153ac60d8b0a6"
         )
     ]
 )
