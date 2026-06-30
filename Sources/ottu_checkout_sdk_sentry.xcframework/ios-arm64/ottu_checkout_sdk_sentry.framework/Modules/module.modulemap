@@ -1,3 +1,0 @@
-framework module ottu_checkout_sdk_sentry {
-  header "ottu_checkout_sdk_sentry-Swift.h"
-}
