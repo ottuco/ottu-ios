@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target x86_64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import Combine
 import CommonCrypto
 import CoreText
 import Darwin
@@ -15,7 +16,7 @@ import Sentry
 import Swift
 import SwiftUI
 import UIKit
-import WebKit
+@preconcurrency import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -25,7 +26,6 @@ import os
 extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var isShimmering: Swift.Bool {
     get
-    set
   }
 }
 public struct TransactionDetails {
@@ -81,7 +81,8 @@ public struct TransactionDetails {
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
   public var paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?
-  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?)
+  public var websocketUrl: Swift.String?
+  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?, websocketUrl: Swift.String? = nil)
 }
 public struct PaymentMethod : Swift.Equatable {
   public enum Flow {
@@ -110,7 +111,9 @@ public struct PaymentMethod : Swift.Equatable {
   public var encKeyURL: Foundation.URL?
   public var trandata: Swift.String?
   public var cvvRequired: Swift.Bool?
-  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?)
+  public var description: Swift.String?
+  public var brandingOption: ottu_checkout_sdk.BrandingOption?
+  public init(code: Swift.String, name: Swift.String, amount: Foundation.Decimal, currencyCode: Swift.String, fee: Foundation.Decimal, feeDescription: Swift.String?, icons: [Foundation.URL], flow: ottu_checkout_sdk.PaymentMethod.Flow, redirectURL: Foundation.URL?, canSaveCard: Swift.Bool, submitURL: Foundation.URL?, directPaymentURL: Foundation.URL?, directSaveCardURL: Foundation.URL?, encKeyURL: Foundation.URL?, trandata: Swift.String?, cvvRequired: Swift.Bool?, description: Swift.String?, brandingOption: ottu_checkout_sdk.BrandingOption?)
   public static func == (a: ottu_checkout_sdk.PaymentMethod, b: ottu_checkout_sdk.PaymentMethod) -> Swift.Bool
 }
 public struct ApplePayWallet : Swift.Equatable {
@@ -129,6 +132,12 @@ public struct ApplePayWallet : Swift.Equatable {
   public var sessionId: Swift.String
   public init(domain: Swift.String, merchantId: Swift.String, code: Swift.String, pgCode: Swift.String, shopName: Swift.String, amount: Foundation.Decimal, fee: Foundation.Decimal, feeDescription: Swift.String, currencyCode: Swift.String, countryCode: Swift.String, validationURL: Foundation.URL, paymentURL: Foundation.URL, sessionId: Swift.String)
   public static func == (a: ottu_checkout_sdk.ApplePayWallet, b: ottu_checkout_sdk.ApplePayWallet) -> Swift.Bool
+}
+public struct BrandingOption : Swift.Equatable {
+  public let text: Swift.String
+  public let color: UIKit.UIColor
+  public let fontWeight: UIKit.UIFont.Weight
+  public static func == (a: ottu_checkout_sdk.BrandingOption, b: ottu_checkout_sdk.BrandingOption) -> Swift.Bool
 }
 public struct FlexMethod : Swift.Equatable {
   public enum Flow : Swift.String {
@@ -176,6 +185,8 @@ public struct FlexMethod : Swift.Equatable {
   public let flow: ottu_checkout_sdk.FlexMethod.Flow
   public let submitURL: Foundation.URL
   public let prePaymentCheckUrl: Foundation.URL
+  public let description: Swift.String?
+  public let brandingOption: ottu_checkout_sdk.BrandingOption?
   public static func == (a: ottu_checkout_sdk.FlexMethod, b: ottu_checkout_sdk.FlexMethod) -> Swift.Bool
 }
 public struct PaymentOptionsDisplaySettings : Swift.Equatable {
@@ -220,6 +231,8 @@ public struct FlexMethodResponse : Swift.Decodable {
   public let pre_payment_options_available: Swift.Bool
   public let pre_payment_check_url: Foundation.URL
   public let pre_payment_options: ottu_checkout_sdk.FlexMethodResponse.PrePaymentOptions
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Card : Swift.Equatable {
@@ -360,20 +373,27 @@ public protocol OttuDelegate : AnyObject {
 public class ButtonComponent {
   public var enabledTitleColor: UIKit.UIColor
   public var disabledTitleColor: UIKit.UIColor
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public var enabledBackgroundColor: UIKit.UIColor
   public var disabledBackgroundColor: UIKit.UIColor
+  public var cornerRadius: CoreFoundation.CGFloat?
+  public var borderColor: UIKit.UIColor?
+  public var borderWidth: CoreFoundation.CGFloat?
   public init()
   @objc deinit
 }
 public typealias VerifyPaymentDelegate = (Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<Swift.Void>
 final public class Checkout {
-  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil) throws
-  final public func paymentViewController() -> UIKit.UIViewController?
+  final public let isSplitPayButton: Swift.Bool
+  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil, isSplitPayButton: Swift.Bool = false) throws
   @objc deinit
+  final public func paymentViewController() -> UIKit.UIViewController?
+  final public func paymentContentViewController() -> UIKit.UIViewController?
+  final public func payButtonViewController() -> UIKit.UIViewController?
 }
 @_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
   @objc deinit
@@ -411,6 +431,12 @@ public enum UiMode : Swift.String {
   }
 }
 public struct CardPayResponse : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BrandingOptionsResponse : Swift.Decodable {
+  public let text: Swift.String
+  public let color: Swift.String
+  public let font_weight: Swift.Int
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol FloatingPanelLayout {
@@ -509,7 +535,7 @@ extension ottu_checkout_sdk.FloatingPanelAdaptiveLayoutAnchor {
   @objc optional var momentumProjectionRate: CoreFoundation.CGFloat { get }
   @objc optional func shouldProjectMomentum(_ fpc: ottu_checkout_sdk.FloatingPanelController, to proposedState: ottu_checkout_sdk.FloatingPanelState) -> Swift.Bool
   @objc optional func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc optional func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc optional func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc optional var removalInteractionVelocityThreshold: CoreFoundation.CGFloat { get }
 }
 open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavior {
@@ -524,7 +550,7 @@ open class FloatingPanelDefaultBehavior : ottu_checkout_sdk.FloatingPanelBehavio
     @objc get
   }
   @objc open func redirectionalProgress(_ fpc: ottu_checkout_sdk.FloatingPanelController, from: ottu_checkout_sdk.FloatingPanelState, to: ottu_checkout_sdk.FloatingPanelState) -> CoreFoundation.CGFloat
-  @objc open func allowsRubberBanding(for edge: UIKit.UIRectEdge) -> Swift.Bool
+  @objc open func allowsRubberBanding(for edge: UIUtilities.UIRectEdge) -> Swift.Bool
   @objc open var removalInteractionVelocityThreshold: CoreFoundation.CGFloat
   @objc deinit
 }
@@ -779,11 +805,11 @@ extension UIKit.UISpringTimingParameters {
 }
 public class LabelComponent {
   public var color: UIKit.UIColor
-  public var font: UIKit.UIFont
-  public var fontFamily: Swift.String {
+  public var font: UIKit.UIFont {
     get
     set
   }
+  public var fontFamily: Swift.String?
   public init()
   @objc deinit
 }
@@ -796,9 +822,6 @@ public struct IconsResponse : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentViewModel {
-}
-extension os.Logger {
-  public static let sdk: os.Logger
 }
 public struct PhoneNumberViewModel {
   public let screenTitle: Swift.String
@@ -875,6 +898,7 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let fee_description: Swift.String?
   public let icons: ottu_checkout_sdk.IconsResponse?
   public let pg_icons: [ottu_checkout_sdk.IconsResponse]?
+  public let icon: Swift.String?
   public let flow: Swift.String
   public let redirect_url: Foundation.URL?
   public let can_save_card: Swift.Bool
@@ -884,6 +908,8 @@ public struct PaymentMethodResponse : Swift.Decodable {
   public let enc_key_url: Foundation.URL?
   public let trandata: Swift.String?
   public let cvv_required: Swift.Bool?
+  public let description: Swift.String?
+  public let branding_options: ottu_checkout_sdk.BrandingOptionsResponse?
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct PaymentServiceResponse : Swift.Decodable {
@@ -936,6 +962,7 @@ public struct TransactionDetailsResponse : Swift.Decodable {
   public let is_amount_editable: Swift.Bool
   public let session_id: Swift.String
   public let payment_type: Swift.String?
+  public let websocket_url: Swift.String?
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
@@ -1032,6 +1059,8 @@ public enum FailedCheck : Swift.CaseIterable {
     get
   }
 }
+public struct ConfigHelper {
+}
 public enum FileIntegrityCheck {
   case bundleID(Swift.String)
   case mobileProvision(Swift.String)
@@ -1077,10 +1106,13 @@ public class CheckoutTheme {
   public var dataLabel: ottu_checkout_sdk.LabelComponent
   public var dataValue: ottu_checkout_sdk.LabelComponent
   public var showPaymentDetails: Swift.Bool
-  public var paymentItemBorderColor: UIKit.UIColor
   public var paymentItemBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodDescriptionTextColor: UIKit.UIColor?
+  public var selectPaymentMethodBorderColor: UIKit.UIColor
   public var selectPaymentMethodTitleLabel: ottu_checkout_sdk.LabelComponent
   public var selectPaymentMethodTitleBackgroundColor: UIKit.UIColor
+  public var selectPaymentMethodBorderWidth: CoreFoundation.CGFloat?
+  public var selectPaymentMethodCornerRadius: CoreFoundation.CGFloat?
   public var uiMode: ottu_checkout_sdk.UiMode
   public init()
   @objc deinit
