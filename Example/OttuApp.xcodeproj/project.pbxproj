@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -197,6 +197,9 @@
 			name = OttuApp;
 			productName = OttuApp;
 			productReference = 377FD5FA2B9B256F001EB337 /* OttuApp.app */;
+			packageProductDependencies = (
+				84CAD1812F87E33E0002E556 /* ottu_checkout_sdk */,
+			);
 			productType = "com.apple.product-type.application";
 		};
 		377FD60F2B9B2574001EB337 /* OttuAppTests */ = {
@@ -271,7 +274,7 @@
 			);
 			mainGroup = 377FD5F12B9B256F001EB337;
 			packageReferences = (
-				84B489152FE3ED4B00E214C4 /* XCRemoteSwiftPackageReference "ottu-ios" */,
+				140ADBA230ADA68D00BB5EE0 /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 377FD5FB2B9B256F001EB337 /* Products */;
 			projectDirPath = "";
@@ -699,29 +702,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		84B489152FE3ED4B00E214C4 /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.12;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		140ADBA230ADA68D00BB5EE0 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
 		};
-		84CAD1802F87E3360002E556 /* XCRemoteSwiftPackageReference "ottu-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ottuco/ottu-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		84CAD1812F87E33E0002E556 /* ottu_checkout_sdk */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 84CAD1802F87E3360002E556 /* XCRemoteSwiftPackageReference "ottu-ios" */;
+			package = 140ADBA230ADA68D00BB5EE0 /* XCLocalSwiftPackageReference ".." */;
 			productName = ottu_checkout_sdk;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -376,7 +376,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         _ isNeededPreload: Bool,
         _ completion: @escaping (String?) -> Void
     ) {
-        Logger.sdk.info("requestSessionId")
+        Logger.app.info("requestSessionId")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue(
@@ -392,7 +392,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let task = session.dataTask(with: request) {
             [weak self] data, response, error in
             guard let self else {
-                Logger.sdk.info(" \(error.debugDescription)")
+                Logger.app.info(" \(error.debugDescription)")
                 return
             }
 
