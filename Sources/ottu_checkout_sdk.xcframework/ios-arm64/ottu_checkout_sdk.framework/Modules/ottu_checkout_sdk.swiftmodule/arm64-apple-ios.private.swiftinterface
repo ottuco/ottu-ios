@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios15 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import Combine
 import CommonCrypto
 import CoreText
 import Darwin
@@ -80,7 +81,8 @@ public struct TransactionDetails {
   public var isAmountEditable: Swift.Bool
   public var sessionId: Swift.String
   public var paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?
-  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?)
+  public var websocketUrl: Swift.String?
+  public init(amount: Foundation.Decimal, cards: [ottu_checkout_sdk.Card], customerId: Swift.String?, customerPhone: Swift.String?, currencyCode: Swift.String, language: ottu_checkout_sdk.TransactionDetails.Language, pymentMethods: [ottu_checkout_sdk.PaymentMethod], flexPayments: [ottu_checkout_sdk.FlexMethod], applePay: ottu_checkout_sdk.ApplePayWallet?, stcPay: ottu_checkout_sdk.Wallet?, urPay: ottu_checkout_sdk.Wallet?, state: ottu_checkout_sdk.TransactionDetails.State, isAmountEditable: Swift.Bool, sessionId: Swift.String, paymentType: ottu_checkout_sdk.TransactionDetails.PaymentType?, websocketUrl: Swift.String? = nil)
 }
 public struct PaymentMethod : Swift.Equatable {
   public enum Flow {
@@ -386,9 +388,12 @@ public class ButtonComponent {
 }
 public typealias VerifyPaymentDelegate = (Swift.String?) async -> ottu_checkout_sdk.CardVerificationResult<Swift.Void>
 final public class Checkout {
-  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil) throws
-  final public func paymentViewController() -> UIKit.UIViewController?
+  final public let isSplitPayButton: Swift.Bool
+  public init(formsOfPayments: [ottu_checkout_sdk.FormOfPayment] = FormOfPayment.allCases, theme: ottu_checkout_sdk.CheckoutTheme = CheckoutTheme(), displaySettings: ottu_checkout_sdk.PaymentOptionsDisplaySettings = PaymentOptionsDisplaySettings(), sessionId: Swift.String, merchantId: Swift.String, apiKey: Swift.String, setupPreload: ottu_checkout_sdk.TransactionDetails? = nil, delegate: any ottu_checkout_sdk.OttuDelegate, verifyPayment: ottu_checkout_sdk.VerifyPaymentDelegate? = nil, payButtonText: ottu_checkout_sdk.PayButtonText? = nil, isSplitPayButton: Swift.Bool = false) throws
   @objc deinit
+  final public func paymentViewController() -> UIKit.UIViewController?
+  final public func paymentContentViewController() -> UIKit.UIViewController?
+  final public func payButtonViewController() -> UIKit.UIViewController?
 }
 @_hasMissingDesignatedInitializers final public class DirectPaySubmitterMapper {
   @objc deinit
@@ -819,9 +824,6 @@ public struct IconsResponse : Swift.Decodable {
 }
 public struct PaymentViewModel {
 }
-extension os.Logger {
-  public static let sdk: os.Logger
-}
 public struct PhoneNumberViewModel {
   public let screenTitle: Swift.String
   public let screenMessage: Swift.String
@@ -961,6 +963,7 @@ public struct TransactionDetailsResponse : Swift.Decodable {
   public let is_amount_editable: Swift.Bool
   public let session_id: Swift.String
   public let payment_type: Swift.String?
+  public let websocket_url: Swift.String?
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {

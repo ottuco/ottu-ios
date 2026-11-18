@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ottu_checkout_sdk",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(

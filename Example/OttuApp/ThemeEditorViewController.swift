@@ -447,7 +447,7 @@ class ThemeEditorViewController: UITableViewController, UIPickerViewDelegate,
         let uiMode = UiMode(rawValue: sender.title) ?? UiMode.SYSTEM
         theme?.uiMode = uiMode
         updateUiMode(uiMode: uiMode)
-        Logger.sdk.info("uiMode has been selected: \(uiMode.rawValue)")
+        Logger.app.info("uiMode has been selected: \(uiMode.rawValue)")
     }
 
     func setThemeFontFamily(_ fontFamily: String) {
