@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A17E9D102EE5000100000001 /* MerchantNestedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E9D102EE5000100000002 /* MerchantNestedView.swift */; };
 		141D76882F34E9A100EBBA82 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141D76872F34E9A100EBBA82 /* Logger.swift */; };
 		3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CC2D54D36700B837F1 /* PgCode.swift */; };
 		3726F5CF2D54D9D500B837F1 /* FormOfPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A17E9D102EE5000100000002 /* MerchantNestedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantNestedView.swift; sourceTree = "<group>"; };
 		141D76872F34E9A100EBBA82 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3726F5CC2D54D36700B837F1 /* PgCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgCode.swift; sourceTree = "<group>"; };
 		3726F5CE2D54D9D500B837F1 /* FormOfPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormOfPayment.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				377FD5FF2B9B256F001EB337 /* SceneDelegate.swift */,
 				377FD6012B9B256F001EB337 /* MainViewController.swift */,
 				3795E0602BC930C90058768A /* OttuPaymentsViewController.swift */,
+				A17E9D102EE5000100000002 /* MerchantNestedView.swift */,
 				37EC2E812DCA1CDE0025A20E /* ResizableContainerView.swift */,
 				379FC7972C1B28D900152872 /* ThemeEditorViewController.swift */,
 				377FD6032B9B256F001EB337 /* Main.storyboard */,
@@ -324,6 +327,7 @@
 				379FC7982C1B28D900152872 /* ThemeEditorViewController.swift in Sources */,
 				377FD5FE2B9B256F001EB337 /* AppDelegate.swift in Sources */,
 				3795E0612BC930C90058768A /* OttuPaymentsViewController.swift in Sources */,
+				A17E9D102EE5000100000001 /* MerchantNestedView.swift in Sources */,
 				141D76882F34E9A100EBBA82 /* Logger.swift in Sources */,
 				377FD6002B9B256F001EB337 /* SceneDelegate.swift in Sources */,
 				3726F5CD2D54D36800B837F1 /* PgCode.swift in Sources */,
