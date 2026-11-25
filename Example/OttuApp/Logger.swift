@@ -9,5 +9,14 @@ import OSLog
 
 internal extension Logger {
     private static var subsystem = Bundle.main.bundleIdentifier!
-    static let app = Logger(subsystem: subsystem, category: "sdk")
+    static let app: Logger = {
+              #if DEBUG
+              return Logger(
+                  subsystem: Bundle.main.bundleIdentifier ?? "net.ottu.ottu-checkout-sdk",
+                  category: "app"
+              )
+              #else
+              return Logger(.disabled)
+              #endif
+          }()
 }

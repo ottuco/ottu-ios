@@ -37,10 +37,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var visibleItemsCountStepper: UIStepper!
     @IBOutlet weak var defaultSelectedPgCodeTextField: UITextField!
     @IBOutlet weak var failPaymentValidationSwitch: UISwitch!
+    @IBOutlet weak var splitPayButtonSwitch: UISwitch!
     @IBOutlet weak var useCustomTextSwitch: UISwitch!
     @IBOutlet weak var languageMenuButton: UIMenu!
     @IBOutlet weak var languageButton: UIButton!
-
 
     private var sessionId: String?
     private var transactionDetailsPreload: TransactionDetails?
@@ -67,13 +67,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
         pgCodeSwitches.forEach {
             let isOn =
-                !($0.tag == PgCode.ottuSdk.rawValue
-                || $0.tag == PgCode.applePay.rawValue
-                || $0.tag == PgCode.muscatbank.rawValue)
+            !($0.tag == PgCode.ottuSdk.rawValue
+              || $0.tag == PgCode.applePay.rawValue
+              || $0.tag == PgCode.muscatbank.rawValue)
 
             $0.setOn(isOn, animated: false)
         }
-        
+
         languageButton.setTitle(language, for: .normal)
     }
 
@@ -92,13 +92,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             noFormsOfPaymentSwitch.isOn = allSwitchesOff
         }
     }
-    
-    @IBAction func onLanguageSelection(_ sender: UIAction) {
-        languageButton.setTitle(sender.title, for: .normal)
-        language = sender.title
-        Logger.app.info("language has been selected: \(self.language)")
-    }
-
 
     @IBAction func didChangeSegmentSelection(_ sender: UISegmentedControl) {
         visibleItemsCountStack.isHidden = sender.selectedSegmentIndex == 0
@@ -110,7 +103,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toThemeEditorSegue",
-            let vc = segue.destination as? ThemeEditorViewController
+           let vc = segue.destination as? ThemeEditorViewController
         {
             vc.theme = theme
         }
@@ -121,8 +114,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
             destinationViewController.theme = theme
             destinationViewController.paymentOptionsDisplayMode =
-                (segmentedControl.selectedSegmentIndex == 0)
-                ? .bottomSheet : .list
+            (segmentedControl.selectedSegmentIndex == 0)
+            ? .bottomSheet : .list
             destinationViewController.visibleItemsCount = UInt(
                 visibleItemsCountStepper.value
             )
@@ -130,7 +123,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             let defaultSelectedPgCode = defaultSelectedPgCodeTextField.text
             if let defaultSelectedPgCode, defaultSelectedPgCode != "" {
                 destinationViewController.defaultSelectedPgCode =
-                    defaultSelectedPgCodeTextField.text
+                defaultSelectedPgCodeTextField.text
             }
 
             if let sessionId {
@@ -139,15 +132,16 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 destinationViewController.sessionId = sessionId
                 destinationViewController.formsOfPayment = formOfPayments
                 destinationViewController.showPaymentDetails =
-                    showPaymentDetailsSwitch.isOn
+                showPaymentDetailsSwitch.isOn
                 destinationViewController.merchantId = merchantIdTextField.text
                 destinationViewController.apiKey = apiKeyTextField.text
                 destinationViewController.transactionDetailsPreload =
-                    transactionDetailsPreload
+                transactionDetailsPreload
                 destinationViewController.failPaymentValidation =
-                    failPaymentValidationSwitch.isOn
+                failPaymentValidationSwitch.isOn
+                destinationViewController.isSplitPayButton = splitPayButtonSwitch.isOn
                 destinationViewController.useCustomText =
-                    useCustomTextSwitch.isOn
+                useCustomTextSwitch.isOn
 
                 if crashSwitch.isOn {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
@@ -166,7 +160,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
         getSessionId { [weak self] sessionId in
             guard let self else { return }
-
+            Logger.app.info("didTapGetSessionId, session: \(sessionId ?? "Have no session")")
             DispatchQueue.main.async {
                 self.ativityIndicator.stopAnimating()
                 self.ativityIndicator.isHidden = true
@@ -197,11 +191,17 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "toPaymentViewController", sender: self)
     }
 
+    @IBAction func onLanguageSelection(_ sender: UIAction) {
+        languageButton.setTitle(sender.title, for: .normal)
+        language = sender.title
+        Logger.app.info("language has been selected: \(self.language)")
+    }
+
     private func enabledFormsOfPayment() -> [ottu_checkout_sdk.FormOfPayment] {
         var formOfPayments = [ottu_checkout_sdk.FormOfPayment]()
         formOfPaymentSwitches.forEach {
             if $0.isOn,
-                let formOfPayment = FormOfPayment(rawValue: $0.tag)?.sdkValue()
+               let formOfPayment = FormOfPayment(rawValue: $0.tag)?.sdkValue()
             {
                 formOfPayments.append(formOfPayment)
             }
@@ -213,7 +213,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         var pgCodes = [String]()
         pgCodeSwitches.forEach {
             if $0.isOn, !$0.isHidden,
-                let pgCode = PgCode(rawValue: $0.tag)?.stringValue()
+               let pgCode = PgCode(rawValue: $0.tag)?.stringValue()
             {
                 pgCodes.append(pgCode)
             }
@@ -224,7 +224,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     private func prepareMinExpiryTime() -> [String: Int]? {
         var minExpiryTime: [String: Int]? = nil
         if let cardExpiryTime = cardExpiryTimeTextField.text,
-            let expiryTime = Int(cardExpiryTime)
+           let expiryTime = Int(cardExpiryTime)
         {
             minExpiryTime = ["min_expiry_time": expiryTime]
         }
@@ -233,8 +233,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
     private func getSessionId(completion: @escaping (String?) -> Void) {
         guard let amount = amountTextField.text, amount != "",
-            let currencyCode = currencyCodeTextField.text, currencyCode != "",
-            let apyKey = apiKeyTextField.text, apyKey != ""
+              let currencyCode = currencyCodeTextField.text, currencyCode != "",
+              let apyKey = apiKeyTextField.text, apyKey != ""
         else {
             getSessionIdButton.isEnabled = true
 
@@ -256,7 +256,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             "language": language,
             "customer_first_name": "John",
             "customer_last_name": "Smith",
-            "customer_email": "john1@some.mail",
+            "customer_email": "\(customerIdTextField.text ?? "noname")@ottu.mail",
             "billing_address": [
                 "country": "KW",
                 "city": "Kuwait City",
@@ -289,7 +289,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 
             json["agreement"] = agreementJSON
         }
-
 
         var paymentMethodJson: [String: Any] = [:]
 
@@ -383,9 +382,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             "Api-Key \(apyKey)",
             forHTTPHeaderField: "Authorization"
         )
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(language, forHTTPHeaderField: "Accept-Language")
 
+        request.setValue(
+            language,
+            forHTTPHeaderField: "Accept-Language"
+        )
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
 
         let session = URLSession(configuration: .ephemeral)
@@ -397,8 +399,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             }
 
             if let data,
-                let json = try? JSONSerialization.jsonObject(with: data)
-                    as? [String: Any]
+               let json = try? JSONSerialization.jsonObject(with: data)
+                as? [String: Any]
             {
                 if let sessionId = json["session_id"] as? String {
 
@@ -406,18 +408,18 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                         if let preloadPayloadDict = json[
                             "sdk_setup_preload_payload"
                         ],
-                            let jsonData = try? JSONSerialization.data(
-                                withJSONObject: preloadPayloadDict,
-                                options: []
-                            ),
-                            let decodedValues = try? JSONDecoder().decode(
-                                TransactionDetailsResponse.self,
-                                from: jsonData
-                            )
+                           let jsonData = try? JSONSerialization.data(
+                            withJSONObject: preloadPayloadDict,
+                            options: []
+                           ),
+                           let decodedValues = try? JSONDecoder().decode(
+                            TransactionDetailsResponse.self,
+                            from: jsonData
+                           )
                         {
 
                             self.transactionDetailsPreload =
-                                try? decodedValues.transactionDetails
+                            try? decodedValues.transactionDetails
                         }
                     } else {
                         self.transactionDetailsPreload = nil
@@ -449,7 +451,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             if prospectiveText == "" {
                 getSessionIdButton.isEnabled = true
             } else if let number = Int(prospectiveText),
-                (1...365).contains(number)
+                      (1...365).contains(number)
             {
                 getSessionIdButton.isEnabled = true
             } else {
